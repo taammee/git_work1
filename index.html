@@ -1,0 +1,1429 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-type">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta name="format-detection" content="telephone=no,email=no,address=no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+<title>Silverangel</title>
+
+	<link rel="stylesheet" href="css/common.css" media="all">
+	<link rel="stylesheet" href="css/layout.css" media="all">
+
+	<script src="js/jquery.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/custom.js"></script>
+
+</head>
+<body class="main">
+	<script>
+			function respondCSS() {
+				var windowWidth = $(window).width();
+	
+				if (windowWidth < 641) {
+					$(document.body).addClass('mobile');
+					$(document.body).removeClass('desktop');
+				}
+				else {
+					$(document.body).addClass('desktop');
+					$(document.body).removeClass('mobile');
+				}
+			}
+			$(window).bind("orientationchange load resize", respondCSS);
+			respondCSS();
+		</script>
+		
+	<header>
+		<div class="w1420 headerWrap">
+			<div class="logoArea">
+				<h1><a href="index.html"><img src="img/logo.png" alt="Silverangel"></a></h1>
+			</div>
+			<div class="loginArea">
+				<ul>
+					<li class="_loginBtn"><a href="#none">로그인</a></li>
+					<li class="_joinBtn"><a href="#none">회원가입</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- top login -->
+		<div class="log-join logWrap">
+			<div class="logBox">
+				<div class="_box">
+					<h2><img src="img/logo.png" alt="Silverangel">로그인</h2>
+					<div class="auth">
+						<button type="button" id="general" class="on">일반 회원</button>
+						<button type="button" id="manager">요양원 회원</button>
+					</div>
+					<div class="logArea">
+						<label for="log_id" class="hidden">아이디 (메일 주소) 입력</label>
+						<input type="text" id="log_id" placeholder="아이디 (메일 주소)">
+						<label for="log_pass" class="hidden">비밀번호 입력</label>
+						<input type="text" id="log_pass" placeholder="비밀번호">
+						<input type="checkbox" id="status">
+						<label for="status" class="status">로그인 상태 유지</label>
+					</div>
+					<div class="btnBox">
+						<a href="#none" class="_btn">회원가입</a>
+						<a href="#none" class="_btn _write">로그인</a>
+					</div>
+					<div class="findArea">
+						<a href="#none" class="find_idBtn">아이디 찾기</a>
+						<a href="#none" class="find_passBtn">비밀번호 찾기</a>
+					</div>
+					<a href="#none" class="closeBtn">로그인 화면 닫기</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- top id 찾기 -->
+		<div class="log-join findWrap _id">
+			<div class="logBox">
+				<div class="_box">
+					<h2><img src="img/logo.png" alt="Silverangel">아이디 찾기</h2>
+					<p class="comment">아이디를 잊으셨나요? <strong>가입시 입력하신 핸드폰 번호</strong>로 아이디를 찾으실 수 있습니다.</p>
+					<div class="findArea">
+						<input type="text" title="휴대폰 첫번째 번호" value="010"> - 
+						<input type="text" title="휴대폰 가운데 번호"> - 
+						<input type="text" title="휴대폰 마지막 번호">
+					</div>
+					<p class="note _green">핸드폰 번호 010 - 뒤부터 8자리를 입력하세요.</p>
+					<div class="btnBox">
+						<a href="#none" class="_btn _write">아이디 찾기</a>
+					</div>
+
+					<div style="height: 100px;"></div>
+
+					<h2><img src="img/logo.png" alt="Silverangel">아이디 찾기</h2>
+					<p class="comment">입력하신 핸드폰 번호로 가입된 아이디는 다음과 같습니다.</p>
+					<p class="id_result">Sil***angel12*</p>
+					<div class="btnBox">
+						<a href="#none" class="_btn">다시 찾기</a>
+						<a href="#none" class="_btn _write">로그인 하기</a>
+					</div>
+
+					<div style="height: 100px;"></div>
+
+					<h2><img src="img/logo.png" alt="Silverangel">아이디 찾기</h2>
+					<p class="id_result2">입력하신 핸드폰 번호로 가입된 아이디가 없습니다.</p>
+					<div class="btnBox">
+						<a href="#none" class="_btn">다시 찾기</a>
+					</div>
+
+
+					<a href="#none" class="closeBtn">아이디 찾기 화면 닫기</a>
+				</div>
+			</div>
+		</div>
+		<!-- top password 찾기 -->
+		<div class="log-join findWrap _password">
+			<div class="logBox">
+				<div class="_box">
+					<h2><img src="img/logo.png" alt="Silverangel">비밀번호 찾기</h2>
+					<p class="comment">비밀번호를 잊으셨나요? <strong>가입시 입력하신 메일 주소</strong>로 <strong>임시 비밀번호</strong>를 보내드립니다.<br>
+						메일로 받으신 임시 비밀번호로 로그인 하시고, 내 정보 수정에서 비밀번호를 재설정 하세요. </p>
+					<div class="max480">
+						<input type="text" title="메일 주소" placeholder="메일 주소">
+						<p class="note _green">가입하신 메일 주소를 입력하세요.</p>
+					</div>
+					<div class="btnBox">
+						<a href="#none" class="_btn _write">임시 비밀번호 찾기</a>
+					</div>
+
+					<div style="height: 100px;"></div>
+
+					<h2><img src="img/logo.png" alt="Silverangel">비밀번호 찾기</h2>
+					<div class="password_result">
+						<p class="comment"><strong>가입시 입력하신 메일 주소</strong>로 <strong>임시 비밀번호</strong>가 전송되었습니다!<br>
+							메일로 받으신 임시 비밀번호로 로그인 하시고, 내 정보 수정에서 비밀번호를 재설정 하세요. </p>
+					</div>
+
+					<div class="btnBox">
+						<a href="#none" class="_btn _write">로그인 하기</a>
+					</div>
+
+
+					<a href="#none" class="closeBtn">아이디 찾기 화면 닫기</a>
+				</div>
+			</div>
+		</div>
+
+
+
+		<!-- top join -->
+		<div class="log-join joinWrap">
+			<div class="joinBox">
+				<div class="_box">
+					<h2><img src="img/logo.png" alt="Silverangel">회원가입</h2>
+					<div class="auth">
+						<button type="button" class="general on">일반 회원</button>
+						<button type="button" class="manager">요양원 회원</button>
+					</div>
+					<div class="btnBox">
+						<a href="#none" class="_btn _write">회원가입</a>
+					</div>
+					
+					
+					<!-- 기능 적용 후 삭제해주세요 -->
+					<div class="btnBox">
+						<p>기능 적용 후 삭제할 버튼</p>
+						<a href="#none" class="_btn _small generalBtn">회원가입-일반</a>
+						<a href="#none" class="_btn _small managerBtn">회원가입-요양원</a>
+					</div>
+					<!-- //기능 적용 후 삭제해주세요 -->
+
+
+					
+					<a href="#none" class="closeBtn">회원가입 화면 닫기</a>
+				</div>
+			</div>
+		</div>
+		<!-- top join - general join -->
+		<div class="joinWrapGeneral joinTwoWrap">
+			<div class="joinBox">
+				<div class="_box">
+					<h2><img src="img/logo.png" alt="Silverangel">회원가입</h2>
+					<p class="important">표시된 항목은 필수 입력 사항입니다. </p>
+
+					<div class="user_info_form">
+						<dl>
+							<dt>프로필 사진</dt>
+							<dd>
+								<img src="img/sub/rvw_profile.png" alt="" class="profile_img"><a href="#none" class="profile_add">프로필 사진 추가하기</a><p class="profile_note note _green">프로필 사진을 등록해 주세요 !</p>
+							</dd>
+						</dl>
+						<dl class="important">
+							<dt>
+								<label for="user_id">아이디
+								<span>(메일 주소)</span></label>
+							</dt>
+							<dd class="text2">
+								<input type="text" id="user_id">			
+								<label for="mail_domain" class="hidden"></label>
+								<select id="mail_domain">
+									<option value="gmail.comm">gmail.com</option>
+									<option value="naver.com">naver.com</option>
+									<option value="daum.net">daum.net</option>
+								</select>
+								<p class="note _green">등록하신 메일 주소를 아이디로 사용 가능합니다 ! </p>
+							</dd>
+						</dl>
+						<dl class="important">
+							<dt><label for="password">비밀번호</label></dt>
+							<dd>
+								<input type="text" id="password">
+								<p class="note _red">8~16자 영문, 숫자, 특수문자를 사용하세요.</p>
+							</dd>
+						</dl>
+						<dl class="important">
+							<dt><label for="password_chk">비밀번호 확인</label></dt>
+							<dd>
+								<input type="text" id="password_chk">
+								<p class="note _red">비밀번호가 일치하지 않습니다.</p>
+							</dd>
+						</dl>
+						<dl>
+							<dt><label for="user_name">성함</label></dt>
+							<dd>
+								<input type="text" id="user_name">
+							</dd>
+						</dl>
+						<dl>
+							<dt>생년월일</dt>
+							<dd class="text3">
+								<input type="text" title="birth_year" placeholder="년(4자)">
+								<input type="text" title="birth_month" placeholder="월">
+								<input type="text" title="birth_day" placeholder="일">
+							</dd>
+						</dl>
+						<dl>
+							<dt>연락처</dt>
+							<dd class="text3">
+								<label for="number_local" class="hidden"></label>
+								<select id="number_local" value="지역번호">
+									<option value="02">02</option>
+									<option value="031">031</option>
+									<option value="032">032</option>
+								</select>
+								<input type="text" title="number_1">
+								<input type="text" title="number_2">
+							</dd>
+						</dl>
+						<dl class="important">
+							<dt>휴대전화</dt>
+							<dd class="text3">
+								<input type="text" title="phone_number_1" value="010">
+								<input type="text" title="phone_number_2">
+								<input type="text" title="phone_number_3">
+							</dd>
+						</dl>
+
+					</div>
+
+				</div>
+
+				
+				<h3>이용약관</h3>
+				<div class="scrollBox">
+					<div class="scrollArea">
+						제1조(목적)<br>
+						이 약관은 [(주)유니포스](이하 회사)가 운영하는 [실버엔젤](이하 “사이트”라 한다)에서 제공하는 인터넷 관련 서비스(이하 “서비스”라 한다)를 이용함에
+						있어 사이트와 이용자의 권리, 의무 및 책임사항을 규정함을 목적으로 합니다.<br><br>
+						
+						※「PC통신, 무선 등을 이용하는 전자상거래에 대해서도 그 성질에 반하지 않는 한 이 약관을 준용합니다」
+						<br>
+						제2조(정의)<br>
+						제1조(목적)<br>
+						이 약관은 [(주)유니포스](이하 회사)가 운영하는 [실버엔젤](이하 “사이트”라 한다)에서 제공하는 인터넷 관련 서비스(이하 “서비스”라 한다)를 이용함에
+						있어 사이트와 이용자의 권리, 의무 및 책임사항을 규정함을 목적으로 합니다.<br><br>
+						
+						※「PC통신, 무선 등을 이용하는 전자상거래에 대해서도 그 성질에 반하지 않는 한 이 약관을 준용합니다」<br>
+						
+						제2조(정의)
+					</div>
+					<input type="checkbox" id="agree_1">
+					<label for="agree_1" class="agree">이용약관에  동의합니다. (필수)</label>
+				</div>
+
+				<h3>개인정보처리방침</h3>
+				<div class="scrollBox">
+					<div class="scrollArea">
+						1. 수집하는 개인정보의 항목및 수집방법<br>
+						(1)수집하는 개인정보의 항목<br>
+						회원가입, 원할한 고객상담, 각정서비스의 제공을 위해 아래와 같은 개인정보를 수집합니다.<br>
+						-성명, ID, 생년월일, 비밀번호, 이메일, 주소, 전화번호, 휴대폰번호<br><br>
+						(2)개인정보 수집방법<br>
+						이용자가 자발적으로, 구체적으로 기입할 때 개인정보를 수집하고 있습니다.<br>
+						1. 수집하는 개인정보의 항목및 수집방법<br>
+						(1)수집하는 개인정보의 항목<br>
+						회원가입, 원할한 고객상담, 각정서비스의 제공을 위해 아래와 같은 개인정보를 수집합니다.<br>
+						-성명, ID, 생년월일, 비밀번호, 이메일, 주소, 전화번호, 휴대폰번호<br><br>
+						(2)개인정보 수집방법<br>
+						이용자가 자발적으로, 구체적으로 기입할 때 개인정보를 수집하고 있습니다.<br>
+						1. 수집하는 개인정보의 항목및 수집방법<br>
+						(1)수집하는 개인정보의 항목<br>
+						회원가입, 원할한 고객상담, 각정서비스의 제공을 위해 아래와 같은 개인정보를 수집합니다.<br>
+						-성명, ID, 생년월일, 비밀번호, 이메일, 주소, 전화번호, 휴대폰번호<br><br>
+						(2)개인정보 수집방법<br>
+						이용자가 자발적으로, 구체적으로 기입할 때 개인정보를 수집하고 있습니다.<br>
+						1. 수집하는 개인정보의 항목및 수집방법<br>
+						(1)수집하는 개인정보의 항목<br>
+						회원가입, 원할한 고객상담, 각정서비스의 제공을 위해 아래와 같은 개인정보를 수집합니다.<br>
+						-성명, ID, 생년월일, 비밀번호, 이메일, 주소, 전화번호, 휴대폰번호<br><br>
+						(2)개인정보 수집방법<br>
+						이용자가 자발적으로, 구체적으로 기입할 때 개인정보를 수집하고 있습니다.<br>
+					</div>
+					<input type="checkbox" id="agree_2">
+					<label for="agree_2" class="agree">개인정보처리방침에  동의합니다. (필수)</label>
+					<input type="checkbox" id="agree_3">
+					<label for="agree_3" class="agree">이용약관, 개인정보처리방침에 모두 동의합니다. (전체 동의)</label>
+				</div>
+				
+				<div class="btnBox">
+					<a href="#none" class="_btn">다시 작성</a>
+					<a href="#none" class="_btn _write">회원가입</a>
+				</div>
+
+				<a href="#none" class="closeBtn">회원가입 화면 닫기</a>
+			</div>
+		</div>
+		<!-- top join - manager join -->
+		<div class="joinWrapManager joinTwoWrap">
+			<div class="joinBox">
+				<div class="_box">
+					<h2><img src="img/logo.png" alt="Silverangel">회원가입</h2>
+					<p class="important">표시된 항목은 필수 입력 사항입니다. </p>
+
+					<div class="user_info_form">
+						<dl>
+							<dt>프로필 사진</dt>
+							<dd>
+								<img src="img/sub/rvw_profile.png" alt="" class="profile_img"><a href="#none" class="profile_add">프로필 사진 추가하기</a><p class="profile_note note _green">프로필 사진을 등록해 주세요 !</p>
+							</dd>
+						</dl>
+						<dl class="important">
+							<dt>
+								<label for="user_id2"></label>아이디
+								<span>(메일 주소)</span></label>
+							</dt>
+							<dd class="text2">
+								<input type="text" id="user_id2">			
+								<label for="mail_domain" class="hidden"></label>
+								<select id="mail_domain">
+									<option value="gmail.comm">gmail.com</option>
+									<option value="naver.com">naver.com</option>
+									<option value="daum.net">daum.net</option>
+								</select>
+								<p class="note _green">등록하신 메일 주소를 아이디로 사용 가능합니다 ! </p>
+							</dd>
+						</dl>
+						<dl class="important">
+							<dt><label for="password2">비밀번호</label></dt>
+							<dd>
+								<input type="text" id="password2">
+								<p class="note _red">8~16자 영문, 숫자, 특수문자를 사용하세요.</p>
+							</dd>
+						</dl>
+						<dl class="important">
+							<dt><label for="password_chk2">비밀번호 확인</label></dt>
+							<dd>
+								<input type="text" id="password_chk2">
+								<p class="note _red">비밀번호가 일치하지 않습니다.</p>
+							</dd>
+						</dl>
+						<dl class="important">
+							<dt><label for="center_name">요양원명</label></dt>
+							<dd>
+								<input type="text" id="center_name">
+							</dd>
+						</dl>
+						<dl class="important">
+							<dt><label for="work_num">사업자번호</label></dt>
+							<dd>
+								<input type="text" id="work_num">
+							</dd>
+						</dl>
+						<dl class="important">
+							<dt><label for="director">대표자(원장)</label></dt>
+							<dd>
+								<input type="text" id="director">
+							</dd>
+						</dl>
+
+						<dl class="important">
+							<dt>개원일</dt>
+							<dd class="text3">
+								<input type="text" title="open_year" placeholder="년(4자)">
+								<input type="text" title="open_month" placeholder="월">
+								<input type="text" title="open_day" placeholder="일">
+							</dd>
+						</dl>
+						<dl class="important">
+							<dt>개원일</dt>
+							<dd>
+								<input type="text" title="주소" style="margin-bottom: 10px;">
+								<input type="text" title="나머지주소">
+							</dd>
+						</dl>
+						<dl class="important">
+							<dt>대표 번호</dt>
+							<dd class="text3">
+								<select id="work_phone_num" title="지역번호">
+									<option value="02">02</option>
+									<option value="031">031</option>
+									<option value="032">032</option>
+								</select>
+								<input type="text" title="number_1">
+								<input type="text" title="number_2">
+							</dd>
+						</dl>
+						<dl class="important">
+							<dt>휴대전화<br>(담당자)</dt>
+							<dd class="text3">
+								<input type="text" title="phone_number_1" value="010">
+								<input type="text" title="phone_number_2">
+								<input type="text" title="phone_number_3">
+							</dd>
+						</dl>
+						<dl class="important">
+							<dt><label for="work_mail">이메일</label></dt>
+							<dd>
+								<input type="text" id="work_mail">
+							</dd>
+						</dl>
+
+					</div>
+
+				</div>
+
+				
+				<h3>이용약관</h3>
+				<div class="scrollBox">
+					<div class="scrollArea">
+						제1조(목적)<br>
+						이 약관은 [(주)유니포스](이하 회사)가 운영하는 [실버엔젤](이하 “사이트”라 한다)에서 제공하는 인터넷 관련 서비스(이하 “서비스”라 한다)를 이용함에
+						있어 사이트와 이용자의 권리, 의무 및 책임사항을 규정함을 목적으로 합니다.<br><br>
+						
+						※「PC통신, 무선 등을 이용하는 전자상거래에 대해서도 그 성질에 반하지 않는 한 이 약관을 준용합니다」
+						<br>
+						제2조(정의)<br>
+						제1조(목적)<br>
+						이 약관은 [(주)유니포스](이하 회사)가 운영하는 [실버엔젤](이하 “사이트”라 한다)에서 제공하는 인터넷 관련 서비스(이하 “서비스”라 한다)를 이용함에
+						있어 사이트와 이용자의 권리, 의무 및 책임사항을 규정함을 목적으로 합니다.<br><br>
+						
+						※「PC통신, 무선 등을 이용하는 전자상거래에 대해서도 그 성질에 반하지 않는 한 이 약관을 준용합니다」<br>
+						
+						제2조(정의)
+					</div>
+					<input type="checkbox" id="agree_1">
+					<label for="agree_1" class="agree">이용약관에  동의합니다. (필수)</label>
+				</div>
+
+				<h3>개인정보처리방침</h3>
+				<div class="scrollBox">
+					<div class="scrollArea">
+						1. 수집하는 개인정보의 항목및 수집방법<br>
+						(1)수집하는 개인정보의 항목<br>
+						회원가입, 원할한 고객상담, 각정서비스의 제공을 위해 아래와 같은 개인정보를 수집합니다.<br>
+						-성명, ID, 생년월일, 비밀번호, 이메일, 주소, 전화번호, 휴대폰번호<br><br>
+						(2)개인정보 수집방법<br>
+						이용자가 자발적으로, 구체적으로 기입할 때 개인정보를 수집하고 있습니다.<br>
+						1. 수집하는 개인정보의 항목및 수집방법<br>
+						(1)수집하는 개인정보의 항목<br>
+						회원가입, 원할한 고객상담, 각정서비스의 제공을 위해 아래와 같은 개인정보를 수집합니다.<br>
+						-성명, ID, 생년월일, 비밀번호, 이메일, 주소, 전화번호, 휴대폰번호<br><br>
+						(2)개인정보 수집방법<br>
+						이용자가 자발적으로, 구체적으로 기입할 때 개인정보를 수집하고 있습니다.<br>
+						1. 수집하는 개인정보의 항목및 수집방법<br>
+						(1)수집하는 개인정보의 항목<br>
+						회원가입, 원할한 고객상담, 각정서비스의 제공을 위해 아래와 같은 개인정보를 수집합니다.<br>
+						-성명, ID, 생년월일, 비밀번호, 이메일, 주소, 전화번호, 휴대폰번호<br><br>
+						(2)개인정보 수집방법<br>
+						이용자가 자발적으로, 구체적으로 기입할 때 개인정보를 수집하고 있습니다.<br>
+						1. 수집하는 개인정보의 항목및 수집방법<br>
+						(1)수집하는 개인정보의 항목<br>
+						회원가입, 원할한 고객상담, 각정서비스의 제공을 위해 아래와 같은 개인정보를 수집합니다.<br>
+						-성명, ID, 생년월일, 비밀번호, 이메일, 주소, 전화번호, 휴대폰번호<br><br>
+						(2)개인정보 수집방법<br>
+						이용자가 자발적으로, 구체적으로 기입할 때 개인정보를 수집하고 있습니다.<br>
+					</div>
+					<input type="checkbox" id="agree_2">
+					<label for="agree_2" class="agree">개인정보처리방침에  동의합니다. (필수)</label>
+					<input type="checkbox" id="agree_3">
+					<label for="agree_3" class="agree">이용약관, 개인정보처리방침에 모두 동의합니다. (전체 동의)</label>
+				</div>
+				
+				<div class="btnBox">
+					<a href="#none" class="_btn">다시 작성</a>
+					<a href="#none" class="_btn _write">회원가입</a>
+				</div>
+
+				<a href="#none" class="closeBtn">회원가입 화면 닫기</a>
+			</div>
+		</div>
+
+		<!-- 회원가입완료 -->
+		<div class="log-join complete">
+			<div class="joinBox">
+				<div class="_box">
+					<h2><img src="img/logo.png" alt="Silverangel">요양원 회원가입</h2>
+
+					<p>
+						<strong>요양원 회원가입이 완료되었습니다.</strong>
+						요양원 등록을 위해 요양원 상세정보를 작성해주세요 !
+					</p>
+					<div class="btnBox">
+						<a href="#none" class="_btn _write">요양원 상세정보 작성</a>
+					</div>
+					
+					<a href="#none" class="closeBtn">회원가입 화면 닫기</a>
+				</div>
+			</div>
+		</div>
+
+
+
+
+		<button id="mMenu" type="button"><span>메뉴열기</span></button>
+		<div class="mLogin">
+			<!-- <a class="my_edit" href="#none">관리</a> -->
+			<div class="profileArea">
+				<img src="img/main/profile.png" alt="프로필 이미지">
+				<strong class="name">비회원</strong>
+				<p class="msg">로그인을 해주세요!</p>
+			</div>
+			<ul class="loginLink"></ul>
+			<div class="loginBox">
+				<button class="btn_login">로그인</button>
+				<button class="btn_join">회원가입</button>
+			</div>
+		</div>
+	</header>
+	<section>
+		<!-- 비주얼 -->
+		<div class="visualWrap">
+			<ul class="visualArea">
+				<li>
+					<img src="img/main/visual_01.jpg" alt="비주얼1">
+					<div class="visual_text">
+						<p>몸과 마음의 휴식처<br>
+								집보다 더 편안하게 모시겠습니다</p>
+						<h3>행복 나래 요양원</h3>
+					</div>
+				</li>
+				<li>
+					<img src="img/main/visual_01.jpg" alt="비주얼1">
+					<div class="visual_text">
+						<p>휴식처<br>
+								집보다 더 편안하게 모시겠습니다</p>
+						<h3>행복 요양원</h3>
+					</div>
+				</li>
+				<li>
+					<img src="img/main/visual_01.jpg" alt="비주얼1">
+					<div class="visual_text">
+						<p>몸과 마음의 휴식처<br>
+							몸과 마음의 휴식처</p>
+						<h3>나래 요양원</h3>
+					</div>
+				</li>
+				<li>
+					<img src="img/main/visual_01.jpg" alt="비주얼1">
+					<div class="visual_text">
+						<p>집보다 더 편안하게<br>
+								집보다 더 편안하게 모시겠습니다</p>
+						<h3>행복 나래 요양원</h3>
+					</div>
+				</li>
+			</ul>
+			<div class="w1420">
+				<div class="vidBtn">
+					<button type="button" class="slick-arrow prev">이전</button>
+
+					<div class="dots"></div>
+					<div class="sl-psBtn">
+						<button type="button" class="stop">슬라이드 정지</button>
+					</div>
+
+					<button type="button" class="slick-arrow next">다음</button>
+				</div>
+			</div>
+			<div class="srchLine w1420">
+				<!-- 검색조건 -->
+				<div class="srchWrap">
+					<div class="srchBox"> 
+						<label class="hidden" for="srchOption">검색조건</label> 
+						<button type="button" title="검색조건 닫기" class="srcName"><span>검색조건</span></button> 
+						<ul id="srchOption" class="src_list" role="tablist"> 
+							<li role="tab"><a href="#none">전체검색</a></li> 
+							<li role="tab"><a href="#none">제목</a></li> 
+							<li role="tab"><a href="#none">내용</a></li> 
+						</ul> 
+					</div>
+					<input id="srchText" type="text">
+					<button type="button" id="srchBtn" onclick="location.href='SUB-1-search.html'">검색</button>
+				</div>
+				<!-- right 링크 -->
+				<ul class="srchLink">
+					<li class="first">
+						<a href="#none">
+							<h4>굽은나무</h4>
+							<p>부모님의 요양원 생활을<br>
+								직접 확인해 보세요!</p>
+						</a>
+					</li>
+					<li>
+						<a href="#none">
+							<h4>엔젤헬퍼</h4>
+							<p>부모님의 요양원 생활을<br>
+								직접 확인해 보세요!</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		
+
+		<!-- 키워드 -->
+		<div class="keywordWrap">
+			<div class="w1420">
+				<h2>키워드로 보는 요양원</h2>
+				<ul>
+					<li class="newKey"><a href="#none">신규</a></li>
+					<li><a href="#none">식단</a></li>
+					<li><a href="#none">종교</a></li>
+					<li class="spe"><a href="#none">특별관리</a></li>
+					<li><a href="#none">시설</a></li>
+					<li><a href="#none">프로그램</a></li>
+					<li><a href="#none">인원수</a></li>
+					<li><a href="#none">가격</a></li>
+					<li><a href="#none">등급</a></li>
+				</ul>
+				<button type="button" class="keyBtn">설정</button>
+			</div>
+		</div>
+
+		<!-- 평점 -->
+		<div class="angelWrap">
+			<div class="w1420">
+				<div class="titleWrap">
+					<h2>평점이 좋은 요양원</h2>
+				</div>
+
+				<!-- angelView -->
+				<div class="angelView">
+					<ul class="angelList">
+						<li>
+							<div class="titleBtn">
+								<button type="button" class="slickOn">요양원 대표 사진</button>
+								<button type="button" class="textOn">특/장점</button>
+							</div>
+							<div class="titleArea">
+								<ul class="mark">
+									<li class="mark_lcms"></li>
+									<li class="mark_best"></li>
+								</ul>
+								<h3>엔젤 요양원</h3>
+								<p class="star">
+									<span class="ico_rate star_off">
+										<span class="ico_rate star_on"></span>
+									</span>
+									<em class="rate">189</em>
+								</p>
+								<ul class="angelInfo">
+									<li class="addr on">
+										<button type="button">주소</button>
+										<p>충청남도 당진시<br>송악읍 가청로 237-7</p>
+									</li>
+									<li class="p_num">
+										<button type="button">전화번호</button>
+										<p>041) 356 - 1811</p>
+									</li>
+									<li class="people">
+										<button type="button">정원</button>
+										<p>정원 <span>205명</span></p>
+									</li>
+									<li class="director">
+										<button type="button">원장</button>
+										<p>원장 <span>김영희</span></p>
+									</li>
+								</ul>
+							</div>
+							
+							<ul class="imgArea">
+								<li><img src="img/main/angel_1_1.jpg" alt="엔젤 요양원 이미지 1"></li>
+								<li><img src="img/main/angel_2_1.jpg" alt="엔젤 요양원 이미지 2"></li>
+								<li><img src="img/main/angel_1_3.jpg" alt="엔젤 요양원 이미지 3"></li>
+							</ul>
+							<div class="tagArea">
+								<div class="tagBox">
+									<h4>특/장점</h4>
+									<ul>
+										<li>일반빌딩</li>
+										<li>자연</li>
+										<li>전원환경</li>
+										<li>정원/산책로</li>
+										<li>재활/물리치료</li>
+										<li>체조교실</li>
+										<li>웃음치료</li>
+										<li>노래교실</li>
+										<li>미술교실</li>
+										<li>문화/공연</li>
+										<li>종교활동</li>
+									</ul>
+								</div>
+							</div>
+							<div class="aViewBtn">
+								<button type="button" class="slick-arrow prev">이전</button>
+			
+								<div class="aView-dots"></div>
+								<!-- <div class="aView-psBtn">
+									<button type="button" class="stop">슬라이드 정지</button>
+								</div> -->
+			
+								<button type="button" class="slick-arrow next">다음</button>
+							</div>
+						</li>
+
+
+						<li>
+							<div class="titleBtn">
+								<button type="button" class="slickOn">요양원 대표 사진</button>
+								<button type="button" class="textOn">특/장점</button>
+							</div>
+							<div class="titleArea">
+								<ul class="mark">
+									<li class="mark_lcms"></li>
+									<li class="mark_best"></li>
+								</ul>
+								<h3>실버프리</h3>
+								<p class="star">
+									<span class="ico_rate star_off">
+										<span class="ico_rate star_on"></span>
+									</span>
+									<em class="rate">123</em>
+								</p>
+								<ul class="angelInfo">
+									<li class="addr on">
+										<button type="button">주소</button>
+										<p>전라남도 담양군<br>송악읍 가청로 237-7</p>
+									</li>
+									<li class="p_num">
+										<button type="button">전화번호</button>
+										<p>041) 356 - 1811</p>
+									</li>
+									<li class="people">
+										<button type="button">정원</button>
+										<p>정원 <span>205명</span></p>
+									</li>
+									<li class="director">
+										<button type="button">원장</button>
+										<p>원장 <span>김영희</span></p>
+									</li>
+								</ul>
+							</div>
+							
+							<ul class="imgArea">
+								<li><img src="img/main/angel_2_1.jpg" alt="엔젤 요양원 이미지 1"></li>
+								<li><img src="img/main/angel_1_1.jpg" alt="엔젤 요양원 이미지 2"></li>
+								<li><img src="img/main/angel_2_1.jpg" alt="엔젤 요양원 이미지 3"></li>
+							</ul>
+							<div class="tagArea">
+								<div class="tagBox">
+									<h4>특/장점</h4>
+									<ul>
+										<li>웃음치료</li>
+										<li>노래교실</li>
+										<li>미술교실</li>
+										<li>문화/공연</li>
+										<li>종교활동</li>
+										<li>일반빌딩</li>
+										<li>자연</li>
+										<li>전원환경</li>
+										<li>정원/산책로</li>
+										<li>재활/물리치료</li>
+										<li>체조교실</li>
+									</ul>
+								</div>
+							</div>
+							<div class="aViewBtn">
+								<button type="button" class="slick-arrow prev">이전</button>
+			
+								<div class="aView-dots"></div>
+			
+								<button type="button" class="slick-arrow next">다음</button>
+							</div>
+						</li>
+						<li>
+							<div class="titleBtn">
+								<button type="button" class="slickOn">요양원 대표 사진</button>
+								<button type="button" class="textOn">특/장점</button>
+							</div>
+							<div class="titleArea">
+								<ul class="mark">
+									<li class="mark_lcms"></li>
+									<li class="mark_best"></li>
+								</ul>
+								<h3>미소 요양원</h3>
+								<p class="star">
+									<span class="ico_rate star_off">
+										<span class="ico_rate star_on" style="width: 80%;"></span>
+									</span>
+									<em class="rate">97</em>
+								</p>
+								<ul class="angelInfo">
+									<li class="addr on">
+										<button type="button">주소</button>
+										<p>경기도 시흥시<br>송악읍 가청로 237-7</p>
+									</li>
+									<li class="p_num">
+										<button type="button">전화번호</button>
+										<p>041) 356 - 1811</p>
+									</li>
+									<li class="people">
+										<button type="button">정원</button>
+										<p>정원 <span>205명</span></p>
+									</li>
+									<li class="director">
+										<button type="button">원장</button>
+										<p>원장 <span>김영희</span></p>
+									</li>
+								</ul>
+							</div>
+							
+							<ul class="imgArea">
+								<li><img src="img/main/angel_3_1.jpg" alt="엔젤 요양원 이미지 1"></li>
+								<li><img src="img/main/angel_3_1.jpg" alt="엔젤 요양원 이미지 2"></li>
+								<li><img src="img/main/angel_1_1.jpg" alt="엔젤 요양원 이미지 3"></li>
+							</ul>
+							<div class="tagArea">
+								<div class="tagBox">
+									<h4>특/장점</h4>
+									<ul>
+										<li>웃음치료</li>
+										<li>노래교실</li>
+										<li>미술교실</li>
+										<li>문화/공연</li>
+										<li>종교활동</li>
+										<li>일반빌딩</li>
+										<li>자연</li>
+										<li>전원환경</li>
+										<li>정원/산책로</li>
+										<li>재활/물리치료</li>
+										<li>체조교실</li>
+									</ul>
+								</div>
+							</div>
+							<div class="aViewBtn">
+								<button type="button" class="slick-arrow prev">이전</button>
+			
+								<div class="aView-dots"></div>
+			
+								<button type="button" class="slick-arrow next">다음</button>
+							</div>
+						</li>
+
+
+						<li>
+							<div class="titleBtn">
+								<button type="button" class="slickOn">요양원 대표 사진</button>
+								<button type="button" class="textOn">특/장점</button>
+							</div>
+							<div class="titleArea">
+								<ul class="mark">
+									<li class="mark_lcms"></li>
+								</ul>
+								<h3>행복요양원</h3>
+								<p class="star">
+									<span class="ico_rate star_off">
+										<span class="ico_rate star_on"></span>
+									</span>
+									<em class="rate">189</em>
+								</p>
+								<ul class="angelInfo">
+									<li class="addr on">
+										<button type="button">주소</button>
+										<p>경기 파주시<br>송악읍 가청로 237-7</p>
+									</li>
+									<li class="p_num">
+										<button type="button">전화번호</button>
+										<p>041) 356 - 1811</p>
+									</li>
+									<li class="people">
+										<button type="button">정원</button>
+										<p>정원 <span>205명</span></p>
+									</li>
+									<li class="director">
+										<button type="button">원장</button>
+										<p>원장 <span>김영희</span></p>
+									</li>
+								</ul>
+							</div>
+							
+							<ul class="imgArea">
+								<li><img src="img/main/angel_4_1.jpg" alt="엔젤 요양원 이미지 1"></li>
+								<li><img src="img/main/angel_1_1.jpg" alt="엔젤 요양원 이미지 2"></li>
+								<li><img src="img/main/angel_2_1.jpg" alt="엔젤 요양원 이미지 3"></li>
+							</ul>
+							<div class="tagArea">
+								<div class="tagBox">
+									<h4>특/장점</h4>
+									<ul>
+										<li>웃음치료</li>
+										<li>노래교실</li>
+										<li>미술교실</li>
+										<li>문화/공연</li>
+										<li>종교활동</li>
+										<li>일반빌딩</li>
+										<li>자연</li>
+										<li>전원환경</li>
+										<li>정원/산책로</li>
+										<li>재활/물리치료</li>
+										<li>체조교실</li>
+									</ul>
+								</div>
+							</div>
+							<div class="aViewBtn">
+								<button type="button" class="slick-arrow prev">이전</button>
+			
+								<div class="aView-dots"></div>
+			
+								<button type="button" class="slick-arrow next">다음</button>
+							</div>
+						</li>
+						<li>
+							<div class="titleBtn">
+								<button type="button" class="slickOn">요양원 대표 사진</button>
+								<button type="button" class="textOn">특/장점</button>
+							</div>
+							<div class="titleArea">
+								<ul class="mark">
+									<li class="mark_best"></li>
+								</ul>
+								<h3>해피니스 요양원</h3>
+								<p class="star">
+									<span class="ico_rate star_off">
+										<span class="ico_rate star_on"></span>
+									</span>
+									<em class="rate">81</em>
+								</p>
+								<ul class="angelInfo">
+									<li class="addr on">
+										<button type="button">주소</button>
+										<p>충남 논산시<br>송악읍 가청로 237-7</p>
+									</li>
+									<li class="p_num">
+										<button type="button">전화번호</button>
+										<p>041) 356 - 1811</p>
+									</li>
+									<li class="people">
+										<button type="button">정원</button>
+										<p>정원 <span>205명</span></p>
+									</li>
+									<li class="director">
+										<button type="button">원장</button>
+										<p>원장 <span>김영희</span></p>
+									</li>
+								</ul>
+							</div>
+							
+							<ul class="imgArea">
+								<li><img src="img/main/angel_5_1.jpg" alt="엔젤 요양원 이미지 1"></li>
+								<li><img src="img/main/angel_3_1.jpg" alt="엔젤 요양원 이미지 2"></li>
+								<li><img src="img/main/angel_4_1.jpg" alt="엔젤 요양원 이미지 3"></li>
+							</ul>
+							<div class="tagArea">
+								<div class="tagBox">
+									<h4>특/장점</h4>
+									<ul>
+										<li>웃음치료</li>
+										<li>노래교실</li>
+										<li>미술교실</li>
+										<li>문화/공연</li>
+										<li>종교활동</li>
+										<li>일반빌딩</li>
+										<li>자연</li>
+										<li>전원환경</li>
+										<li>정원/산책로</li>
+										<li>재활/물리치료</li>
+										<li>체조교실</li>
+									</ul>
+								</div>
+							</div>
+							<div class="aViewBtn">
+								<button type="button" class="slick-arrow prev">이전</button>
+			
+								<div class="aView-dots"></div>
+			
+								<button type="button" class="slick-arrow next">다음</button>
+							</div>
+						</li>
+
+						<li>
+							<div class="titleBtn">
+								<button type="button" class="slickOn">요양원 대표 사진</button>
+								<button type="button" class="textOn">특/장점</button>
+							</div>
+							<div class="titleArea">
+								<ul class="mark">
+									<li class="mark_lcms"></li>
+									<li class="mark_best"></li>
+								</ul>
+								<h3>실버프리</h3>
+								<p class="star">
+									<span class="ico_rate star_off">
+										<span class="ico_rate star_on"></span>
+									</span>
+									<em class="rate">123</em>
+								</p>
+								<ul class="angelInfo">
+									<li class="addr on">
+										<button type="button">주소</button>
+										<p>전라남도 담양군<br>송악읍 가청로 237-7</p>
+									</li>
+									<li class="p_num">
+										<button type="button">전화번호</button>
+										<p>041) 356 - 1811</p>
+									</li>
+									<li class="people">
+										<button type="button">정원</button>
+										<p>정원 <span>205명</span></p>
+									</li>
+									<li class="director">
+										<button type="button">원장</button>
+										<p>원장 <span>김영희</span></p>
+									</li>
+								</ul>
+							</div>
+							
+							<ul class="imgArea">
+								<li><img src="img/main/angel_2_1.jpg" alt="엔젤 요양원 이미지 1"></li>
+								<li><img src="img/main/angel_1_1.jpg" alt="엔젤 요양원 이미지 2"></li>
+								<li><img src="img/main/angel_2_1.jpg" alt="엔젤 요양원 이미지 3"></li>
+							</ul>
+							<div class="tagArea">
+								<div class="tagBox">
+									<h4>특/장점</h4>
+									<ul>
+										<li>웃음치료</li>
+										<li>노래교실</li>
+										<li>미술교실</li>
+										<li>문화/공연</li>
+										<li>종교활동</li>
+										<li>일반빌딩</li>
+										<li>자연</li>
+										<li>전원환경</li>
+										<li>정원/산책로</li>
+										<li>재활/물리치료</li>
+										<li>체조교실</li>
+									</ul>
+								</div>
+							</div>
+							<div class="aViewBtn">
+								<button type="button" class="slick-arrow prev">이전</button>
+			
+								<div class="aView-dots"></div>
+			
+								<button type="button" class="slick-arrow next">다음</button>
+							</div>
+						</li>
+					</ul>
+
+				</div>
+			</div>
+
+			<!-- angelThumb -->
+			<div class="angelThumbWrap">
+				<ul class="angelThumb">
+					<li>
+						<div class="thumbArea">
+							<ul class="mark">
+								<li class="mark_lcms"></li>
+								<li class="mark_best"></li>
+							</ul>
+							<img src="img/main/angel_1_1.jpg" alt="엔젤 요양원 썸네일">
+						</div>
+						<div class="thumbInfo">
+							<h3>엔젤 요양원</h3>
+							<p>충남 당진시</p>
+							<p class="star">
+								<span class="ico_rate star_off">
+									<span class="ico_rate star_on"></span>
+								</span>
+								<em class="rate">189</em>
+							</p>
+						</div>
+					</li>
+					<li>
+						<div class="thumbArea">
+							<ul class="mark">
+								<li class="mark_lcms"></li>
+								<li class="mark_best"></li>
+							</ul>
+							<img src="img/main/angel_2_1.jpg" alt="실버프리 썸네일">
+						</div>
+						<div class="thumbInfo">
+							<h3>실버프리</h3>
+							<p>전남 담양군</p>
+							<p class="star">
+								<span class="ico_rate star_off">
+									<span class="ico_rate star_on"></span>
+								</span>
+								<em class="rate">123</em>
+							</p>
+						</div>
+					</li>
+					<li>
+						<div class="thumbArea">
+							<ul class="mark">
+								<li class="mark_lcms"></li>
+								<li class="mark_best"></li>
+							</ul>
+							<img src="img/main/angel_3_1.jpg" alt="미소요양원 썸네일">
+						</div>
+						<div class="thumbInfo">
+							<h3>미소요양원</h3>
+							<p>경기 시흥시</p>
+							<p class="star">
+								<span class="ico_rate star_off">
+									<span class="ico_rate star_on "style="width:80%"></span>
+								</span>
+								<em class="rate">97</em>
+							</p>
+						</div>
+					</li>
+					<li>
+						<div class="thumbArea">
+							<ul class="mark">
+								<li class="mark_lcms"></li>
+							</ul>
+							<img src="img/main/angel_4_1.jpg" alt="행복요양원 썸네일">
+						</div>
+						<div class="thumbInfo">
+							<h3>행복요양원</h3>
+							<p>경기 파주시</p>
+							<p class="star">
+								<span class="ico_rate star_off">
+									<span class="ico_rate star_on "style="width:80%"></span>
+								</span>
+								<em class="rate">88</em>
+							</p>
+						</div>
+					</li>
+					<li>
+						<div class="thumbArea">
+							<ul class="mark">
+								<li class="mark_best"></li>
+							</ul>
+							<img src="img/main/angel_5_1.jpg" alt="해피니스요양원 썸네일">
+						</div>
+						<div class="thumbInfo">
+							<h3>해피니스요양원</h3>
+							<p>충남 논산시</p>
+							<p class="star">
+								<span class="ico_rate star_off">
+									<span class="ico_rate star_on "style="width:80%"></span>
+								</span>
+								<em class="rate">81</em>
+							</p>
+						</div>
+					</li>
+					<li>
+							<div class="thumbArea">
+								<ul class="mark">
+									<li class="mark_lcms"></li>
+									<li class="mark_best"></li>
+								</ul>
+								<img src="img/main/angel_2_1.jpg" alt="실버프리 썸네일">
+							</div>
+							<div class="thumbInfo">
+								<h3>실버프리</h3>
+								<p>전남 담양군</p>
+								<p class="star">
+									<span class="ico_rate star_off">
+										<span class="ico_rate star_on"></span>
+									</span>
+									<em class="rate">123</em>
+								</p>
+							</div>
+						</li>
+				</ul>
+			</div>
+
+		</div>
+
+		<!-- 추천 & 공지사항 -->
+		<div class="noticeWrap">
+			<div class="w1420">
+				<div class="bannerArea">
+					<h3>추천 요양원</h3>
+					<div class="b_slide_btn">
+						<button type="button" class="slick-arrow prev">이전</button>
+	
+						<div class="b_slide_dot"></div>
+
+						<button type="button" class="slick-arrow next">다음</button>
+					</div>
+					<ul class="bannerSlide">
+						<li>
+							<ul>
+								<li>
+									<a href="#none">
+										<h4>실버프리</h4>
+										<p>전남 담양군</p>
+									</a>
+								</li>
+								<li>
+									<a href="#none">
+										<h4>해피니스 요양원</h4>
+										<p>충남 논산시</p>
+									</a>
+								</li>
+								<li>
+									<a href="#none">
+										<h4>로나요양원</h4>
+										<p>충남 논산시</p>
+									</a>
+								</li>
+								<li>
+									<a href="#none">
+										<h4>에바다요양원</h4>
+										<p>전남 담양군</p>
+									</a>
+								</li>
+								<li>
+									<a href="#none">
+										<h4>소담 요양원</h4>
+										<p>전남 담양군</p>
+									</a>
+								</li>
+								<li>
+									<a href="#none">
+										<h4>나비 요양원</h4>
+										<p>충남 논산시</p>
+									</a>
+								</li>
+								<li>
+									<a href="#none">
+										<h4>아름다운 요양원</h4>
+										<p>충남 논산시</p>
+									</a>
+								</li>
+								<li>
+									<a href="#none">
+										<h4>행복요양원</h4>
+										<p>전남 담양군</p>
+									</a>
+								</li>
+								<li>
+									<a href="#none">
+										<h4>휴마루 시니어타운</h4>
+										<p>전남 담양군</p>
+									</a>
+								</li>
+								<li>
+									<a href="#none">
+										<h4>무지개동산</h4>
+										<p>충남 논산시</p>
+									</a>
+								</li>
+								<li>
+									<a href="#none">
+										<h4>동탄요양원</h4>
+										<p>충남 논산시</p>
+									</a>
+								</li>
+								<li>
+									<a href="#none">
+										<h4>미카엘요양원</h4>
+										<p>전남 담양군</p>
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li>
+									<a href="#none">
+										<h4>요양원 이름</h4>
+										<p>지역</p>
+									</a>
+								</li>
+								<li>
+									<a href="#none">
+										<h4>요양원 이름</h4>
+										<p>지역</p>
+									</a>
+								</li>
+								<li>
+									<a href="#none">
+										<h4>요양원 이름</h4>
+										<p>지역</p>
+									</a>
+								</li>
+								<li>
+									<a href="#none">
+										<h4>요양원 이름</h4>
+										<p>지역</p>
+									</a>
+								</li>
+								<li>
+									<a href="#none">
+										<h4>요양원 이름</h4>
+										<p>지역</p>
+									</a>
+								</li>
+								<li>
+									<a href="#none">
+										<h4>요양원 이름</h4>
+										<p>지역</p>
+									</a>
+								</li>
+								<li>
+									<a href="#none">
+										<h4>요양원 이름</h4>
+										<p>지역</p>
+									</a>
+								</li>
+								<li>
+									<a href="#none">
+										<h4>요양원 이름</h4>
+										<p>지역</p>
+									</a>
+								</li>
+								<li>
+									<a href="#none">
+										<h4>요양원 이름</h4>
+										<p>지역</p>
+									</a>
+								</li>
+								<li>
+									<a href="#none">
+										<h4>요양원 이름</h4>
+										<p>지역</p>
+									</a>
+								</li>
+								<li>
+									<a href="#none">
+										<h4>요양원 이름</h4>
+										<p>지역</p>
+									</a>
+								</li>
+								<li>
+									<a href="#none">
+										<h4>요양원 이름</h4>
+										<p>지역</p>
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="noticeBox">
+					<div class="noticeArea">
+						<h3>공지사항</h3>
+						<div class="noticeList">
+							<ul>
+								<li>
+									<a href="#none">실버엔젤 요양 포털 공지사항을 알려드립니다. </a>
+									<span class="list_date">2019-10-14</span>
+								</li>
+								<li>
+									<a href="#none">실버엔젤 요양 포털 공지사항을 알려드립니다. </a>
+									<span class="list_date">2019-10-14</span>
+								</li>
+								<li>
+									<a href="#none">실버엔젤 요양 포털 공지사항을 알려드립니다. </a>
+									<span class="list_date">2019-10-14</span>
+								</li>
+								<li>
+									<a href="#none">실버엔젤 요양 포털 공지사항을 알려드립니다. </a>
+									<span class="list_date">2019-10-14</span>
+								</li>
+							</ul>
+							<a href="SUB-5-board.html" class="notice_more">더보기</a>
+						</div>
+					</div>
+					<div class="linkArea">
+						<h3>장기요양보험 정보</h3>
+						<ul>
+							<li>
+								<a href="#none">
+									<h4>요양보험제도<strong>안내</strong></h4>
+									<p>바로가기</p>
+								</a>
+							</li>
+							<li>
+								<a href="#none">
+									<h4>장기요양보험<strong>소식</strong></h4>
+									<p>바로가기</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</section>
+	<footer>
+		<div class="w1420">
+			<ul class="f_link">
+				<li><a href="#none">실버엔젤</a></li>
+				<li><a href="#none">이용안내</a></li>
+				<li><a href="SUB-4-quest.html">제휴／문의</a></li>
+				<li><a href="#none">공지사항</a></li>
+			</ul>
+			<div class="f_info">
+				<address>
+						인천광역시 부평구 부평대로 293, 712호 (청천동, 부평테크시티) 전화 : 032-277-9797 팩스 : 032-524-7955 통신판매면허번호 : 제2011-인천부평-00326호
+				</address>
+				<p class="copy">COPYRIGHTⓒ 2019 실버엔젤(Silver Angel) ALL RiGHTS RESERVED.</p>
+			</div>
+	</div>
+	</footer>
+</body>
+</html>
+

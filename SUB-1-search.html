@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-type">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta name="format-detection" content="telephone=no,email=no,address=no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+<title>SUB - 검색페이지</title>
+
+	<link rel="stylesheet" href="css/common.css" media="all">
+	<link rel="stylesheet" href="css/vendor/swiper.min.css">
+	<link rel="stylesheet" href="css/layout.css" media="all">
+	<link rel="stylesheet" href="css/sub.css" media="all">
+
+	<script src="js/jquery.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script src="js/custom.js"></script>
+	<script src="js/sub.js"></script>
+
+</head>
+<body class="sub">
+	<script>
+			function respondCSS() {
+				var windowWidth = $(window).width();
+	
+				if (windowWidth < 641) {
+					$(document.body).addClass('mobile');
+					$(document.body).removeClass('desktop');
+				}
+				else {
+					$(document.body).addClass('desktop');
+					$(document.body).removeClass('mobile');
+				}
+			}
+			$(window).bind("orientationchange load resize", respondCSS);
+			respondCSS();
+		</script>
+		
+	<header>
+		<div class="w1420 headerWrap">
+			<div class="logoArea">
+				<h1><a href="index.html"><img src="img/logo.png" alt="Silverangel"></a></h1>
+			</div>
+			<div class="sub_srchLine">
+				<div class="srchLine">
+				<!-- 검색조건 -->
+					<div class="srchWrap">
+						<div class="srchBox">
+							<label class="hidden" for="srchOption">검색조건</label> 
+							<button type="button" title="검색조건 닫기" class="srcName"><span>검색조건</span></button> 
+							<ul id="srchOption" class="src_list" role="tablist"> 
+								<li role="tab"><a href="#none">검색조건</a></li> 
+								<li role="tab"><a href="#none">제목</a></li> 
+								<li role="tab"><a href="#none">내용</a></li> 
+							</ul> 
+						</div>
+						<input id="srchText" type="text">
+						<button type="button" id="srchBtn">검색</button>
+					</div>
+				</div>
+			</div>
+			<div class="loginArea">
+				<ul>
+					<li><a href="SUB-3-mypage.html">로그인</a></li>
+					<li><a href="#none">회원가입</a></li>
+				</ul>
+			</div>
+		</div>
+		<button id="mMenu" type="button"><span>메뉴열기</span></button>
+		<div class="mLogin">
+			<a class="my_edit" href="#none">관리</a>
+			<div class="profileArea">
+				<img src="img/main/profile.png" alt="프로필 이미지">
+				<strong class="name">Silverangel</strong>
+				<p class="msg">실버엔젤 님 반갑습니다!</p>
+			</div>
+			<ul class="postNumArea">
+				<li>
+					<dl>
+						<dt>나의 관심 요양원 </dt>
+						<dd>12</dd>
+					</dl>	
+				</li>
+				<li>
+					<dl>
+						<dt>내가 작성한 후기 </dt>
+						<dd>0</dd>
+					</dl>	
+				</li>
+			</ul>
+			<ul class="loginLink"></ul>
+			<button class="btn_logout">로그아웃</button>
+		</div>
+	</header>
+
+
+
+
+	<section>
+		<div class="srchLinkWrap w1420">
+			<ul class="srchLink">
+				<li class="first">
+					<a href="#none">
+						<h4>굽은나무</h4>
+						<p>부모님의 요양원 생활을<br>
+							직접 확인해 보세요!</p>
+					</a>
+				</li>
+				<li>
+					<a href="#none">
+						<h4>엔젤헬퍼</h4>
+						<p>부모님의 요양원 생활을<br>
+							직접 확인해 보세요!</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div id="rsltWrap">
+			<div class="w1420">
+				<div class="rsltArea">
+					<p class="note">총 <strong>186</strong>개의 요양원을 찾았습니다.</p>
+					<!-- rslt option -->
+					<div class="rsltOpt">
+						<div class="opt_left">
+							<button type="button" title="카테고리 열기" class="opt_cate_open">카테고리 열기</button>
+							<ul class="opt_cate">
+								<li><a href="#none">전체보기</a></li>
+								<li><a href="#none">평점순</a></li>
+								<li class="_on"><a href="#none">등급순</a></li>
+								<li><a href="#none">거리순</a></li>
+								<li><a href="#none">정원순</a></li>
+							</ul>
+						</div>
+						<div class="opt_right">
+							<!-- <div class="chxArea">
+								<p>내 조건 맞춤</p>
+								<div class="chx">
+									<input type="checkbox" id="cbx" style="display:none"/>
+									<label for="cbx" class="toggle"><span></span></label>  
+								</div>
+							</div> -->
+							<div class="detailWrap">
+								<button class="dtlBtn" type="button"><span>상세옵션</span></button>
+								<div class="detailArea">
+									<!-- <div class="chk_key">
+										<h3>내게 맞는 조건 키워드 선택하기</h3>
+										<ul class="key_list">
+											<li>70대</li>
+											<li>치매</li>
+											<li>불교</li>
+											<li>노래교실</li>
+										</ul>
+										<div class="key_src">
+											<label for="key_src" class="hidden">키워드 검색</label>
+											<input id="key_src" type="text" placeholder="원하시는 직접 키워드를 입력하세요. ">
+											<input type="button" id="key_srcBtn" value="확인">
+										</div>
+									</div> -->
+									<div class="chk_detail">
+										<h3>상세 옵션</h3>
+										<dl class="slct">
+											<dt>지역</dt>
+											<dd>
+												<div class="srchWrap">
+													<div class="srchBox"> 
+														<label class="hidden" for="ch_local">지역 선택</label> 
+														<button type="button" title="지역선택 닫기" class="srcName"><span>지역 선택</span></button> 
+														<ul id="ch_local" class="src_list" role="tablist"> 
+															<li role="tab"><a href="#none">서울</a></li> 
+															<li role="tab"><a href="#none">강원</a></li> 
+															<li role="tab"><a href="#none">경기</a></li> 
+														</ul> 
+													</div>
+													<div class="srchBox"> 
+														<label class="hidden" for="ch_local">시/구/군 선택</label> 
+														<button type="button" title="시/구/군 선택 닫기" class="srcName"><span>시/구/군 선택</span></button> 
+														<ul id="ch_local" class="src_list" role="tablist"> 
+															<li role="tab"><a href="#none">강남구</a></li> 
+															<li role="tab"><a href="#none">강동구</a></li> 
+															<li role="tab"><a href="#none">강남구</a></li> 
+															<li role="tab"><a href="#none">강북구</a></li> 
+															<li role="tab"><a href="#none">강서구</a></li> 
+															<li role="tab"><a href="#none">관악구</a></li> 
+															<li role="tab"><a href="#none">광진구</a></li> 
+															<li role="tab"><a href="#none">구로구</a></li> 
+															<li role="tab"><a href="#none">금천구</a></li> 
+															<li role="tab"><a href="#none">노원구</a></li> 
+														</ul>
+													</div>
+												</div>
+											</dd>
+										</dl>
+
+										<dl>
+											<dt>연령대</dt>
+											<dd>
+												<ul class="chk_list">
+													<li><input type="radio" id="age_0" name="age_chk" checked><label for="age_0">전체</label></li>
+													<li><input type="radio" id="age_1" name="age_chk"><label for="age_1">60대</label></li>
+													<li><input type="radio" id="age_2" name="age_chk"><label for="age_2">70대</label></li>
+													<li><input type="radio" id="age_3" name="age_chk"><label for="age_3">80대</label></li>
+													<li><input type="radio" id="age_4" name="age_chk"><label for="age_4">85세 이상</label></li>
+												</ul>
+											</dd>
+										</dl>
+
+										<dl>
+											<dt>종교</dt>
+											<dd>
+												<ul class="chk_list">
+													<li><input type="radio" id="rlg_0" name="rlg_chk" checked><label for="rlg_0">전체</label></li>
+													<li><input type="radio" id="rlg_1" name="rlg_chk"><label for="rlg_1">불교</label></li>
+													<li><input type="radio" id="rlg_2" name="rlg_chk"><label for="rlg_2">기독교</label></li>
+													<li><input type="radio" id="rlg_3" name="rlg_chk"><label for="rlg_3">천주교</label></li>
+												</ul>
+											</dd>
+										</dl>
+
+										<dl>
+											<dt>주거형태</dt>
+											<dd>
+												<ul class="chk_list">
+													<li><input type="radio" id="house_0" name="house_chk" checked><label for="house_0">전체</label></li>
+													<li><input type="radio" id="house_1" name="house_chk"><label for="house_1">주택형</label></li>
+													<li><input type="radio" id="house_2" name="house_chk"><label for="house_2">일반빌딩</label></li>
+													<li><input type="radio" id="house_3" name="house_chk"><label for="house_3">단독빌딩</label></li>
+												</ul>
+											</dd>
+										</dl>
+
+										<dl>
+											<dt>프로그램<p>*중복선택가능</p></dt>
+											<dd>
+												<ul class="chk_list">
+													<li><input type="checkbox" id="program_0" checked><label for="program_0">전체</label></li>
+													<li><input type="checkbox" id="program_1"><label for="program_1">노래교실</label></li>
+													<li><input type="checkbox" id="program_2"><label for="program_2">체조교실</label></li>
+													<li><input type="checkbox" id="program_3"><label for="program_3">미술치료</label></li>
+													<li><input type="checkbox" id="program_4"><label for="program_4">웃음치료</label></li>
+												</ul>
+												<label>
+											</dd>
+										</dl>
+										
+										<div class="btn_detail">									
+											<input type="button" id="key_clear" value="초기화">
+											<input type="button" id="key_fin" value="선택 완료">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- rsltKey -->
+					<div class="rsltKey">
+						<button type="button" class="rsltKey-arrow rsltKey-next">다음 키워드로 이동</button>
+						<div class="swiper-container">							
+							<ul class="swiper-wrapper">
+								<li class="_on"><a href="#none">전체</a></li>
+								<li><a href="#none">불교</a></li>
+								<li><a href="#none">산책</a></li>
+								<li><a href="#none">특별관리</a></li>
+								<li><a href="#none">엔젤시스템</a></li>
+								<li><a href="#none">물리치료</a></li>
+								<li><a href="#none">치매</a></li>
+								<li><a href="#none">70대</a></li>
+								<li><a href="#none">정원</a></li>
+								<li><a href="#none">친절</a></li>
+								<li><a href="#none">노래교실</a></li>
+								<li><a href="#none">웃음치료</a></li>
+								<li><a href="#none">생활체조</a></li>
+								<li><a href="#none">숲길</a></li>
+							</ul>							
+						</div>
+
+						<button type="button" class="rsltKey-arrow rsltKey-prev">이전 키워드로 이동</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="srchResult" class="w1420">
+			<ul>
+				<li>
+					<a href="SUB-2-introduce.html">
+						<div class="thumbArea">
+							<ul class="mark">
+								<li class="mark_lcms"></li>
+								<li class="mark_best"></li>
+							</ul>
+							<img src="img/sub/rslt_thumb_1.jpg" alt="재)한국기독교장로회복지재단 썸네일">
+						</div>
+						<div class="thumbInfo">
+							<h3>재)한국기독교장로회복지재단</h3>
+							<p>충청남도 당진시</p>
+							<ul class="rslt_keyword">
+								<li>식단</li>
+								<li>종교</li>
+								<li>특별관리</li>
+							</ul>
+							<p class="star">
+								<span class="ico_rate star_off">
+									<span class="ico_rate star_on"></span>
+								</span>
+							</p>
+							<button type="button" class="heart on">즐겨찾기</button>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#none">
+						<div class="thumbArea">
+							<ul class="mark">
+								<li class="mark_lcms"></li>
+								<li class="mark_best"></li>
+							</ul>
+							<img src="img/sub/rslt_thumb_2.jpg" alt="한나요양원 썸네일">
+						</div>
+						<div class="thumbInfo">
+							<h3>한나요양원</h3>
+							<p>경기도 이천시</p>
+							<ul class="rslt_keyword">
+								<li>식단</li>
+								<li>종교</li>
+								<li>특별관리</li>
+							</ul>
+							<p class="star">
+								<span class="ico_rate star_off">
+									<span class="ico_rate star_on"></span>
+								</span>
+							</p>
+							<button type="button" class="heart">즐겨찾기</button>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#none">
+						<div class="thumbArea">
+							<ul class="mark">
+								<li class="mark_lcms"></li>
+								<li class="mark_best"></li>
+							</ul>
+							<img src="img/sub/rslt_thumb_3.jpg" alt="성심노인요양원 썸네일">
+						</div>
+						<div class="thumbInfo">
+							<h3>성심노인요양원</h3>
+							<p>충청북도 청주시</p>
+							<ul class="rslt_keyword">
+								<li>식단</li>
+								<li>종교</li>
+								<li>특별관리</li>
+							</ul>
+							<p class="star">
+								<span class="ico_rate star_off">
+									<span class="ico_rate star_on"></span>
+								</span>
+							</p>
+							<button type="button" class="heart">즐겨찾기</button>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#none">
+						<div class="thumbArea">
+							<ul class="mark">
+								<li class="mark_lcms"></li>
+								<li class="mark_best"></li>
+							</ul>
+							<img src="img/sub/rslt_thumb_4.jpg" alt="재)해피나라노인전문요양원 썸네일">
+						</div>
+						<div class="thumbInfo">
+							<h3>해피나라노인전문요양원</h3>
+							<p>경기도 안양시</p>
+							<ul class="rslt_keyword">
+								<li>식단</li>
+								<li>종교</li>
+								<li>특별관리</li>
+							</ul>
+							<p class="star">
+								<span class="ico_rate star_off">
+									<span class="ico_rate star_on"></span>
+								</span>
+							</p>
+							<button type="button" class="heart">즐겨찾기</button>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#none">
+						<div class="thumbArea">
+							<ul class="mark">
+								<li class="mark_lcms"></li>
+								<li class="mark_best"></li>
+							</ul>
+							<img src="img/sub/rslt_thumb_3.jpg" alt="성심노인요양원 썸네일">
+						</div>
+						<div class="thumbInfo">
+							<h3>성심노인요양원</h3>
+							<p>충청북도 청주시</p>
+							<ul class="rslt_keyword">
+								<li>식단</li>
+								<li>종교</li>
+								<li>특별관리</li>
+							</ul>
+							<p class="star">
+								<span class="ico_rate star_off">
+									<span class="ico_rate star_on"></span>
+								</span>
+							</p>
+							<button type="button" class="heart">즐겨찾기</button>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#none">
+						<div class="thumbArea">
+							<ul class="mark">
+								<li class="mark_lcms"></li>
+								<li class="mark_best"></li>
+							</ul>
+							<img src="img/sub/rslt_thumb_4.jpg" alt="재)해피나라노인전문요양원 썸네일">
+						</div>
+						<div class="thumbInfo">
+							<h3>해피나라노인전문요양원</h3>
+							<p>경기도 안양시</p>
+							<ul class="rslt_keyword">
+								<li>식단</li>
+								<li>종교</li>
+								<li>특별관리</li>
+							</ul>
+							<p class="star">
+								<span class="ico_rate star_off">
+									<span class="ico_rate star_on"></span>
+								</span>
+							</p>
+							<button type="button" class="heart">즐겨찾기</button>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#none">
+						<div class="thumbArea">
+							<ul class="mark">
+								<li class="mark_lcms"></li>
+								<li class="mark_best"></li>
+							</ul>
+							<img src="img/sub/rslt_thumb_1.jpg" alt="재)한국기독교장로회복지재단 썸네일">
+						</div>
+						<div class="thumbInfo">
+							<h3>재)한국기독교장로회복지재단</h3>
+							<p>충청남도 당진시</p>
+							<ul class="rslt_keyword">
+								<li>식단</li>
+								<li>종교</li>
+								<li>특별관리</li>
+							</ul>
+							<p class="star">
+								<span class="ico_rate star_off">
+									<span class="ico_rate star_on"></span>
+								</span>
+							</p>
+							<button type="button" class="heart on">즐겨찾기</button>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#none">
+						<div class="thumbArea">
+							<ul class="mark">
+								<li class="mark_lcms"></li>
+								<li class="mark_best"></li>
+							</ul>
+							<img src="img/sub/rslt_thumb_2.jpg" alt="한나요양원 썸네일">
+						</div>
+						<div class="thumbInfo">
+							<h3>한나요양원</h3>
+							<p>경기도 이천시</p>
+							<ul class="rslt_keyword">
+								<li>식단</li>
+								<li>종교</li>
+								<li>특별관리</li>
+							</ul>
+							<p class="star">
+								<span class="ico_rate star_off">
+									<span class="ico_rate star_on"></span>
+								</span>
+							</p>
+							<button type="button" class="heart">즐겨찾기</button>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#none">
+						<div class="thumbArea">
+							<ul class="mark">
+								<li class="mark_lcms"></li>
+								<li class="mark_best"></li>
+							</ul>
+							<img src="img/sub/rslt_thumb_3.jpg" alt="성심노인요양원 썸네일">
+						</div>
+						<div class="thumbInfo">
+							<h3>성심노인요양원</h3>
+							<p>충청북도 청주시</p>
+							<ul class="rslt_keyword">
+								<li>식단</li>
+								<li>종교</li>
+								<li>특별관리</li>
+							</ul>
+							<p class="star">
+								<span class="ico_rate star_off">
+									<span class="ico_rate star_on"></span>
+								</span>
+							</p>
+							<button type="button" class="heart">즐겨찾기</button>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#none">
+						<div class="thumbArea">
+							<ul class="mark">
+								<li class="mark_lcms"></li>
+								<li class="mark_best"></li>
+							</ul>
+							<img src="img/sub/rslt_thumb_4.jpg" alt="재)해피나라노인전문요양원 썸네일">
+						</div>
+						<div class="thumbInfo">
+							<h3>해피나라노인전문요양원</h3>
+							<p>경기도 안양시</p>
+							<ul class="rslt_keyword">
+								<li>식단</li>
+								<li>종교</li>
+								<li>특별관리</li>
+							</ul>
+							<p class="star">
+								<span class="ico_rate star_off">
+									<span class="ico_rate star_on"></span>
+								</span>
+							</p>
+							<button type="button" class="heart">즐겨찾기</button>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#none">
+						<div class="thumbArea">
+							<ul class="mark">
+								<li class="mark_lcms"></li>
+								<li class="mark_best"></li>
+							</ul>
+							<img src="img/sub/rslt_thumb_1.jpg" alt="재)한국기독교장로회복지재단 썸네일">
+						</div>
+						<div class="thumbInfo">
+							<h3>재)한국기독교장로회복지재단</h3>
+							<p>충청남도 당진시</p>
+							<ul class="rslt_keyword">
+								<li>식단</li>
+								<li>종교</li>
+								<li>특별관리</li>
+							</ul>
+							<p class="star">
+								<span class="ico_rate star_off">
+									<span class="ico_rate star_on"></span>
+								</span>
+							</p>
+							<button type="button" class="heart on">즐겨찾기</button>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#none">
+						<div class="thumbArea">
+							<ul class="mark">
+								<li class="mark_lcms"></li>
+								<li class="mark_best"></li>
+							</ul>
+							<img src="img/sub/rslt_thumb_2.jpg" alt="한나요양원 썸네일">
+						</div>
+						<div class="thumbInfo">
+							<h3>한나요양원</h3>
+							<p>경기도 이천시</p>
+							<ul class="rslt_keyword">
+								<li>식단</li>
+								<li>종교</li>
+								<li>특별관리</li>
+							</ul>
+							<p class="star">
+								<span class="ico_rate star_off">
+									<span class="ico_rate star_on"></span>
+								</span>
+							</p>
+							<button type="button" class="heart">즐겨찾기</button>
+						</div>
+					</a>
+				</li>
+			</ul>
+			<div class="btnBox">
+				<a href="#none" class="_btn moreBtn">더보기</a>
+			</div>
+		</div>
+	</section>
+
+
+
+	<footer>
+		<div class="w1420">
+			<ul class="f_link">
+				<li><a href="#none">실버엔젤</a></li>
+				<li><a href="#none">이용안내</a></li>
+				<li><a href="#none">제휴신청</a></li>
+				<li><a href="#none">요양원등록</a></li>
+				<li><a href="#none">문의하기</a></li>
+			</ul>
+			<div class="f_info">
+				<address>
+						인천광역시 부평구 부평대로 293, 712호 (청천동, 부평테크시티) 전화 : 032-277-9797 팩스 : 032-524-7955 통신판매면허번호 : 제2011-인천부평-00326호
+				</address>
+				<p class="copy">COPYRIGHTⓒ 2019 실버엔젤(Silver Angel) ALL RiGHTS RESERVED.</p>
+			</div>
+	</div>
+	</footer>
+</body>
+</html>
+

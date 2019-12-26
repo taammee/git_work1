@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-type">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta name="format-detection" content="telephone=no,email=no,address=no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+<title>SUB - 마이페이지</title>
+
+	<link rel="stylesheet" href="css/common.css" media="all">
+	<link rel="stylesheet" href="css/vendor/swiper.min.css">
+	<link rel="stylesheet" href="css/layout.css" media="all">
+	<link rel="stylesheet" href="css/mypage.css" media="all">
+
+	<script src="js/jquery.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script src="js/custom.js"></script>
+	<script src="js/sub.js"></script>
+
+</head>
+<body class="sub">
+	<script>
+			function respondCSS() {
+				var windowWidth = $(window).width();
+	
+				if (windowWidth < 641) {
+					$(document.body).addClass('mobile');
+					$(document.body).removeClass('desktop');
+				}
+				else {
+					$(document.body).addClass('desktop');
+					$(document.body).removeClass('mobile');
+				}
+			}
+			$(window).bind("orientationchange load resize", respondCSS);
+			respondCSS();
+		</script>
+		
+	<header>
+		<div class="w1420 headerWrap">
+			<div class="logoArea">
+				<h1><a href="index.html"><img src="img/logo.png" alt="Silverangel"></a></h1>
+			</div>
+			<div class="sub_srchLine">
+				<div class="srchLine">
+				<!-- 검색조건 -->
+					<div class="srchWrap">
+						<div class="srchBox">
+							<label class="hidden" for="srchOption">검색조건</label> 
+							<button type="button" title="검색조건 닫기" class="srcName"><span>검색조건</span></button> 
+							<ul id="srchOption" class="src_list" role="tablist"> 
+								<li role="tab"><a href="#none">검색조건</a></li> 
+								<li role="tab"><a href="#none">제목</a></li> 
+								<li role="tab"><a href="#none">내용</a></li> 
+							</ul> 
+						</div>
+						<input id="srchText" type="text">
+						<button type="button" id="srchBtn">검색</button>
+					</div>
+				</div>
+			</div>
+			<div class="loginArea">
+				<ul>
+					<li class="log-in"><button type="button"><strong>Silverangel</strong>님</button>
+						<div class="mypageBox">
+							<img src="img/sub/rvw_profile.png" alt="" class="mp_user">
+							<div class="infoArea">
+								<p class="name"><span>이엔젤</span>님</p>
+								<a href="SUB-3-mypage.html">마이페이지</a>
+							</div>
+							<div class="postCount">
+								<ul>
+									<li class="fav">
+										<p>나의 관심 요양원 <span>12</span></p>
+									</li>
+									<li class="post">
+										<p>내가 작성한 후기 <span>1</span></p>
+									</li>
+								</ul>
+							</div>
+							<h5>최근 본 요양원</h5>
+							<ul class="rct_center">
+								<li><img src="img/sub/rct_center.jpg" alt=""></li>
+								<li><img src="img/sub/rct_center2.jpg" alt=""></li>
+								<li><img src="img/sub/rct_center3.jpg" alt=""></li>
+							</ul>
+						</div>
+					</li>
+					<li><a href="#none">로그아웃</a></li>
+				</div>
+			</div>
+		</div>
+		<button id="mMenu" type="button"><span>메뉴열기</span></button>
+		<div class="mLogin">
+			<div class="profileArea">
+				<img src="img/main/profile.png" alt="프로필 이미지">
+				<strong class="name">Silverangel</strong>
+				<p class="msg">실버엔젤 님 반갑습니다!</p>
+			</div>
+			<ul class="postNumArea">
+				<li>
+					<dl>
+						<dt>나의 관심 요양원 </dt>
+						<dd>12</dd>
+					</dl>	
+				</li>
+				<li>
+					<dl>
+						<dt>내가 작성한 후기 </dt>
+						<dd>0</dd>
+					</dl>	
+				</li>
+			</ul>
+			<ul class="loginLink"></ul>
+			<ul class="mypageNav">
+				<li>
+					<a href="SUB-3-mypage.html">마이페이지</a>
+				</li>
+				<li>
+					<a href="SUB-3-user_edit.html">회원정보 수정</a>
+				</li>
+				<li>
+					<a href="SUB-3-password_edit.html">비밀번호 변경</a>
+				</li>
+			</ul>
+			<button class="btn_logout">로그아웃</button>
+		</div>
+	</header>
+
+
+
+
+	<section class="mypage">
+		<div class="srchLinkWrap w1420">
+			<ul class="srchLink">
+				<li class="first">
+					<a href="#none">
+						<h4>굽은나무</h4>
+						<p>부모님의 요양원 생활을<br>
+							직접 확인해 보세요!</p>
+					</a>
+				</li>
+				<li>
+					<a href="#none">
+						<h4>엔젤헬퍼</h4>
+						<p>부모님의 요양원 생활을<br>
+							직접 확인해 보세요!</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="mypageWrap w1420">
+			<h2>마이페이지</h2>
+			<div class="sideBox">
+				<div class="myInfo">
+					<img src="img/sub/rvw_profile.png" alt="" class="myInfo_img">
+					<p class="center_name">Silverangel</p>
+					<p class="user_name"><strong>이엔젤</strong>님</p>
+				</div>
+				<ul class="sideNav">
+					<li class="_on">
+						<a href="SUB-3-mypage.html">마이페이지</a>
+					</li>
+					<li>
+						<a href="SUB-3-user_edit.html">회원정보 수정</a>
+					</li>
+					<li>
+						<a href="SUB-3-password_edit.html">비밀번호 변경</a>
+					</li>
+				</ul>
+			</div>
+			<div class="contentsArea">
+				<div class="postBox _album">
+					<div class="postTitle">
+						<h4>나의 관심 요양원</h4>
+						<p class="count">12</p>
+						<a href="SUB-3-mypage_bookmark.html" class="moreBtn">더 보기</a>
+					</div>
+					<div class="postList">
+						<ul>
+							<li>
+								<a href="#none">
+									<img src="img/sub/postList_1.jpg" alt="">
+									<p class="center_name">실버 엔젤 요양원</p>
+									<p class="center_loc">충청남도 당진시</p>
+								</a>
+							</li>
+							<li>
+								<a href="#none">
+									<img src="img/sub/postList_2.jpg" alt="">
+									<p class="center_name">성심노인요양원</p>
+									<p class="center_loc">충청북도 청주시</p>
+								</a>
+							</li>
+							<li>
+								<a href="#none">
+									<img src="img/sub/postList_3.jpg" alt="">
+									<p class="center_name">해피나라노인전문요양원</p>
+									<p class="center_loc">경기도 안양시</p>
+								</a>
+							</li>
+							<li>
+								<a href="#none">
+									<img src="img/sub/postList_4.jpg" alt="">
+									<p class="center_name">재)한국기독교장로회복지한국기독교장로회복지</p>
+									<p class="center_loc">충청북도 당진시</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="postBox _review">
+					<div class="postTitle">
+						<h4>내가 작성한 후기</h4>
+						<p class="count">0</p>
+						<a href="#none" class="moreBtn">더 보기</a>
+					</div>
+					<div class="postList">
+						<ul>
+							<li class="_none">
+								작성된 후기가 없습니다. 첫번째 후기를 작성해 주세요 : )
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="postBox _review">
+					<div class="postTitle">
+						<h4>내가 작성한 후기</h4>
+						<p class="count">3</p>
+						<a href="#none" class="moreBtn">더 보기</a>
+					</div>
+					<div class="postList">
+						<ul>
+							<li>
+								<a href="#none">
+									<img src="img/sub/postList_1.jpg" alt="">
+									<p class="center_name">실버 엔젤 요양원</p>
+									<p class="center_loc">충청남도 당진시</p>
+								</a>
+							</li>
+							<li>
+								<a href="#none">
+									<img src="img/sub/postList_2.jpg" alt="">
+									<p class="center_name">성심노인요양원</p>
+									<p class="center_loc">충청북도 청주시</p>
+								</a>
+							</li>
+							<li>
+								<a href="#none">
+									<img src="img/sub/postList_2.jpg" alt="">
+									<p class="center_name">성심노인요양원</p>
+									<p class="center_loc">충청북도 청주시</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<footer>
+		<div class="w1420">
+			<ul class="f_link">
+				<li><a href="#none">실버엔젤</a></li>
+				<li><a href="#none">이용안내</a></li>
+				<li><a href="#none">제휴신청</a></li>
+				<li><a href="#none">요양원등록</a></li>
+				<li><a href="#none">문의하기</a></li>
+			</ul>
+			<div class="f_info">
+				<address>
+						인천광역시 부평구 부평대로 293, 712호 (청천동, 부평테크시티) 전화 : 032-277-9797 팩스 : 032-524-7955 통신판매면허번호 : 제2011-인천부평-00326호
+				</address>
+				<p class="copy">COPYRIGHTⓒ 2019 실버엔젤(Silver Angel) ALL RiGHTS RESERVED.</p>
+			</div>
+	</div>
+	</footer>
+</body>
+</html>
+

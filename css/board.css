@@ -1,0 +1,180 @@
+/**
+ * *board 
+*/
+body.sub header + section {margin: 7px 0 0 0; padding: 87px 0 80px;}
+
+
+/* 
+    section:: boardPage
+*/
+section.boardPage {background-color: #f3f3f3;}
+
+.boardWrap {
+    background-color: #fff;
+    padding: 70px;
+    width: 90%;
+}
+.boardWrap h2 {
+    font-size: 1.6em; font-weight: 500; text-align: center;
+}
+.boardWrap .tableWrap .postNum {
+    font-size: 0.8em; font-weight: 400;
+}
+.tableWrap,
+.viewWrap {
+    width: 90%; max-width: 1000px;
+    margin: 30px auto;
+}
+.tableWrap table {
+    border-top: 2px solid #4d4d4d;
+    font-size: 0.8em; text-align: center;
+    margin: 10px 0 40px;
+}
+.tableWrap table ._num {width: 10%;}
+.tableWrap table ._title {width: auto;}
+.tableWrap table ._date {width: 10%;}
+.tableWrap table ._hit {width: 10%;}
+
+.tableWrap table thead th {
+    font-weight: 500;
+    border-bottom: 1px solid #89948e;
+    padding: 4px;
+}
+.tableWrap table tbody td {
+    color: #767676; font-weight: 200;
+    border-bottom: 1px solid #dbdfdd;
+    padding: 8px;
+}
+.tableWrap table tbody tr:last-child td {border-color: #89948e;}
+.tableWrap table tbody td._title {
+    text-align: left;
+}
+.tableWrap table tbody td._title a {
+    color: #272727; font-weight: 300;
+    display: block; width: 95%; overflow: hidden;
+    text-overflow: ellipsis; white-space: nowrap;
+}
+.tableWrap .paging {text-align: center;}
+.tableWrap a.pageBtn {
+    display: inline-block; text-indent: -5000px;
+    width: 17px; height: 17px;
+    background: url('../img/sub/board_paging.png') left center no-repeat;
+    vertical-align: middle
+}
+.tableWrap a.pageBtn._prev {background-position: -23px center;}
+.tableWrap a.pageBtn._next {background-position: -47px center;}
+.tableWrap a.pageBtn._last {background-position: right center;}
+.tableWrap .paging ul {
+    display: inline-block; vertical-align: middle;
+    margin: 0 10px 2px;
+}
+.tableWrap .paging ul li {display: inline-block;}
+.tableWrap .paging ul li a {
+    display: block; width: 25px;
+    color: #767676; font-size: 0.850em; font-weight: 300; text-align: center;
+    border-radius: 50%;
+}
+.tableWrap .paging ul li.on a {
+    color: #fff; background-color: #01df70;
+}
+
+/* viewPage */
+.viewWrap .titleArea {
+    overflow: hidden;
+    border-top: 2px solid #4d4d4d;
+    border-bottom: 1px solid #89948e;
+    padding: 17px 20px;
+}
+.viewWrap .titleArea h3 {
+    float: left; font-size: 1.2em; font-weight: 500;
+}
+.viewWrap .titleArea .postInfo {
+    float: right;
+}
+.viewWrap .titleArea dl {
+    display: inline-block;
+    margin-left: 40px;
+}
+.viewWrap .titleArea dt {
+    display: inline-block; vertical-align: middle;
+    font-size: 0.8em; font-weight: 500;
+}
+.viewWrap .titleArea dd {
+    display: inline-block; vertical-align: middle;
+    font-size: 0.75em; font-weight: 200;
+    margin-left: 20px;
+}
+.viewWrap .contentArea {
+    padding: 30px 20px; font-size: 0.8em; line-height: 1.7;
+    border-bottom: 1px solid #89948e;
+    min-height: 270px;
+}
+
+.viewWrap .fileArea dl {
+    overflow: hidden;
+    padding: 15px 20px 15px 0;
+    border-bottom: 1px solid #89948e;
+}
+.viewWrap .fileArea dt {
+    color: #414141; font-size: 0.9em; font-weight: 400; text-align: center;
+    float: left; width: 120px;
+}
+.viewWrap .fileArea dd {
+    float: right; width: calc(100% - 150px);
+    color: #414141; font-size: 0.8em; font-weight: 200;
+}
+.viewWrap .fileArea dd li {
+    background: url('../img/sub/file_icon.png') left center no-repeat;
+    padding-left: 35px;
+}
+.viewWrap .fileArea dd a {
+    float: right;
+    color: #b2b2b2; font-weight: 500;
+    background: url('../img/sub/down_icon.png') right center no-repeat;
+    padding: 2px 40px 2px 0;
+}
+
+.viewWrap .btnBox {margin-top: 40px;}
+.viewWrap .pageNav {
+    margin-top: 40px;
+    border-top: 1px solid #c4cac7;
+}
+.viewWrap .pageNav dl {
+    border-bottom: 1px solid #c4cac7;
+    padding: 11px;
+}
+.viewWrap .pageNav dt {
+    display: inline-block; vertical-align: middle;
+    font-size: 0.8em; font-weight: 500;
+    margin-left: 20px;
+    width: 75px;
+}
+.viewWrap .pageNav dt:before {
+    content: ''; display: inline-block;
+    width: 17px; height: 10px;
+    background: url('../img/sub/pageNav_arrow.png') center top no-repeat;
+    margin: 0 15px 2px 0;
+}
+.viewWrap .pageNav ._nextNav dt:before {background-position: center bottom;}
+.viewWrap .pageNav dd {
+    display: inline-block; vertical-align: middle;
+    font-size: 0.75em; font-weight: 300;
+    margin-left: 20px;
+    width: calc(100% - 120px);
+}
+.viewWrap .pageNav dd a {
+    color: #767676;
+    display: block; width: 100%; overflow: hidden;
+    text-overflow: ellipsis; white-space: nowrap;
+}
+
+/* ---------------------------------------------------- 반응형 */
+@media (max-width: 980px) {
+    body.sub header + section {margin-top: 0;}
+    .boardWrap,
+    .viewWrap {width: 90%;padding: 40px 10px;}
+}
+body.mobile .boardWrap,
+body.mobile .viewWrap {padding: 40px 10px;}
+body.mobile .tableWrap ._date {width: 20%;}
+body.mobile .tableWrap ._hit {display: none;}

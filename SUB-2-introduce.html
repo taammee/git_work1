@@ -1,0 +1,1781 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-type">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta name="format-detection" content="telephone=no,email=no,address=no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+<title>SUB - 소개페이지</title>
+
+	<link rel="stylesheet" href="css/common.css" media="all">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+	<link rel="stylesheet" href="css/layout.css" media="all">
+	<link rel="stylesheet" href="css/sub.css" media="all">
+
+	<script src="js/jquery.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+	<script src="js/custom.js"></script>
+	<script src="js/sub.js"></script>
+
+</head>
+<body class="sub">
+	<script>
+			function respondCSS() {
+				var windowWidth = $(window).width();
+	
+				if (windowWidth < 641) {
+					$(document.body).addClass('mobile');
+					$(document.body).removeClass('desktop');
+				}
+				else {
+					$(document.body).addClass('desktop');
+					$(document.body).removeClass('mobile');
+				}
+			}
+			$(window).bind("orientationchange load resize", respondCSS);
+			respondCSS();
+		</script>
+		
+	<header>
+		<div class="w1420 headerWrap">
+			<div class="logoArea">
+				<h1><a href="index.html"><img src="img/logo.png" alt="Silverangel"></a></h1>
+			</div>
+			<div class="sub_srchLine">
+				<div class="srchLine">
+				<!-- 검색조건 -->
+					<div class="srchWrap">
+						<div class="srchBox">
+							<label class="hidden" for="srchOption">검색조건</label> 
+							<button type="button" title="검색조건 닫기" class="srcName"><span>검색조건</span></button> 
+							<ul id="srchOption" class="src_list" role="tablist"> 
+								<li role="tab"><a href="#none">검색조건</a></li> 
+								<li role="tab"><a href="#none">제목</a></li> 
+								<li role="tab"><a href="#none">내용</a></li> 
+							</ul> 
+						</div>
+						<input id="srchText" type="text">
+						<button type="button" id="srchBtn">검색</button>
+					</div>
+				</div>
+			</div>
+			<div class="loginArea">
+				<ul>
+					<li><a href="SUB-3-mypage.html">로그인</a></li>
+					<li><a href="#none">회원가입</a></li>
+				</ul>
+			</div>
+		</div>
+		<button id="mMenu" type="button"><span>메뉴열기</span></button>
+		<div class="mLogin">
+			<div class="profileArea">
+				<img src="img/main/profile.png" alt="프로필 이미지">
+				<strong class="name">Silverangel</strong>
+				<p class="msg">실버엔젤 님 반갑습니다!</p>
+			</div>
+			<ul class="postNumArea">
+				<li>
+					<dl>
+						<dt>나의 관심 요양원 </dt>
+						<dd>12</dd>
+					</dl>	
+				</li>
+				<li>
+					<dl>
+						<dt>내가 작성한 후기 </dt>
+						<dd>0</dd>
+					</dl>	
+				</li>
+			</ul>
+			<ul class="loginLink"></ul>
+			<button class="btn_logout">로그아웃</button>
+		</div>
+	</header>
+
+
+
+
+	<section class="detailPage">
+		<div class="srchLinkWrap w1420">
+			<ul class="srchLink">
+				<li class="first">
+					<a href="#none">
+						<h4>굽은나무</h4>
+						<p>부모님의 요양원 생활을<br>
+							직접 확인해 보세요!</p>
+					</a>
+				</li>
+				<li>
+					<a href="#none">
+						<h4>엔젤헬퍼</h4>
+						<p>부모님의 요양원 생활을<br>
+							직접 확인해 보세요!</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<div id="detailPage" class="w1420">
+			<div class="detailTitle">
+				<h3>실버 엔젤 요양원</h3>
+				<div class="dt_right">
+					<p class="note"></p>
+					<ul class="fs_btn">
+						<li class="fav">
+							<button type="button">즐겨찾기</button>
+						</li>
+						<li class="share">
+							<button type="button">공유하기</button>
+						</li>
+						<li class="contact">
+							<a href="tel:번호">전화걸기</a>
+						</li>
+					</ul>
+				</div>
+				<div class="dt_left">
+					<div class="dt_mark">
+						<ul class="mark">
+							<li class="mark_lcms"></li>
+							<li class="mark_best"></li>
+						</ul>
+					</div>
+					<div class="dt_keyword">
+						<h4><strong>‘실버 엔젤 요양원’</strong> 의 주요 키워드</h4>
+						<ul class="rslt_keyword">
+							<li>식단</li>
+							<li>종교</li>
+							<li>특별관리</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="detailReview">
+				<p class="star">
+					<span class="ico_rate star_off">
+						<span class="ico_rate star_on"></span>
+					</span>
+					<em class="rate">189</em>
+				</p>
+				<div class="review_text">
+				<p class="text">“위치도 좋고 직원들이 친절해서 참 좋았어요.”</p>
+				<a href="#none" class="all_review">전체 후기 보기</a>
+				</div>
+			</div>
+			<div class="detailInfo">
+				<ul class="angelInfo">
+					<li class="addr">
+						<dl>
+							<dt>주소</dt>
+							<dd>
+								충청남도 당진시 송악읍 가청로 237-7
+								<a href="#none" class="mapLink">지도보기</a>
+							</dd>
+						</dl>
+					</li>
+					<li class="p_num">
+						<dl>
+							<dt>대표번호</dt>
+							<dd>041) 356 - 1811</dd>
+							<dt>팩스번호</dt>
+							<dd>041) 356 - 0000</dd>
+						</dl>
+					</li>
+					<li class="people">
+						<dl>
+							<dt>정원</dt>
+							<dd>205명  ( 남 100명  /  여 105명 )</dd>
+						</dl>
+					</li>
+					<li class="director">
+						<dl>
+							<dt>원장</dt>
+							<dd>김영희</dd>
+						</dl>
+					</li>
+				</ul>
+				<div class="markBic lcms">
+					<img src="img/sub/mark_big_1.png" alt="LCMS 요양시설통합세례관리솔루션 엔젤시스템">
+					<p><em>요양시설통합세례관리솔루션</em> <strong>엔젤시스템</strong>을 사용하는 요양원 입니다.</p>
+				</div>
+				<div class="markBic best">
+					<img src="img/sub/mark_big_2.png" alt="최우수 2018 국민건강보험관리공단 장기요양기관평가">
+					<p><em>장기요양기관평가</em>에서 <strong>2018년도 최우수 등급</strong>을 받은 요양원 입니다.</p>		
+				</div>
+				<div class="toContactWrap">
+					<a href="#none" class="toContact">
+						<p>요양원에<br>문의하기</p>
+					</a>
+					<div class="toContactBox">
+						<h4>문자로 요양원 연락처 & 정보 받기</h4>
+						<p>현재 요양원의 연락처와 간략한 정보를 문자로 전송해드립니다.  </p>
+						<div class="input">
+							<label for="numBox" class="hidden">전화번호 입력창</label>
+							<input type="text" placeholder="전화번호 입력">
+							<input type="button" value="문자 받기">
+						</div>
+						<a href="#none" class="closeBtn">닫기</a>
+					</div>
+				</div>
+			</div>		
+		</div>
+
+		<div class="detailSlide">
+			<div class="w1420">
+				<ul class="tabList">
+					<li class="on" data-tab="li_tab1"><button type="button" class="liTitle">대표 사진(5)</button></li class="on">
+					<li data-tab="li_tab2"><button type="button" class="liTitle">활동 사진(5)</button></li>
+					<li data-tab="li_tab3"><button type="button" class="liTitle">시설 사진(5)</button></li>
+				</ul>
+				<ul class="dt_slide_wrap">
+					<li id="li_tab1">
+						<!-- <button type="button" class="liTitle">대표 사진(5)</button> -->
+						<ul class="rprst">
+							<li><img src="img/sub/rprst_1.jpg" alt="대표사진"></li>
+							<li><img src="img/sub/rprst_2.jpg" alt="대표사진"></li>
+							<li><img src="img/sub/rprst_3.jpg" alt="대표사진"></li>
+							<li><img src="img/sub/rprst_1.jpg" alt="대표사진"></li>
+							<li><img src="img/sub/rprst_2.jpg" alt="대표사진"></li>
+							<li><img src="img/sub/rprst_3.jpg" alt="대표사진"></li>
+							<li><img src="img/sub/rprst_1.jpg" alt="대표사진"></li>
+							<li><img src="img/sub/rprst_2.jpg" alt="대표사진"></li>
+							<li><img src="img/sub/rprst_2.jpg" alt="대표사진"></li>
+							<li><img src="img/sub/rprst_2.jpg" alt="대표사진"></li>
+						</ul>
+					</li>
+					<li id="li_tab2">
+						<!-- <button type="button" class="liTitle">활동 사진(15)</button> -->
+						<ul class="rprst">
+							<li><img src="img/sub/rprst_2.jpg" alt="대표사진"></li>
+							<li><img src="img/sub/rprst_2.jpg" alt="대표사진"></li>
+							<li><img src="img/sub/rprst_2.jpg" alt="대표사진"></li>
+							<li><img src="img/sub/rprst_1.jpg" alt="대표사진"></li>
+							<li><img src="img/sub/rprst_3.jpg" alt="대표사진"></li>
+						</ul>
+					</li>
+					<li id="li_tab3">
+						<!-- <button type="button" class="liTitle">시설 사진(12)</button> -->
+						<ul class="rprst">
+							<li><img src="img/sub/rprst_3.jpg" alt="대표사진"></li>
+							<li><img src="img/sub/rprst_1.jpg" alt="대표사진"></li>
+							<li><img src="img/sub/rprst_3.jpg" alt="대표사진"></li>
+							<li><img src="img/sub/rprst_1.jpg" alt="대표사진"></li>
+							<li><img src="img/sub/rprst_2.jpg" alt="대표사진"></li>
+							<li><img src="img/sub/rprst_3.jpg" alt="대표사진"></li>
+							<li><img src="img/sub/rprst_1.jpg" alt="대표사진"></li>
+							<li><img src="img/sub/rprst_2.jpg" alt="대표사진"></li>
+							<li><img src="img/sub/rprst_3.jpg" alt="대표사진"></li>
+							<li><img src="img/sub/rprst_1.jpg" alt="대표사진"></li>
+							<li><img src="img/sub/rprst_2.jpg" alt="대표사진"></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="detailContent">
+			<div class="w1420">
+				<ul class="detail_list">
+					<li class="li01 on" data-tab="tab1">
+						<a href="#none">소개</a>
+					</li>
+					<li class="li02" data-tab="tab2">
+						<a href="#none">인원현황</a>
+					</li>
+					<li class="li03" data-tab="tab3">
+						<a href="#none">프로그램</a>
+					</li>
+					<li class="li04" data-tab="tab4">
+						<a href="#none">시설안내</a>
+					</li>
+					<li class="li05" data-tab="tab5">
+						<a href="#none">직원현황</a>
+					</li>
+					<li class="li06" data-tab="tab6">
+						<a href="#none">장비정보</a>
+					</li>
+					<li class="li07" data-tab="tab7">
+						<a href="#none">입소안내</a>
+					</li>
+					<li class="li08" data-tab="tab8">
+						<a href="#none">오시는 길</a>
+					</li>
+					<li class="li09" data-tab="tab9">
+						<a href="#none">비급여수가표</a>
+					</li>
+					<li class="li10" data-tab="tab10">
+						<a href="#none">후기보기</a>
+					</li>
+				</ul>
+
+				<!-- 소개 -->
+				<ul class="detail_text">
+					<li id="tab1" class="on">
+						<h4><strong>실버 엔젤 요양원</strong>을(를) 소개 합니다.</h4>
+						<div class="textBox">
+							내 집 같은 편안함을 제공해 드리기 위하여 직원들의 친근하고 가족 같은 따뜻한 분위기에서 편안한 노후 생활을 보내실 수 있습니다.<br>
+							햇살이 가득하고 그림 같은 전망이 함께하고 공기가 좋아 경치를 한 눈에 내려다 볼 수 있으며 창으로 드는 햇볕으로 인해 마음이 따뜻해지고 풍요롭습니다.<br>
+							전문 강사를 초빙하여 프로그램이 진행되어 무기력한 생활이 아닌 웃음이 넘치는 원내 생활을 하실 수 있도록 해드립니다.<br>
+							재활서비스를 통하여 어르신의 특징에 맞게 개인별 맞춤형 재활 프로그램을 통한 물리치료 서비스를 제공하고 있습니다.<br>
+							전문 간호사의 24시간 케어를 통하여 어르신들의 상태를 수시로 체크하여 전문 간호 서비스를 제공합니다.<br>
+							웰빙 식단으로 어르신들의 건강을 돕기 위하여 손수 공수한 신선한 재료들을 사용하고 위생적이고 청결한 환경에서 어르신들의 기호에 맞춘 식단을 제공합니다.<br>
+							협력병원이 함께하여 신속한 응급조치가 이루어지고 있습니다.
+						</div>
+					</li>
+
+					<!-- 인원현황 -->
+					<li id="tab2">
+						<div class="h4Title">
+							<h4><strong>실버 엔젤 요양원</strong> 인원현황</h4>
+							<span class="dateBox">2019.11.08 16:45 기준</span>
+						</div>
+						<div class="people">
+							<p>
+								<strong>전체정원</strong>은 <strong>205명</strong>이며,<br> 
+								현재 <strong>여성 105명</strong> / <strong>남성 100명</strong>으로 <strong>총원 205명</strong>의 어르신이 생활하고 계십니다.
+							</p>
+							<ul class="boxList">
+								<li>
+									<div>
+										정원
+										<strong>205명</strong>
+									</div>
+								</li>
+								<li>
+									<div>
+										총원
+										<strong>205명</strong>
+									</div>
+								</li>
+								<li>
+									<div>
+										여성
+										<strong>105명</strong>
+									</div>
+								</li>
+								<li>
+									<div>
+										남성
+										<strong>100명</strong>
+									</div>
+								</li>
+								<li>
+									<div>
+										대기/여성
+										<strong>5명</strong>
+									</div>
+								</li>
+								<li>
+									<div>
+										대기/남성
+										<strong>5명</strong>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+
+
+
+					<!-- 프로그램 -->
+					<li id="tab3">
+						<h4><strong>실버 엔젤 요양원</strong> 프로그램</h4>
+						<ul class="program_list">
+							<li class="rehab">
+								<div class="titleWrap">
+									<h5>재활/물리치료</h5>
+									<button type="button" class="picBtn">사진보기</button>
+									<div class="picWrap">
+										<div class="picLayout">
+											<div class="picArea">
+												<img src="img/sub/program_1.jpg" alt="">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="program_text">
+									재활 치료란 어르신이 가질 수 있는 최적의 신체적, 감각적, 지능적, 심리적, 사회적 수준을 성취하고 유지하려는 노력으로 수행하는 모든 치료를 말합니다. 또한 노화나 다른 외적요인에 인하여 영위하는  삶의 질이 떨어질 때, 대상자의 활동에 대해 중재를 시행하고 물리적 자극을 이용하여 치료를 제공 하여, 기능을 증진 유지 시키는 목적을 가집니다.
+								</div>									
+							</li>
+							<li class="gym">
+								<div class="titleWrap">
+									<h5>체조교실</h5>
+									<button type="button" class="picBtn">사진보기</button>
+									<div class="picWrap">
+										<div class="picLayout">
+											<div class="picArea">
+												<img src="img/sub/program_1.jpg" alt="">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="program_text">
+									신체의 발달을 조장하고 건강과 체력 증진을 위한 신체운동으로 노화됨에 따라 뼈와 근육이 퇴화된 어르신들에게 체조활동을 제공하여 조금씩 근력과 유연성을 높여 신체 상태를 유지할 수
+									있게 하고 낙상 위험을 줄입니다
+								</div>									
+							</li>
+							<li class="music">
+								<div class="titleWrap">
+									<h5>노래교실</h5>
+									<button type="button" class="picBtn">사진보기</button>
+									<div class="picWrap">
+										<div class="picLayout">
+											<div class="picArea">
+												<img src="img/sub/program_1.jpg" alt="">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="program_text">
+									함께 노래를 부름으로써 즐거움과 흥을 느낄 수 있고, 스트레스와 우울증을 해소할 수 있습니다.<br>
+									자신감 향상에 기여할 수 있으며 여가활동의 기회를 제공합니다. 또한 노래를 배우면서 기억력 감퇴를 예방 할 수 있습니다.
+								</div>									
+							</li>
+							<li class="arts">
+								<div class="titleWrap">
+									<h5>미술교실</h5>
+									<button type="button" class="picBtn">사진보기</button>
+									<div class="picWrap">
+										<div class="picLayout">
+											<div class="picArea">
+												<img src="img/sub/program_1.jpg" alt="">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="program_text">
+									다양한 미술활동을 통해 집중력을 높일 수 있고, 정서적 안정감을 줄 수 있습니다. <br>
+									어르신들께서 직접 미술작품을 완성함으로써 성취감을 느낄 수 있고, 자기표현능력을 향상시킬 수 있으며, 이는 자존감 향상에도 도움을 줍니다
+								</div>									
+							</li>
+							<li class="concert">
+								<div class="titleWrap">
+									<h5>문화/공연</h5>
+									<button type="button" class="picBtn">사진보기</button>
+									<div class="picWrap">
+										<div class="picLayout">
+											<div class="picArea">
+												<img src="img/sub/program_1.jpg" alt="">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="program_text">
+									거동이 불편하고, 소외된 어르신들에게 문화,∙공연 관람을 통한 어르신들의 여가문화의 질을 향상 시킵니다. <br>
+									그리고 어르신들을 둘러싼 환경을 문화욕구로 충족하게 하여, 활기찬 문화체험 영위를 통해서 건강한 감정과 심리적 안정감을 형성할 수 있습니다.
+								</div>									
+							</li>
+							<li class="smile">
+								<div class="titleWrap">
+									<h5>웃음치료</h5>
+									<button type="button" class="picBtn">사진보기</button>
+									<div class="picWrap">
+										<div class="picLayout">
+											<div class="picArea">
+												<img src="img/sub/program_1.jpg" alt="">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="program_text">
+									웃음을 활용한 치료법으로 큰 소리로 웃기, 박수치며 웃기 등의 기법을 통해 신체적 또는 정서적 고통을 경감시키고 스트레스를 해소하며 분노, 우울 등 정서조절 향상을 위한 것으로 어르신들의 삶의 질을 향상시킬 수 있습니다.
+								</div>									
+							</li>
+							<li class="religion">
+								<div class="titleWrap">
+									<h5>종교활동</h5>
+									<button type="button" class="picBtn">사진보기</button>
+									<div class="picWrap">
+										<div class="picLayout">
+											<div class="picArea">
+												<img src="img/sub/program_1.jpg" alt="">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="program_text">
+									종교(宗敎)라는 한자(漢字)의 의미로 본다면 “으뜸되는 가르침”, “근본적인 교훈”이라고 풀이할 수 있습니다. 다시 말하면, 사람으로서 마땅히 알아야 할 근본적인 문제, 즉 현실 이상의 영원한 문제를 가르쳐 주는 것이 곧 종교입니다. 정신적 육체적으로 약해져 있는 어르신들에게 종교활동을 함으로써 정신적 건강에 보탬이 될 수 있습니다.
+								</div>									
+							</li>
+						</ul>
+					</li>
+
+					<!-- 시설안내 -->
+					<li id="tab4">
+						<h4><strong>실버 엔젤 요양원</strong> 시설안내</h4>
+						<ul class="program_list facility">
+							<li class="room">
+								<div class="titleWrap">
+									<h5>1인실</h5>
+									<button type="button" class="picBtn">사진보기</button>
+									<div class="picWrap">
+										<div class="picLayout">
+											<div class="picArea">
+												<img src="img/sub/program_1.jpg" alt="">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="program_text">
+									<strong>1</strong>개
+								</div>									
+							</li>
+							<li class="room">
+								<div class="titleWrap">
+									<h5>2인실</h5>
+									<button type="button" class="picBtn">사진보기</button>
+									<div class="picWrap">
+										<div class="picLayout">
+											<div class="picArea">
+												<img src="img/sub/program_1.jpg" alt="">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="program_text">
+									<strong>1</strong>개
+								</div>									
+							</li>
+							<li class="room">
+								<div class="titleWrap">
+									<h5>3인실</h5>
+									<button type="button" class="picBtn">사진보기</button>
+									<div class="picWrap">
+										<div class="picLayout">
+											<div class="picArea">
+												<img src="img/sub/program_1.jpg" alt="">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="program_text">
+									<strong>10</strong>개
+								</div>									
+							</li>
+							<li class="room">
+								<div class="titleWrap">
+									<h5>4인실</h5>
+									<button type="button" class="picBtn">사진보기</button>
+									<div class="picWrap">
+										<div class="picLayout">
+											<div class="picArea">
+												<img src="img/sub/program_1.jpg" alt="">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="program_text">
+									<strong>15</strong>개
+								</div>									
+							</li>
+							<li class="spe_room">
+								<div class="titleWrap">
+									<h5>특수침실</h5>
+									<button type="button" class="picBtn">사진보기</button>
+									<div class="picWrap">
+										<div class="picLayout">
+											<div class="picArea">
+												<img src="img/sub/program_1.jpg" alt="">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="program_text">
+									<strong>5</strong>개
+								</div>									
+							</li>
+							<li class="medical">
+								<div class="titleWrap">
+									<h5>의료/간호</h5>
+									<button type="button" class="picBtn">사진보기</button>
+									<div class="picWrap">
+										<div class="picLayout">
+											<div class="picArea">
+												<img src="img/sub/program_1.jpg" alt="">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="program_text">
+									<strong>1</strong>개
+								</div>									
+							</li>
+							<li class="training">
+								<div class="titleWrap">
+									<h5>훈련실</h5>
+									<button type="button" class="picBtn">사진보기</button>
+									<div class="picWrap">
+										<div class="picLayout">
+											<div class="picArea">
+												<img src="img/sub/program_1.jpg" alt="">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="program_text">
+									<strong>1</strong>개
+								</div>									
+							</li>
+							<li class="washroom">
+								<div class="titleWrap">
+									<h5>세면실</h5>
+									<button type="button" class="picBtn">사진보기</button>
+									<div class="picWrap">
+										<div class="picLayout">
+											<div class="picArea">
+												<img src="img/sub/program_1.jpg" alt="">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="program_text">
+									<strong>5</strong>개
+								</div>									
+							</li>
+						</ul>
+					</li>
+
+					<!-- 직원현황 -->
+					<li id="tab5">
+						<h4><strong>실버 엔젤 요양원</strong> 직원현황</h4>
+						<div class="people staff">
+							<ul class="boxList">
+								<li>
+									<div>
+										시설장
+										<strong>1명</strong>
+									</div>
+								</li>
+								<li>
+									<div>
+										사무국장
+										<strong>1명</strong>
+									</div>
+								</li>
+								<li>
+									<div>
+										사회복지사
+										<strong>2명</strong>
+									</div>
+								</li>
+								<li>
+									<div>
+										의사_촉탁
+										<strong>1명</strong>
+									</div>
+								</li>
+								<li>
+									<div>
+										간호사
+										<strong>6명</strong>
+									</div>
+								</li>
+								<li>
+									<div>
+										간호조무사
+										<strong>1명</strong>
+									</div>
+								</li>
+								<li>
+									<div>
+										물리치료사
+										<strong>2명</strong>
+									</div>
+								</li>
+								<li>
+									<div>
+										요양보호사 1급
+										<strong>50명</strong>
+									</div>
+								</li>
+								<li>
+									<div>
+										사무원
+										<strong>1명</strong>
+									</div>
+								</li>
+								<li>
+									<div>
+										영양사
+										<strong>1명</strong>
+									</div>
+								</li>
+								<li>
+									<div>
+										조리원
+										<strong>5명</strong>
+									</div>
+								</li>
+								<li>
+									<div>
+										위생원
+										<strong>2명</strong>
+									</div>
+								</li>
+								<li>
+									<div>
+										관리인
+										<strong>2명</strong>
+									</div>
+								</li>
+								<li>
+									<div>
+										보조원
+										<strong>1명</strong>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+
+					<!-- 장비정보 -->
+					<li id="tab6">
+						<h4><strong>실버 엔젤 요양원</strong> 장비정보</h4>
+						<div class="people staff">
+							<ul class="boxList">
+								<li>
+									<div>
+										CT
+										<strong>1개</strong>
+									</div>
+								</li>
+								<li>
+									<div>
+										MRI
+										<strong>1개</strong>
+									</div>
+								</li>
+								<li>
+									<div>
+										초음파영상<br>진단기
+										<strong>5개</strong>
+									</div>
+								</li>
+								<li>
+									<div>
+										골밀도검사기
+										<strong>1개</strong>
+									</div>
+								</li>
+								<li>
+									<div>
+										유방촬영장치
+										<strong>1개</strong>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+
+
+					<!-- 장비정보 -->
+					<li id="tab7">
+						<h4><strong>실버 엔젤 요양원</strong> 입소안내</h4>
+						<div class="entranceWrap">
+							<div class="area">
+								<h5>입소대상</h5>
+								<ul class="boxList">
+									<li>
+										<dl>
+											<dt>65세 이상</dt>
+											<dd>
+												장기요양보험등급 <strong>1~5등급</strong>
+												판정을 받으신 어르신
+											</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>65세 미만</dt>
+											<dd>
+												<strong>노인성 질환</strong>을 앓고 계시며 <strong>1~4등급</strong> 판정을 받으신 어르신
+											</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>65세 이상</dt>
+											<dd>
+												<strong>기초수급권</strong> 어르신
+											</dd>
+										</dl>
+									</li>
+								</ul>
+							</div>
+							
+							<div class="area">
+								<h5>입소절차</h5>
+								<ul class="process">
+									<li class="pro_1">
+										<p>전화문의</p>
+									</li>
+									<li class="pro_2">
+										<p>입소상담</p>
+									</li>
+									<li class="pro_3">
+										<p>입소신청서 작성</p>
+									</li>
+									<li class="pro_4">
+										<p>사전방문 면담</p>
+									</li>
+									<li class="pro_5">
+										<p>입소계약</p>
+									</li>
+									<li class="pro_6">
+										<p>입소완료</p>
+									</li>
+								</ul>
+							</div>
+
+							<div class="area">
+								<div class="part">
+									<h5>구비서류</h5>
+									<ul class="checkList">
+										<li>장기요양등급 인정서</li>
+										<li>표준장기요양이용계획서</li>
+										<li>건강진단서</li>
+										<li>질병진단서 또는 의사소견서 (처방전포함)</li>
+										<li>주민등록등본(입소자본인) 1부</li>
+										<li>가족관계증명서, 주민등록등본(대표보호자) 1부</li>
+										<li>주민등록증, 도장</li>
+										<li>반명함판 사진 4매</li>
+										<li>국민기초생활수급 증명서 (해당자에 한함)</li>
+										<li>의료급여 증명서 (해당자에 한함)</li>
+									</ul>
+								</div>
+								<div class="part">
+									<h5>입소비용</h5>
+									<ul class="checkList">
+										<li>
+											<strong>입소시 선납</strong>
+											<p>보증금 없음</p>
+										</li>
+										<li>
+											<strong>노인장기요양보험 적용</strong>
+											<p>등급자만 해당</p>
+										</li>
+										<li>
+											<strong>본인부담 20%적용</strong>
+											<p>식자재비, 간식비, 의료비, 경관식은 비급여 항목으로 본인 부담</p>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="area">
+								<h5>입소시 준비물</h5>
+								<div class="textArea">
+									<strong>실내화, 양말3개, 속옷3개, 가디건, 외출복, 어르신께서 좋아하시는 개인 소지품 등</strong>
+									휠체어, 지팡이, 좌변기, 워커등은 개인이 필요시 준비하시면 됩니다.
+								</div>
+							</div>
+
+							<div class="area">
+								<h5>면회시간 외출 및 퇴소</h5>
+								<ul class="checkList">
+									<li>
+										<strong>오전 9시 ~ 오후 6시 까지</strong>
+										<p>너무 이른 시간이나 너무 늦은 시간에는 긴급한 용무 외에는 가급적 면회를 자제해 주시길 바랍니다. </p>
+									</li>
+									<li>
+										<strong>어르신의 건강 상태를 고려해서 담당 간호사와 상담 후 결정합니다.</strong>
+									</li>
+								</ul>
+							</div>
+
+							<div class="area">
+								<h5>식사시간</h5>
+								<ul class="inline">
+									<li>아침식사 07:00</li>
+									<li>점심식사 12:00</li>
+									<li>저녁식사 17:00</li>
+									<li>간식 1일 1회 제공</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+
+					<!-- 오시는길 -->
+					<li id="tab8">
+						<h4><strong>실버 엔젤 요양원</strong> 오시는 길</h4>
+						<div class="mapArea">
+							<dl class="mapInfo">
+								<dt>주소</dt>
+								<dd>충청남도 당진시 송악읍 가청로 237-7</dd>
+							</dl>
+
+							<div class="mapImg">
+								<img src="img/sub/map.jpg" alt="map">
+							</div>
+						</div>
+					</li>
+
+					<!-- 비급여수가표 -->
+					<li id="tab9">
+						<h4><strong>실버 엔젤 요양원</strong> 비급여수가표</h4>
+						<div class="entranceWrap statement">
+							<div class="area">
+								<h5>비급여</h5>
+								<p class="f18">
+									식재료비, 간식비, 상급 침실 사용료 등 본인이 부담해야하는 <strong>비급여 항목</strong>의 <strong>산출 근거 및 상세 내역</strong>입니다. 
+								</p>
+								<ul class="boxList">
+									<li>
+										<dl>
+											<dt>식재료비(간식제외)</dt>
+											<dd>
+												<strong>하루</strong> 1일 2,500원 X 3식 = <strong>7,500원</strong><br>
+												<strong>한달(31일)</strong> 7,500원 X 31식 = <strong>232,500원</strong>
+											</dd>
+										</dl>
+									</li>									
+									<li>
+										<dl>
+											<dt>간식비</dt>
+											<dd>
+												<strong>하루</strong> 1,000원 X 1회 = <strong>1,000원</strong><br>
+												<strong>한달(31일)</strong> 1,000원 X 31회 = <strong>31,000원</strong>
+											</dd>
+										</dl>
+									</li>									
+									<li>
+										<dl>
+											<dt>상급 침실 사용료</dt>
+											<dd>
+												<strong>1,2인실 한달 100,000원</strong><br>
+												<strong>한달(31일)</strong> 3,200원 X 31일 = <strong>99,200원</strong>
+											</dd>
+										</dl>
+									</li>									
+								</ul>
+							</div>
+							
+							<div class="area">
+								<h5>수가표</h5>
+								<p class="f18">
+									시설 이용시, <strong>노인장기요양등급별 지불해야 하는 금액</strong>과 <strong>본인부담금액</strong>입니다.<br>
+									<strong>‘1일 본인부담’</strong>은 하루에 직접 결제해야 하는 금액이고,<strong>‘30일 본인부담’</strong>은 30일 입원시 직접 부담해야 하는 금액입니다.
+								</p>
+								<ul class="grade">
+									<li>
+										<h6>1등급</h6>
+										<dl>
+											<dt>1일당 수가</dt>
+											<dd>69,150원</dd>
+										</dl>
+										<dl class="bold">
+											<dt>1일 본인부담</dt>
+											<dd>13,830원</dd>
+										</dl>
+										<dl>
+											<dt>비급여 합</dt>
+											<dd>8,500원</dd>
+										</dl>
+										<dl>
+											<dt>30일 수가</dt>
+											<dd>2,074,500원</dd>
+										</dl>
+										<dl class="bold">
+											<dt>30일 본인부담</dt>
+											<dd>414,900원</dd>
+										</dl>
+									</li>
+									<li>
+										<h6>2등급</h6>
+										<dl>
+											<dt>1일당 수가</dt>
+											<dd>69,150원</dd>
+										</dl>
+										<dl class="bold">
+											<dt>1일 본인부담</dt>
+											<dd>13,830원</dd>
+										</dl>
+										<dl>
+											<dt>비급여 합</dt>
+											<dd>8,500원</dd>
+										</dl>
+										<dl>
+											<dt>30일 수가</dt>
+											<dd>2,074,500원</dd>
+										</dl>
+										<dl class="bold">
+											<dt>30일 본인부담</dt>
+											<dd>414,900원</dd>
+										</dl>
+									</li>
+									<li>
+										<h6>3등급</h6>
+										<dl>
+											<dt>1일당 수가</dt>
+											<dd>69,150원</dd>
+										</dl>
+										<dl class="bold">
+											<dt>1일 본인부담</dt>
+											<dd>13,830원</dd>
+										</dl>
+										<dl>
+											<dt>비급여 합</dt>
+											<dd>8,500원</dd>
+										</dl>
+										<dl>
+											<dt>30일 수가</dt>
+											<dd>2,074,500원</dd>
+										</dl>
+										<dl class="bold">
+											<dt>30일 본인부담</dt>
+											<dd>414,900원</dd>
+										</dl>
+									</li>
+									<li>
+										<h6>4등급</h6>
+										<dl>
+											<dt>1일당 수가</dt>
+											<dd>69,150원</dd>
+										</dl>
+										<dl class="bold">
+											<dt>1일 본인부담</dt>
+											<dd>13,830원</dd>
+										</dl>
+										<dl>
+											<dt>비급여 합</dt>
+											<dd>8,500원</dd>
+										</dl>
+										<dl>
+											<dt>30일 수가</dt>
+											<dd>2,074,500원</dd>
+										</dl>
+										<dl class="bold">
+											<dt>30일 본인부담</dt>
+											<dd>414,900원</dd>
+										</dl>
+									</li>
+									<li>
+										<h6>5등급</h6>
+										<dl>
+											<dt>1일당 수가</dt>
+											<dd>69,150원</dd>
+										</dl>
+										<dl class="bold">
+											<dt>1일 본인부담</dt>
+											<dd>13,830원</dd>
+										</dl>
+										<dl>
+											<dt>비급여 합</dt>
+											<dd>8,500원</dd>
+										</dl>
+										<dl>
+											<dt>30일 수가</dt>
+											<dd>2,074,500원</dd>
+										</dl>
+										<dl class="bold">
+											<dt>30일 본인부담</dt>
+											<dd>414,900원</dd>
+										</dl>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+
+					<!-- 후기보기 / 쓰기 -->
+					<li id="tab10">
+						<h4><strong>실버 엔젤 요양원</strong> 후기보기</h4>
+
+						<!-- 리뷰 평균 -->
+						<div class="reviewWrap">
+							<p class="rvw_num">전체<span>189</span></p>
+							<div class="reviewBox">
+								<div class="rateArea">
+									<div class="rate">
+										<h5>평균 별점</h5>
+										<div class="rate_star">
+											<p class="rate_text">4.5</p>
+											<p class="star">
+												<span class="ico_rate star_off">
+													<span class="ico_rate star_on"></span>
+												</span>
+											</p>
+										</div>
+										<div class="rate_graph">
+											<ul>
+												<li class="point_5">
+													<span class="bar_blank">
+														<span class="wrap_value" style="height: 80%">
+															<span class="area_value">
+																<em class="value">186</em>
+															</span>
+															<span class="bar"></span>
+														</span>
+													</span>
+													<span class="label">5점</span>
+												</li>
+												<li>
+													<span class="bar_blank">
+														<span class="wrap_value" style="height: 30%">
+															<span class="bar"></span>
+														</span>
+													</span>
+													<span class="label">4점</span>
+												</li>
+												<li>
+													<span class="bar_blank">
+														<span class="wrap_value">
+															<span class="bar"></span>
+														</span>
+													</span>
+													<span class="label">3점</span>
+												</li>
+												<li>
+													<span class="bar_blank">
+														<span class="wrap_value">
+															<span class="bar"></span>
+														</span>
+													</span>
+													<span class="label">2점</span>
+												</li>
+												<li>
+													<span class="bar_blank">
+														<span class="wrap_value">
+															<span class="bar"></span>
+														</span>
+													</span>
+													<span class="label">1점</span>
+												</li>
+											</ul>
+										</div>
+										
+									</div>
+									<div class="rate_keyword">
+										<h5>많이 집계되는 조건 키워드</h5>
+										<ul class="rslt_keyword">
+											<li>불교</li>
+											<li>산책</li>
+											<li>특별관리</li>
+											<li>엔젤시스템</li>
+											<li>치매</li>
+										</ul>
+										<ul class="rslt_rvw">
+											<li>“위치도 좋고 직원들이 친절해서 참 좋았어요.”</li>
+											<li>“시설이 깨끗해서 좋았습니다.”</li>
+										</ul>
+									</div>
+									<div class="scrollBox">
+										<ul class="rvw_thumb">
+											<li>
+												<a href="#none">
+													<img src="img/sub/rvw_thumb_1.jpg" alt="">
+												</a>
+											</li>
+											<li>
+												<a href="#none">
+													<img src="img/sub/rvw_thumb_2.jpg" alt="">
+												</a>
+											</li>
+											<li>
+												<a href="#none">
+													<img src="img/sub/rvw_thumb_3.jpg" alt="">
+												</a>
+											</li>
+											<li>
+												<a href="#none">
+													<img src="img/sub/rvw_thumb_4.jpg" alt="">
+												</a>
+											</li>
+											<li>
+												<a href="#none">
+													<img src="img/sub/rvw_thumb_5.jpg" alt="">
+													<div class="more_pic">
+														<p>20</p>
+														사진 더 보기
+													</div>
+												</a>
+											</li>
+										</ul>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+						<!-- 리뷰 서칭 필터 및 키워드 -->
+						<div id="rsltWrap">
+
+							<div class="w1420">
+								<div class="rsltArea">
+									<!-- rslt option -->
+									<div class="rsltOpt">
+										<div class="opt_left">
+											<button type="button" title="카테고리 열기" class="opt_cate_open">카테고리 열기</button>
+											<ul class="opt_cate">
+												<li class="_on"><a href="#none">도움되는순</a></li>
+												<li><a href="#none">최신순</a></li>
+											</ul>
+										</div>
+										<div class="opt_right">
+											<div class="detailWrap">
+												<button class="dtlBtn" type="button"><span>필터</span></button>
+												<div class="detailArea">
+													<div class="chk_detail">
+														<h3>필터</h3>
+														<div class="filterArea">
+															<dl>
+																<dt>연령대</dt>
+																<dd>
+																	<ul class="chk_list">
+																		<li><input type="radio" id="age_0" name="age_chk" checked><label for="age_0">전체</label></li>
+																		<li><input type="radio" id="age_1" name="age_chk"><label for="age_1">60대</label></li>
+																		<li><input type="radio" id="age_2" name="age_chk"><label for="age_2">70대</label></li>
+																		<li><input type="radio" id="age_3" name="age_chk"><label for="age_3">80대</label></li>
+																		<li><input type="radio" id="age_4" name="age_chk"><label for="age_4">85세 이상</label></li>
+																	</ul>
+																</dd>
+															</dl>
+					
+															<dl>
+																<dt>종교</dt>
+																<dd>
+																	<ul class="chk_list">
+																		<li><input type="radio" id="rlg_0" name="rlg_chk" checked><label for="rlg_0">전체</label></li>
+																		<li><input type="radio" id="rlg_1" name="rlg_chk"><label for="rlg_1">불교</label></li>
+																		<li><input type="radio" id="rlg_2" name="rlg_chk"><label for="rlg_2">기독교</label></li>
+																		<li><input type="radio" id="rlg_3" name="rlg_chk"><label for="rlg_3">천주교</label></li>
+																	</ul>
+																</dd>
+															</dl>
+					
+															<dl>
+																<dt>주거형태</dt>
+																<dd>
+																	<ul class="chk_list">
+																		<li><input type="radio" id="house_0" name="house_chk" checked><label for="house_0">전체</label></li>
+																		<li><input type="radio" id="house_1" name="house_chk"><label for="house_1">주택형</label></li>
+																		<li><input type="radio" id="house_2" name="house_chk"><label for="house_2">일반빌딩</label></li>
+																		<li><input type="radio" id="house_3" name="house_chk"><label for="house_3">단독빌딩</label></li>
+																	</ul>
+																</dd>
+															</dl>
+					
+															<dl>
+																<dt>프로그램<p>*중복선택가능</p></dt>
+																<dd>
+																	<ul class="chk_list">
+																		<li><input type="checkbox" id="program_0" checked><label for="program_0">전체</label></li>
+																		<li><input type="checkbox" id="program_1"><label for="program_1">노래교실</label></li>
+																		<li><input type="checkbox" id="program_2"><label for="program_2">체조교실</label></li>
+																		<li><input type="checkbox" id="program_3"><label for="program_3">미술치료</label></li>
+																		<li><input type="checkbox" id="program_4"><label for="program_4">웃음치료</label></li>
+																	</ul>
+																	<label>
+																</dd>
+															</dl>
+														</div>
+														<div class="star_rate">
+															<dl>
+																<dt>별점</dt>
+																<dd>
+																	<ul>
+																		<li class="active">
+																			<span class="label">5점</span>
+																			<img src="img/sub/star_rate_5.png" alt="별점 5점">
+																			<span class="count">160개</span>
+																		</li>
+																		<li class="active">
+																			<span class="label">4점</span>
+																			<img src="img/sub/star_rate_4.png" alt="별점 4점">
+																			<span class="count">29개</span>
+																		</li>
+																		<li>
+																			<span class="label">3점</span>
+																			<img src="img/sub/star_rate_3.png" alt="별점 3점">
+																			<span class="count">0개</span>
+																		</li>
+																		<li>
+																			<span class="label">2점</span>
+																			<img src="img/sub/star_rate_2.png" alt="별점 2점">
+																			<span class="count">0개</span>
+																		</li>
+																		<li>
+																			<span class="label">1점</span>
+																			<img src="img/sub/star_rate_1.png" alt="별점 1점">
+																			<span class="count">0개</span>
+																		</li>
+																	</ul>
+																</dd>
+															</dl>
+														</div>
+
+														<div class="btn_detail">
+															<input type="button" id="key_clear" value="초기화">
+															<input type="button" id="key_fin" value="선택 완료">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- rsltKey -->
+									<div class="rsltKey">
+										<button type="button" class="rsltKey-arrow rsltKey-next">다음 키워드로 이동</button>
+										<div class="swiper-container">							
+											<ul class="swiper-wrapper">
+												<li class="_on"><a href="#none">전체</a></li>
+												<li><a href="#none">불교</a></li>
+												<li><a href="#none">산책</a></li>
+												<li><a href="#none">특별관리</a></li>
+												<li><a href="#none">엔젤시스템</a></li>
+												<li><a href="#none">물리치료</a></li>
+												<li><a href="#none">치매</a></li>
+												<li><a href="#none">70대</a></li>
+												<li><a href="#none">정원</a></li>
+												<li><a href="#none">친절</a></li>
+												<li><a href="#none">노래교실</a></li>
+												<li><a href="#none">웃음치료</a></li>
+												<li><a href="#none">생활체조</a></li>
+												<li><a href="#none">숲길</a></li>
+											</ul>							
+										</div>
+				
+										<button type="button" class="rsltKey-arrow rsltKey-prev">이전 키워드로 이동</button>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- 리뷰리스트 -->
+						<div class="reviewList">
+							<ul>
+								<li>
+									<div class="user">
+										<img src="img/sub/rvw_profile.png" alt="userPicture" class="userPic">
+										<h5>정** (jeon***123) 님의 후기</h5>
+										<p class="date">2019-10-01  18:30 작성</p>
+									</div>
+									<div class="rvw_detail">
+										<h6>요양원 평가 ／ 상세 만족도</h6>
+										<div class="rvw_dtl_rate">
+											<div class="rateValue">
+												<p class="star">
+													<em class="rate">5점</em>
+													<span class="ico_rate star_off">
+														<span class="ico_rate star_on"></span>
+													</span>
+												</p>
+											</div>
+											<div class="rvw_dtl_chk">
+												<ul>
+													<li class="nice">
+														<p>친절도</p>
+														<span class="emo">좋아요</span>
+													</li>
+													<li class="good">
+														<p>전문성</p>
+														<span class="emo">만족해요</span>
+													</li>
+													<li class="nice">
+														<p>인권보호</p>
+														<span class="emo">좋아요</span>
+													</li>
+													<li class="n_good">
+														<p>시설</p>
+														<span class="emo">별로에요</span>
+													</li>
+													<li class="nice">
+														<p>프로그램</p>
+														<span class="emo">좋아요</span>
+													</li>
+												</ul>
+												<div class="rvw">
+													직원분들 엄청 친절하십니다. <br>
+													다양한 프로그램이 있어 어르신들께 도움이 많이 되는 것 같고 지루하실 틈없이 즐겁게 지내실 수 있는 것 같아요.
+												</div>
+											</div>
+											<div class="rvw_slideWrap">
+												<ul class="rvw_slide">
+													<li><img src="img/sub/rvw_sllide_1.jpg" alt="리뷰 이미지"></li>
+													<li><img src="img/sub/rvw_sllide_2.jpg" alt="리뷰 이미지"></li>
+													<li><img src="img/sub/rvw_sllide_1.jpg" alt="리뷰 이미지"></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+
+									<div class="rvw_eva">
+										<div class="heartArea">
+											<button type="button">좋아요</button>
+											<em>12명</em>에게 <strong>도움</strong> 되었어요!
+										</div>
+										<div class="replyArea">
+											<span class="reply_count">5</span>
+											<button type="button">댓글 모두 보기</button>
+										</div>
+									</div>
+
+									<!-- reply -->
+									<div class="replyWrap">
+										<h6>댓글 <strong>5</strong></h6>
+										<ul>
+											<li>
+												<div class="userInfo">
+													<img class="rply_user" src="img/sub/rply_user.png" alt="댓글 작성자 프로필 이미지">
+													<p class="rply_name">박** (park***09) 님</p>
+													<p class="rply_date">2019-10-01  18:30 작성</p>
+												</div>
+												<div class="reply_text">
+													숲이 있는 요양원을 찾고있었는데 요양원에서 숲이 얼마나 가까운가요?
+												</div>
+												<div class="control">
+													<a href="#none">신고</a>
+													<a href="#none" class="re">답글 쓰기</a>
+												</div>
+												<ul class="_re">
+													<li>
+														<div class="userInfo">
+															<img class="rply_user" src="img/sub/rply_user.png" alt="댓글 작성자 프로필 이미지">
+															<p class="rply_name">정** (jeon***123) 님</p>
+															<p class="rply_date">2019-10-01  18:30 작성</p>
+														</div>
+														<div class="reply_text">
+															도보 5분 정도 거리에 있어요~! 아주 가깝습니다ㅎ         
+														</div>
+														<div class="control">
+															<a href="#none">신고</a>
+															<a href="#none" class="re">답글 쓰기</a>
+														</div>
+													</li>
+													<li>
+														<div class="userInfo">
+															<img class="rply_user" src="img/sub/rply_user.png" alt="댓글 작성자 프로필 이미지">
+															<p class="rply_name">박** (park***09) 님</p>
+															<p class="rply_date">2019-10-01  18:30 작성</p>
+														</div>
+														<div class="reply_text">
+															주말에 상담 받으러 한 번 다녀와야겠네요~ 답변 감사합니다. ^^
+														</div>
+														<div class="control">
+															<a href="#none">신고</a>
+															<a href="#none" class="re">답글 쓰기</a>
+														</div>
+													</li>
+												</ul>
+											</li>
+											<li>
+												<div class="userInfo">
+													<img class="rply_user" src="img/sub/rply_user.png" alt="댓글 작성자 프로필 이미지">
+													<p class="rply_name">김** (kims***5) 님</p>
+													<p class="rply_date">2019-10-01  18:30 작성</p>
+												</div>
+												<div class="reply_text">
+													사진 까지 올려주시고~~ 도움이 많이 되었습니다~~
+												</div>
+												<div class="control">
+													<a href="#none">신고</a>
+													<a href="#none" class="re">답글 쓰기</a>
+												</div>
+											</li>
+											<li>
+												<div class="userInfo">
+													<img class="rply_user" src="img/sub/rply_user.png" alt="댓글 작성자 프로필 이미지">
+													<p class="rply_name">최**(cde***5)</p>
+													<p class="rply_date">2019-10-01  18:30 작성</p>
+												</div>
+												<div class="reply_text">
+													감사합니다. 좋은 정보네요^^감사합니다. 좋은 정보네요^^감사합니다. 좋은 정보네요^^감사합니다. 좋은 정보네요^^감사합니다. 좋은 정보네요^^감사합니다. 좋은 정보네요^^감사합니다. 좋은 정보네요^^감사합니다. 좋은 정보네요^^감사합니다. 좋은 정보네요^^
+												</div>
+												<div class="control">
+													<a href="#none">신고</a>
+													<a href="#none" class="re">답글 쓰기</a>
+												</div>
+											</li>
+										</ul>
+										<h6>댓글 쓰기</h6>
+										<div class="rply_write">
+											<div class="rply_textBox _rply">
+												<span class="reUser">@최**(cde***5)</span>
+												<textarea>답글 입력시 이렇게 나타납니다. 답글 테스트 입니다. </textarea>
+											</div>
+											<a href="#none" class="rply_btn">댓글등록</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="user">
+										<img src="img/sub/rvw_profile.png" alt="userPicture" class="userPic">
+										<h5>김** (kim***123) 님의 후기</h5>
+										<p class="date">2019-09-30  18:30 작성</p>
+									</div>
+									<div class="rvw_detail">
+										<h6>요양원 평가 ／ 상세 만족도</h6>
+										<div class="rvw_dtl_rate">
+											<div class="rateValue">
+												<p class="star">
+													<em class="rate">4.5점</em>
+													<span class="ico_rate star_off">
+														<span class="ico_rate star_on" 
+														style="width: 90%"></span>
+													</span>
+												</p>
+											</div>
+											<div class="rvw_dtl_chk">
+												<ul>
+													<li class="good">
+														<p>친절도</p>
+														<span class="emo">만족해요</span>
+													</li>
+													<li class="good">
+														<p>전문성</p>
+														<span class="emo">만족해요</span>
+													</li>
+													<li class="nice">
+														<p>인권보호</p>
+														<span class="emo">좋아요</span>
+													</li>
+													<li class="good">
+														<p>시설</p>
+														<span class="emo">만족해요</span>
+													</li>
+													<li class="n_good">
+														<p>프로그램</p>
+														<span class="emo">별로에요</span>
+													</li>
+												</ul>
+												<div class="rvw">
+													직원분들 엄청 친절하십니다. <br>
+													다양한 프로그램이 있어 어르신들께 도움이 많이 되는 것 같고 지루하실 틈없이 즐겁게 지내실 수 있는 것 같아요.
+												</div>
+											</div>
+											<div class="rvw_slideWrap">
+												<ul class="rvw_slide">
+													<li><img src="img/sub/rvw_sllide_1.jpg" alt="리뷰 이미지"></li>
+													<li><img src="img/sub/rvw_sllide_2.jpg" alt="리뷰 이미지"></li>
+													<li><img src="img/sub/rvw_sllide_1.jpg" alt="리뷰 이미지"></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+
+									<div class="rvw_eva">
+										<div class="heartArea">
+											<button type="button">좋아요</button>
+											<em>2명</em>에게 <strong>도움</strong> 되었어요!
+										</div>
+										<div class="replyArea">
+											<span class="reply_count">0</span>
+											<button type="button">댓글 쓰기</button>
+										</div>
+									</div>
+
+									<!-- reply -->
+									<div class="replyWrap">
+										<h6>댓글 <strong>0</strong></h6>
+										<ul>
+											<li class="no_comment">
+												등록된 댓글이 없습니다. 댓글을 작성해 주세요 : ) 
+											</li>
+										</ul>
+										<h6>댓글 쓰기</h6>
+										<div class="rply_write">
+											<div class="rply_textBox">
+												<textarea>댓글 입력시 이렇게 나타납니다. 댓글 테스트 입니다. </textarea>
+											</div>
+											<a href="#none" class="rply_btn">댓글등록</a>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<div class="btnBox">
+								<a href="#none" class="_btn moreBtn">더보기</a>
+								<a href="#none" class="_btn _write rvwWriteBtn">후기 쓰기</a>
+							</div>
+
+							<div class="rvw_writeWrap">
+
+								<div class="rvw_write">
+									<h5>후기쓰기</h5>
+									<div class="centerInfo">
+										<img src="img/sub/center_img.png" alt="" class="center_img">
+										<p class="center_name">실버 엔젤 요양원</p>
+										<p class="center_loc">충청남도 당진시</p>
+									</div>
+
+									<h6>별점을 눌러 전체 만족도를 평가해주세요.</h6>
+									<div class="rate_star">
+										<p class="star">
+											<span class="ico_rate star_off">
+												<span class="ico_rate star_on">
+													<input type="radio" name="star-input" id="p1" value="0.5"><label for="p1">0.5</label>
+													<input type="radio" name="star-input" id="p2" value="1"><label for="p2">1</label>
+													<input type="radio" name="star-input" id="p3" value="1.5"><label for="p3">1.5</label>
+													<input type="radio" name="star-input" id="p4" value="2"><label for="p4">2</label>
+													<input type="radio" name="star-input" id="p5" value="2.5"><label for="p5">2.5</label>
+													<input type="radio" name="star-input" id="p6" value="3"><label for="p6">3</label>
+													<input type="radio" name="star-input" id="p7" value="3.5"><label for="p7">3.5</label>
+													<input type="radio" name="star-input" id="p8" value="4"><label for="p8">4</label>
+													<input type="radio" name="star-input" id="p9" value="4.5"><label for="p9">4.5</label>
+													<input type="radio" name="star-input" id="p10" value="5"><label for="p10">5</label>
+												</span>
+												<em class="rate"><span></span>점</em>
+											</span>
+										</p>
+									</div>
+
+									<h6>상세 만족도를 평가해주세요.</h6>
+									<ul class="sati_chk">
+										<li>
+											<p class="title">친절도</p>
+											<ul>
+												<li>
+													<input type="radio" id="kind_1" name="kind">
+													<label for="kind_1">좋아요</label>
+												</li>
+												<li>
+													<input type="radio" id="kind_2" name="kind">
+													<label for="kind_2">만족해요</label>
+												</li>
+												<li>
+													<input type="radio" id="kind_3" name="kind">
+													<label for="kind_3">별로에요</label>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<p class="title">전문성</p>
+											<ul>
+												<li>
+													<input type="radio" id="pro_1" name="pro">
+													<label for="pro_1">좋아요</label>
+												</li>
+												<li>
+													<input type="radio" id="pro_2" name="pro">
+													<label for="pro_2">만족해요</label>
+												</li>
+												<li>
+													<input type="radio" id="pro_3" name="pro">
+													<label for="pro_3">별로에요</label>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<p class="title">인권보호</p>
+											<ul>
+												<li>
+													<input type="radio" id="humanright_1" name="humanright">
+													<label for="humanright_1">좋아요</label>
+												</li>
+												<li>
+													<input type="radio" id="humanright_2" name="humanright">
+													<label for="humanright_2">만족해요</label>
+												</li>
+												<li>
+													<input type="radio" id="humanright_3" name="humanright">
+													<label for="humanright_3">별로에요</label>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<p class="title">시설</p>
+											<ul>
+												<li>
+													<input type="radio" id="facility_1" name="facility">
+													<label for="facility_1">좋아요</label>
+												</li>
+												<li>
+													<input type="radio" id="facility_2" name="facility">
+													<label for="facility_2">만족해요</label>
+												</li>
+												<li>
+													<input type="radio" id="facility_3" name="facility">
+													<label for="facility_3">별로에요</label>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<p class="title">프로그램</p>
+											<ul>
+												<li>
+													<input type="radio" id="pgm_1" name="pgm">
+													<label for="pgm_1">좋아요</label>
+												</li>
+												<li>
+													<input type="radio" id="pgm_2" name="pgm">
+													<label for="pgm_2">만족해요</label>
+												</li>
+												<li>
+													<input type="radio" id="pgm_3" name="pgm">
+													<label for="pgm_3">별로에요</label>
+												</li>
+											</ul>
+										</li>
+									</ul>
+
+									<h6>사진을 등록해주세요. <strong>(선택)</strong></h6>
+									<div class="uploadArea btnBox t_left">
+										<a href="#none" class="_btn moreBtn _pic">사진 업로드</a>
+										<div class="info">
+											<p>요양원과 관련된 후기 사진을 업로드 해주세요.</p>
+											<p class="light">요양원과 관련이 없거나 부적합한 사진을 등록하는 경우, 사전경고 없이 사진이 삭제될 수 있습니다.</p>
+										</div>
+										<div class="uploadResult">
+											<ul>
+												<li>
+													<img src="img/sub/center_img.png">
+												</li>
+												<li>
+													<img src="img/sub/center_img.png">
+												</li>
+											</ul>
+										</div>
+									</div>
+
+
+									<h6>후기를 작성해주세요.</h6>
+									<div class="rvw_textarea">
+										<div class="info">
+											<p>이 요양원을 방문하거나 생활하면서 느꼈던 장점과 단점을 솔직하게 알려주세요.</p>
+											<p class="light">해당 요양원과 무관한 내용이나 동일 문자의 반복 등 부적합한 내용은 삭제될 수 있습니다.</p>
+											<p class="txtCount">0자 / 최소 20자</p>
+										</div>
+										<textarea placeholder="내용을 입력해주세요."></textarea>
+									</div>
+
+									<div class="btnBox">
+										<a href="#none" class="_btn">다시 쓰기</a>
+										<a href="#none" class="_btn _write">작성 완료</a>
+									</div>
+
+									<a href="#none" class="closeBtn">후기쓰기 닫기</a>
+								</div>
+							</div>
+						</div>
+
+						
+					</li>
+
+
+				</dl>
+			</div>
+		</div>
+	</section>
+
+
+
+	<footer>
+		<div class="w1420">
+			<ul class="f_link">
+				<li><a href="#none">실버엔젤</a></li>
+				<li><a href="#none">이용안내</a></li>
+				<li><a href="#none">제휴신청</a></li>
+				<li><a href="#none">요양원등록</a></li>
+				<li><a href="#none">문의하기</a></li>
+			</ul>
+			<div class="f_info">
+				<address>
+						인천광역시 부평구 부평대로 293, 712호 (청천동, 부평테크시티) 전화 : 032-277-9797 팩스 : 032-524-7955 통신판매면허번호 : 제2011-인천부평-00326호
+				</address>
+				<p class="copy">COPYRIGHTⓒ 2019 실버엔젤(Silver Angel) ALL RiGHTS RESERVED.</p>
+			</div>
+	</div>
+	</footer>
+</body>
+</html>
+
