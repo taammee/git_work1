@@ -1212,7 +1212,7 @@ body.sub .srchLine .srchBox .src_list {top: 57px; text-align: left;}
   body.sub .headerWrap {position: relative; padding: 20px; height: 216px;}
   body.sub .sub_srchLine {width: 100%; position: absolute; left: 0; bottom: 0; background-color: #f2f2f2; padding: 25px 0 17px;}
 }
-body.mobile.sub .headerWrap {height: 220px;}
+body.mobile.sub .headerWrap {height: 197px;}
 
 @media all and (max-width: 1020px) {
   .user_info_form dd.text3 select, .user_info_form dd.text3 input[type="text"] {
@@ -1228,3 +1228,17 @@ body.mobile .logBox .closeBtn, body.mobile .joinBox .closeBtn {top: 20px; right:
 
 /* mobile font resizing */
 body.mobile {font-size: 0.8em;}
+body.sub.mobile .srchLine .srchBox {width: 150px;}
+body.sub.mobile .srchLine .srcName:after {top: 13px;}
+body.sub.mobile .srchLine .srcName {
+  height: 34px;
+  padding: 2px 20px;
+}
+body.sub.mobile .srchLine .srchBox .src_list a {
+  padding: 5px 20px;
+}
+body.sub.mobile .srchLine .srchWrap {
+  height: 52px;
+}
+body.sub.mobile #srchText {height: 33px;}
+body.sub.mobile .srchLine #srchBtn {width: 52px; height: 52px;}

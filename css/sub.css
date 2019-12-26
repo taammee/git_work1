@@ -1708,9 +1708,10 @@ body.mobile .detailSlide .tabList {
   text-align: center; width: 100%; left: 0; bottom: 20px;
 }
 body.mobile .tabList .liTitle {
-  width: 140px; box-sizing: border-box;
+  width: 110px; box-sizing: border-box;
   color: #fff; font-weight: 200;
   background-color: rgba(0,0,0,0.3); border-radius: 55px; padding: 17px 10px;
+  margin: 0 10px;
 }
 body.mobile .tabList li.on .liTitle {
   background-color: rgba(0,0,0,0.8);
