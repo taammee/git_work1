@@ -105,7 +105,7 @@ header {
 }
 .mLogin .loginBox,
 .mLogin .btn_logout {
-  color: #fff; font-weight: 200; width: 100%;
+  color: #fff; font-weight: 200; width: 100%;  text-align: center; font-size: 1rem;
   border-width: 1px 0; border-style: solid; border-color: rgba(255,255,255,0.2);
   margin: 25px 0; padding: 25px 0;
   background-color: transparent;
@@ -486,7 +486,7 @@ footer .w1420 {
 }
 .srchLine .srcName {
   /* float: left; */
-  position: relative; width: 100%; height: 45px;
+  position: relative; width: 100%; height: 63px;
   color: #01df70; font-size: 1.5em; font-weight: 400; text-align: left;
   padding: 29px 40px 0; box-sizing: border-box;
   outline: 0;
@@ -564,7 +564,7 @@ body.main .srchLine #srchText {margin-top: 23px;}
   body.main .srchWrap {width: 69%; height: 80px;padding: 15px 6px;}
   body.main .srchBox {font-size: 0.8em; width: 180px; padding: 3px 0; border-radius: 30px;}
   body.main .srchBox .src_list {padding-top: 5px;}
-  body.main .srchLine .srcName {padding: 0 20px;}
+  body.main .srchLine .srcName {padding: 0 20px; height: 40px;}
   body.main .srchLine .srcName:after {
     top: 16px;
     width: 22px; height: 12px; background-position: center bottom;
@@ -633,78 +633,79 @@ body.main .srchLine #srchText {margin-top: 23px;}
 
 .loginArea .log-in {position: relative;}
 .loginArea .log-in button {
-    background: url('../img/sub/log-in_arrow.png') right center no-repeat;
-    padding-right: 20px;
+  height: 29px;
+  background: url('../img/sub/log-in_arrow.png') right center no-repeat;
+  padding-right: 20px;
 }
 .loginArea .log-in button strong {
-    color: #01df70;
-    margin-right: 5px; 
+  color: #01df70;
+  margin-right: 5px; 
 }
 .mypageBox {
-    display: none;
-    width: 260px;
-    font-size: 0.8em; 
-    position: absolute; top: 50px; left: 0;
-    background: #fff; border: 1px solid #c2c2c2;
-    padding: 20px 14px; box-sizing: border-box; border-radius: 15px;
-    z-index: 1;
+  display: none;
+  width: 260px;
+  font-size: 0.8em; 
+  position: absolute; top: 50px; left: 0;
+  background: #fff; border: 1px solid #c2c2c2;
+  padding: 20px 14px; box-sizing: border-box; border-radius: 15px;
+  z-index: 1;
 }
 .mypageBox:before {
-    content: ''; width: 13px; height: 13px;
-    position: absolute; top: -12px; left: calc(50% - 7px);
-    background: url('../img/sub/mypageBox_arrow.png') center top no-repeat;
+  content: ''; width: 13px; height: 13px;
+  position: absolute; top: -12px; left: calc(50% - 7px);
+  background: url('../img/sub/mypageBox_arrow.png') center top no-repeat;
 }
 .mypageBox .mp_user {
-    display: block; 
-    width: 64px; height: 64px; border-radius: 50%;
-    margin: 0 auto;
+  display: block; 
+  width: 64px; height: 64px; border-radius: 50%;
+  margin: 0 auto;
 }
 .mypageBox .infoArea {
-    text-align: center;
-    margin: 10px 0;
+  text-align: center;
+  margin: 10px 0;
 }
 .mypageBox .infoArea .name {
-    display: inline-block; width: 49%;
-    color: #616161;
+  display: inline-block; width: 49%;
+  color: #616161;
 }
 .mypageBox .infoArea .name span {
-    color: #434343; font-size: 0.9rem; font-weight: 500; margin-right: 5px;
+  color: #434343; font-size: 0.9rem; font-weight: 500; margin-right: 5px;
 }
 .mypageBox .infoArea > a {
-    display: inline-block; width: 49%;
-    color: #999797; font-weight: 300;
+  display: inline-block; width: 49%;
+  color: #999797; font-weight: 300;
 }
 .mypageBox .postCount {
-    border-width: 1px 0 1px 0;
-    border-style: solid;
-    border-color: #dfdfdf;
-    color: #616161;
-    padding: 15px; margin-bottom: 20px;
+  border-width: 1px 0 1px 0;
+  border-style: solid;
+  border-color: #dfdfdf;
+  color: #616161;
+  padding: 15px; margin-bottom: 20px;
 }
 .mypageBox .postCount li {
-    display: block;
-    margin: 10px 0;
+  display: block;
+  margin: 10px 0;
 }
 .mypageBox .postCount p:before {
-    content: ''; display: inline-block;
-    width: 21px; height: 21px; background: url('../img/sub/postCount.png') left top no-repeat;
-    vertical-align: middle; margin-right: 10px;
+  content: ''; display: inline-block;
+  width: 21px; height: 21px; background: url('../img/sub/postCount.png') left top no-repeat;
+  vertical-align: middle; margin-right: 10px;
 }
 .mypageBox .postCount li.post p:before {
-    background-position: left bottom;
+  background-position: left bottom;
 }
 .mypageBox .postCount span {
-    font-size: 1.5em; font-weight: 500;
-    float: right; vertical-align: middle; margin-top: -6px;
+  font-size: 1.5em; font-weight: 500;
+  float: right; vertical-align: middle; margin-top: -6px;
 }
 .mypageBox h5 {color: #616161; font-size: 0.7rem; margin-bottom: 10px;}
 .mypageBox .rct_center {overflow: hidden;}
 .mypageBox .rct_center li  {
-    float: left; width: 70px; height: 70px; margin-right: 10px;
+  float: left; width: 70px; height: 70px; margin-right: 10px;
 }
 .mypageBox .rct_center li:last-child {margin-right: 0;}
 .mypageBox .rct_center img  {
-    display: block; width: 100%; height: 100%;
+  display: block; width: 100%; height: 100%;
 }
 
 
@@ -1197,6 +1198,7 @@ body.sub .srchLine {display: inline-block; margin: 0 20px; width: calc(100% - 40
 body.sub .srchLine .srchWrap {float: left; width: calc(100% - 54px); height: 72px; border: 1px solid #c4c4c4; box-shadow: none; padding: 8px 10px;}
 body.sub .srchLine .srcName {
  font-size: 1.2em; padding: 14px 40px;
+ height: 53px;
 }
 body.sub .srchLine .srcName:after {
   top: 21px;
@@ -1228,11 +1230,21 @@ body.mobile .logBox .closeBtn, body.mobile .joinBox .closeBtn {top: 20px; right:
 
 /* mobile font resizing */
 body.mobile {font-size: 0.8em;}
-body.sub.mobile .srchLine .srchBox {width: 150px;}
+
+
+@media all and (max-width: 1025px) {
+  body.sub .srchLine #srchText {width: calc(100% - 190px); margin-left: 0;}
+  body.sub .srchLine .srchBox {width: 160px;}
+  body.sub .srchLine .srcName {
+    padding: 2px 20px;
+  }
+  body.sub .srchLine .srchBox .src_list a {
+    padding: 5px 20px;
+  }
+}
 body.sub.mobile .srchLine .srcName:after {top: 13px;}
 body.sub.mobile .srchLine .srcName {
   height: 34px;
-  padding: 2px 20px;
 }
 body.sub.mobile .srchLine .srchBox .src_list a {
   padding: 5px 20px;

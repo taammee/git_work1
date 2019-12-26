@@ -108,6 +108,7 @@ $(document).ready(function(){
 		dots: false,
 		draggable: false,
 		accessibility: false,
+		swipe: false,
 		asNavFor: '.angelThumb'
 	});
 
@@ -126,6 +127,7 @@ $(document).ready(function(){
 		centerPadding: 0,
 		accessibility: false,
 		focusOnSelect: true,
+		swipe: false,
 		responsive: [
 			{
 				breakpoint: 1200,
