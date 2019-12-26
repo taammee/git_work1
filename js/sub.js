@@ -237,6 +237,7 @@ $(document).ready(function(){
 				breakpoint: 1200,
 				settings: {
           slidesToShow: 8,
+          slidesToScroll: 4,
           arrows: true,
 				}
 			},
@@ -244,13 +245,15 @@ $(document).ready(function(){
 				breakpoint: 900,
 				settings: {
           slidesToShow: 5,
+          slidesToScroll: 5,
           arrows: true,
 				}
 			},
 			{
 				breakpoint: 640,
 				settings: {
-					slidesToShow: 4,
+          slidesToShow: 4,
+          slidesToScroll: 4,
           arrows: true,
           
 				}
@@ -258,7 +261,8 @@ $(document).ready(function(){
 			{
 				breakpoint: 500,
 				settings: {
-					slidesToShow: 2,
+          slidesToShow: 3,
+          slidesToScroll: 3,
           arrows: true,
 
 				}
