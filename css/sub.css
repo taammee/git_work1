@@ -166,9 +166,8 @@
 .detailArea .chk_detail .slct {margin: 20px 0;}
 .detailArea .chk_detail .slct dd {position: relative;}
 .detailArea .chk_detail .srchWrap {
-  clear: both;
   position: absolute; top: -2px; left: 0;
-  width: 100%;
+  width: 350px;
   display: inline-block;
   z-index: 1;
 }
