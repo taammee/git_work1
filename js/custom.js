@@ -303,7 +303,11 @@ $(document).ready(function(){
 		$('.joinWrap').hide();
 		$('.joinWrapManager').fadeIn(150);
 	});
-	$('.joinTwoWrap ._btn._write').click(function(){
+	$('.joinTwoWrap ._btn._general').click(function(){
+		$('.joinTwoWrap').hide();
+		$('.general_complete').fadeIn(150);
+	});
+	$('.joinTwoWrap ._btn._center').click(function(){
 		$('.joinTwoWrap').hide();
 		$('.complete').fadeIn(150);
 	});

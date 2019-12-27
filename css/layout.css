@@ -1185,7 +1185,7 @@ body.sub .srchLink .first {margin-right: 0;}
 body.sub .srchLink .first a {background-color: #01df70; color: #fff;}
 @media all and (max-width: 1660px) {
   body.sub .srchLink {
-    position: fixed; bottom: 20px; right: 20px; top: auto !important; z-index: 11;
+    position: fixed; bottom: 120px; right: 20px; top: auto !important; z-index: 11;
   }
   body.sub .srchLink a {
     width: 70px; height: auto; padding: 10px 8px;
