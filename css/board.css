@@ -30,6 +30,7 @@ section.boardPage {background-color: #f3f3f3;}
     font-size: 0.8em; text-align: center;
     margin: 10px 0 40px;
 }
+.tableWrap table ._auto {width: auto;}
 .tableWrap table ._num {width: 10%;}
 .tableWrap table ._title {width: auto;}
 .tableWrap table ._date {width: 10%;}

@@ -648,7 +648,7 @@ body.main .srchLine #srchText {margin-top: 23px;}
   position: absolute; top: 50px; left: 0;
   background: #fff; border: 1px solid #c2c2c2;
   padding: 20px 14px; box-sizing: border-box; border-radius: 15px;
-  z-index: 1;
+  z-index: 3;
 }
 .mypageBox:before {
   content: ''; width: 13px; height: 13px;
