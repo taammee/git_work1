@@ -25,6 +25,14 @@
 .btnBox ._btn._black {background-color: #434343;}
 .btnBox ._btn._small {font-size: 0.9rem; padding: 7px 33px;}
 
+button#mTop {
+	display: none; width: 45px; height: 48px;
+	position: fixed; bottom: 30px; right: 30px;
+	background: url('../img/topBtn.png') center center no-repeat;
+	text-indent: -5000px;
+	z-index: 997;
+}
+
 /* ------------------------------------------- header */
 header {
   display: inline-block; width: 100%; margin-bottom: -7px;

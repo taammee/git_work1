@@ -1,4 +1,24 @@
 $(document).ready(function(){
+
+	// top button
+	$(window).scroll( function(){
+		if ($(window).scrollTop() > 20){
+			$("#mTop").fadeIn();
+		} else {
+			$("#mTop").fadeOut();
+		}
+		var sHeight = $(window).scrollTop();
+		if (sHeight > 120){
+		} else {
+		}
+	});
+	$("button#mTop").click(function(){
+		$("html, body").animate({
+			scrollTop : 0
+			}, 600);
+	});
+
+	
 	// 로그인 시 loginArea width값에 맞춰 검색창 width 조절
 	$(window).on('load resize', function(){
 		var topSrch = $('.headerWrap .loginArea').width() + 240;
@@ -320,5 +340,4 @@ $(document).ready(function(){
 	///////////////////////////// 모바일 굽은나무/엔젤헤퍼 링크 가져오기
 	var srchLink = $('.srchLink').html();
 	$('.loginLink').html(srchLink);
-
 });
