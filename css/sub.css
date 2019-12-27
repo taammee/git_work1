@@ -1578,7 +1578,7 @@ body.mobile #rsltWrap .rsltArea .note {text-align: center;}
   }
   .btn_detail {position: static; margin-top: 30px;}
 }
-body.mobile .detailWrap .dtlBtn {margin-right: 0;}
+body.mobile .detailWrap .dtlBtn {margin-right: 0; margin-top: 5px;}
 body.mobile .detailWrap .dtlBtn span {display: none;}
 body.mobile .detailArea .chk_detail dl {display: block; margin: 30px 0;}
 body.mobile .detailArea .chk_detail dt,
@@ -1751,6 +1751,8 @@ body.mobile .detailContent .detail_list .slick-arrow {
 
 /* -- 상세페이지  */
 
+body.mobile .detailContent .w1420 {padding: 0;}
+body.mobile .detailContent .detail_list {margin: 0 20px;}
 body.mobile .detail_text > li{text-align: center;}
 body.mobile .detail_text .h4Title {margin-bottom: 20px;}
 body.mobile .detail_text .h4Title h4 {float: none; margin-bottom: 10px;}
@@ -1837,29 +1839,30 @@ body.mobile .entranceWrap ul.inline li:last-child:after {display: none;}
   .reviewList .rvw_detail, 
   .reviewList .rvw_eva{ margin-left: 0;}
 
-
+  .replyWrap {padding: 20px 0;}
   .replyWrap .userInfo {margin-bottom: 10px;}
-  .replyWrap .userInfo,
-  .replyWrap .reply_text,
-  .replyWrap .control {
-    float: none; width: calc(100% - 80px);
+  .replyWrap .userInfo {
+    float: none; width: 95%;
     padding-left: 60px;
   }
   .replyWrap .control {text-align: right; margin: 10px 0;}
-  .replyWrap .userInfo .rply_user {left: 0;}
+  .replyWrap .reply_text {width: 90%; float: none; margin: 0 auto; padding-top: 10px;}
+  .replyWrap ul._re > li .reply_text {width: calc(100% - 53px);}
+  .replyWrap .userInfo .rply_user {left: 0; top: 0;}
   .replyWrap ul._re {margin-top: 15px;}
   .replyWrap ul._re > li .userInfo:before {left: 20px;}
   .replyWrap ul._re > li .userInfo .rply_user {left: 50px;}
-  .replyWrap ul._re > li .userInfo,
-  .replyWrap ul._re > li .reply_text {padding-left: 110px; width: calc(100% - 130px);}
+  .replyWrap ul._re > li .userInfo {padding-left: 110px; width: 95%;}
 
-  .replyWrap .rply_textBox {float: none; width: 100%;}
+  .replyWrap .rply_textBox {float: none; width: 100%; padding: 10px;}
   .replyWrap .rply_btn {
-    font-size: 0.8em;width: 130px; height: 36px; border-radius: 36px; padding: 7px;
+    font-size: 0.8em; width: 130px; height: 36px; border-radius: 36px; padding: 9px;
     margin: 10px auto 0;
   }
 }
 body.mobile .rvw_detail .rvw_dtl_chk li {width: 25%; margin: 10px 10px 10px 0;}
+body.mobile .replyWrap textarea {font-size: 1em;}
+body.mobile .replyWrap ._rply textarea {width: 100%; margin-top: 10px;}
 /* 후기 쓰기 */
 @media all and (max-width: 970px) {
   .rvw_write {padding: 30px;text-align: center;}
