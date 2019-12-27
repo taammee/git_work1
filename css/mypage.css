@@ -253,7 +253,7 @@ section.mypage {background-color: #f3f3f3;}
     .postList li {width: calc(50% - 15px)};
 }
 @media all and (max-width: 980px) {
-    body.sub header + section {margin-top: 0;}
+    body.sub header + section {margin-top: 0; padding-top: 30px;}
     .sideBox {display: none;}
     .contentsArea {float: none; width: 100%;}
 }
@@ -271,6 +271,8 @@ body.mobile ._album .postList li {
     width: calc(50% - 4%);
     margin: 0 2% 20px;
 }
+body.mobile .mp_tab li a h4 {margin-top: 10px;}
+body.mobile .mp_tab li a p {display: block; margin: 0 auto;}
 
 /* 북마크 리스트 */
 @media all and (max-width: 1300px) {
