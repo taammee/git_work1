@@ -2,7 +2,7 @@
  * *MYPAGE 
 */
 body.sub header + section {margin: 7px 0 0 0; padding: 87px 0 80px;}
-
+body.mobile.sub header + section {margin-top: 0 !important;}
 
 
 /* 
@@ -271,8 +271,9 @@ body.mobile ._album .postList li {
     width: calc(50% - 4%);
     margin: 0 2% 20px;
 }
+body.mobile .mp_tab li a {font-size: 0.8em;}
 body.mobile .mp_tab li a h4 {margin-top: 10px;}
-body.mobile .mp_tab li a p {display: block; margin: 0 auto;}
+body.mobile .mp_tab li a p {display: block; margin: 0 auto; font-size: 2em;}
 
 /* 북마크 리스트 */
 @media all and (max-width: 1300px) {

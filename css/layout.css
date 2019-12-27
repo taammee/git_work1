@@ -1245,7 +1245,11 @@ body.sub .srchLine .srchBox .src_list {top: 57px; text-align: left;}
   }
   #srchBtn_h {display: block;}
 }
-body.mobile #srchBtn_h {margin: 13px 55px 0 0;}
+body.mobile #srchBtn_h {
+  margin: 16px 51px 0 0;
+  background-size: 100%;
+  width: 30px; height: 30px;
+}
 
 @media all and (max-width: 1020px) {
   .user_info_form dd.text3 select, .user_info_form dd.text3 input[type="text"] {

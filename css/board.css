@@ -71,7 +71,7 @@ section.boardPage {background-color: #f3f3f3;}
 }
 .tableWrap .paging ul li {display: inline-block;}
 .tableWrap .paging ul li a {
-    display: block; width: 25px;
+    display: block; width: 25px; height: 25px;
     color: #767676; font-size: 0.850em; font-weight: 300; text-align: center;
     border-radius: 50%;
 }
@@ -178,10 +178,15 @@ section.boardPage {background-color: #f3f3f3;}
 body.mobile.sub header + section {padding-top: 30px;}
 body.mobile .boardWrap,
 body.mobile .viewWrap {padding: 40px 10px;}
-body.mobile .tableWrap ._date {width: 20%;}
+body.mobile .tableWrap ._num {width: 15%;}
+body.mobile .tableWrap ._date {width: 36%;}
 body.mobile .tableWrap ._hit {display: none;}
 body.mobile .tableWrap table ._title {width: 100%;}
 body.mobile .viewWrap .fileArea dt {float: none; width: 100%; text-align: left; margin-bottom: 10px;}
 body.mobile .viewWrap .fileArea dd {float: none; width: 100%; text-align: left;}
 body.mobile .viewWrap .fileArea dd li {padding: 5px 0 5px 35px;}
 body.mobile .viewWrap .fileArea dd a {padding: 5px 40px 4px 0;}
+body.mobile .tableWrap .paging ul {display: block; margin-top: 10px;}
+body.mobile .viewWrap .titleArea .postInfo {float: none;}
+body.mobile .viewWrap .titleArea dl {margin-left: 0; margin-right: 20px;}
+body.mobile .viewWrap .pageNav dt {margin-left: 0;}
