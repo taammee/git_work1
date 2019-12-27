@@ -156,7 +156,6 @@ header {
   background-color: #fff;
   padding: 100px 120px; border-radius: 40px; box-sizing: border-box;
   z-index: 12;
-
   max-height: 80%; overflow-y: auto;
 }
 ._box {
@@ -1242,9 +1241,10 @@ body.sub .srchLine .srchBox .src_list {top: 57px; text-align: left;}
   body.sub .sub_srchLine {
     /* display: none; */
     width: 100%; position: absolute; left: 0; top: 98px; background-color: #f2f2f2; padding: 25px 0 17px;
-    z-index: -1;
+    opacity: 0;
+    z-index: 2;
   }
-  body.sub .sub_srchLine.show {z-index: 1;}
+  body.sub .sub_srchLine.show {opacity: 1;}
   #srchBtn_h {display: block;}
 }
 body.mobile #srchBtn_h {
