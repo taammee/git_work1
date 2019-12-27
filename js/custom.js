@@ -276,9 +276,6 @@ $(document).ready(function(){
 
 
 	///////////////////////////// login box
-	var bodyH = $('body').height();
-	console.log(bodyH);	
-
 	$('.logBox .auth button, .joinBox .auth button').click(function(){
 		$('.logBox .auth button, .joinBox .auth button').removeClass('on');
 		$(this).addClass('on');
@@ -288,6 +285,7 @@ $(document).ready(function(){
 		$('.logWrap').fadeIn(150);
 	});
 	$('.loginArea ._joinBtn, .loginBox .btn_join').click(function(){
+		$('body').addClass('noScroll');
 		$('.joinWrap').fadeIn(150);
 	});
 	$('.log-join .closeBtn, .joinBox .closeBtn').click(function(){
