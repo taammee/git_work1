@@ -1539,6 +1539,7 @@ body.sub header + section.questPage {padding: 0;}
 }
 
 /* ------------------------------------------- 반응형 */
+body.mobile.sub header + section {margin-top: 30px;}
 /* -- 검색페이지 */
 /* 내조건맞춤 checkbox */
 @media all and (max-width: 930px) {
@@ -1860,14 +1861,13 @@ body.mobile .rvw_detail .rvw_dtl_chk li {width: 25%; margin: 10px 10px 10px 0;}
   .rvw_write {padding: 30px;text-align: center;}
   .rvw_write h5 {margin-right: 0; text-align: left;}
   .sati_chk > li {margin: 20px 10px; width: calc(50% - 20px);}
-  .sati_chk ul li {margin: 0 5px;}
+  .sati_chk ul li {margin: 0 2%;}
   .btnBox.t_left {text-align: center;}
   .uploadArea .moreBtn {margin-bottom: 15px;}
   .uploadArea .info {display: block;}
   .rvw_write .info .txtCount {float: none; text-align: right; display: block; margin-top: 10px;}
 }
 body.mobile .sati_chk > li {float: none; width: 100%; margin: 20px 0;}
-body.mobile .sati_chk ul li {margin: 0 20px;}
 
 /* 제휴문의 */
 @media all and (max-width: 800px) {
@@ -1877,6 +1877,13 @@ body.mobile .sati_chk ul li {margin: 0 20px;}
     vertical-align: top;
     margin-bottom: 20px;
   }
+}
+@media all and (max-width: 530px) {
+  .questForm ._form dl,
+  .questForm ._form dl dt,
+  .questForm ._form dl dd {display: block; width: 100%;}
+  .questForm ._form dl dt {border-bottom: 1px solid #e6e6e6;}
+  .questForm ._form dd {padding: 10px 0;}
 }
 body.mobile .questWrap .process li {
   width: 49%;

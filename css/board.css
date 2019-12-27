@@ -175,6 +175,7 @@ section.boardPage {background-color: #f3f3f3;}
     .boardWrap,
     .viewWrap {width: 90%;padding: 40px 10px;}
 }
+body.mobile.sub header + section {padding-top: 30px;}
 body.mobile .boardWrap,
 body.mobile .viewWrap {padding: 40px 10px;}
 body.mobile .tableWrap ._date {width: 20%;}

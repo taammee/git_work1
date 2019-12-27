@@ -284,10 +284,10 @@ $(document).ready(function(){
 		$('.logBox .auth button, .joinBox .auth button').removeClass('on');
 		$(this).addClass('on');
 	});
-	$('.loginArea ._loginBtn').click(function(){
+	$('.loginArea ._loginBtn, .loginBox .btn_login').click(function(){
 		$('.logWrap').fadeIn(150);
 	});
-	$('.loginArea ._joinBtn').click(function(){
+	$('.loginArea ._joinBtn, .loginBox .btn_join').click(function(){
 		$('.joinWrap').fadeIn(150);
 	});
 	$('.log-join .closeBtn, .joinBox .closeBtn').click(function(){
