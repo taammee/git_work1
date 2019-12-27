@@ -285,7 +285,7 @@ $(document).ready(function(){
 	});
 	$('.loginArea ._loginBtn, .loginBox .btn_login').click(function(){
 		$('body').addClass('noScroll');
-		$('.logWrap').fadeIn(150).css('height', bodyH);
+		$('.logWrap').fadeIn(150);
 	});
 	$('.loginArea ._joinBtn, .loginBox .btn_join').click(function(){
 		$('.joinWrap').fadeIn(150);
