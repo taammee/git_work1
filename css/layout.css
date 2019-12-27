@@ -786,11 +786,12 @@ body.main .srchLine #srchText {margin-top: 23px;}
 .angelView .angelInfo p {
   display: none;
   color: #555; font-size: 1.2em;
+  margin-top: 50px;
 }
 .angelView .angelInfo li.on p {display: block;}
 .angelView .angelInfo li p span {margin-left: 15px; display: inline-block;}
 .angelInfo button {
-  position: absolute; bottom: 0; left: 0;
+  position: absolute; top: 20px; left: 0;
   width: 25%; height: 30px;
   text-indent: -5000px; font-size: 0; background: transparent; margin-bottom: 10px;
 }
