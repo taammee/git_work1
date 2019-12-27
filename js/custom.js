@@ -276,17 +276,22 @@ $(document).ready(function(){
 
 
 	///////////////////////////// login box
+	var bodyH = $('body').height();
+	console.log(bodyH);	
+
 	$('.logBox .auth button, .joinBox .auth button').click(function(){
 		$('.logBox .auth button, .joinBox .auth button').removeClass('on');
 		$(this).addClass('on');
 	});
 	$('.loginArea ._loginBtn, .loginBox .btn_login').click(function(){
-		$('.logWrap').fadeIn(150);
+		$('body').addClass('noScroll');
+		$('.logWrap').fadeIn(150).css('height', bodyH);
 	});
 	$('.loginArea ._joinBtn, .loginBox .btn_join').click(function(){
 		$('.joinWrap').fadeIn(150);
 	});
 	$('.log-join .closeBtn, .joinBox .closeBtn').click(function(){
+		$('body').removeClass('noScroll');
 		$('.log-join, .joinTwoWrap, .complete').fadeOut(150);
 	});
 

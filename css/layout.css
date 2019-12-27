@@ -1,6 +1,12 @@
 @charset "utf-8";
 
 /* ------------------------------------------- common */
+body.noScroll{
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  height: 100%
+}
 .w1420 {
   max-width: 1460px; width: 100%;
   box-sizing: border-box; padding: 0 20px; margin: 0 auto;
@@ -144,19 +150,20 @@ header {
 .log-join,
 .joinTwoWrap {
   display: none;
-  position: fixed; top: 0; right: 0; bottom: 0; left: 0; margin: 0 auto;
+  position: absolute; top: 0; right: 0; bottom: 0; left: 0; margin: 0 auto;
   width: 100%;
   z-index: 12;
   background-color: rgba(0,0,0,0.3);
+  overflow-y: auto;
 }
 .logBox,
 .joinBox {
   width: 90%; max-width: 1200px;
-  position: relative; top: 15%; margin: 0 auto;
+  position: relative; top: 100px; margin: 0 auto 20px;
   background-color: #fff;
   padding: 100px 120px; border-radius: 40px; box-sizing: border-box;
   z-index: 12;
-  max-height: 80%; overflow-y: auto;
+  /* max-height: 80%; overflow-y: auto; */
 }
 ._box {
   max-width: 480px; margin: 0 auto;
@@ -247,7 +254,6 @@ header {
 
 .joinTwoWrap .joinBox {
   display: block;
-  height: 70%; overflow-y: auto;
 }
 .joinTwoWrap ._box {max-width: 615px; margin-bottom: 80px;}
 p.important {
@@ -290,7 +296,7 @@ p.important:before,
 }
 
 .findWrap .comment {
-  color: #767676; font-size: 0.750em; font-weight: 200; text-align: center;
+  color: #767676; font-size: 0.750rem; font-weight: 200; text-align: center;
   letter-spacing: -1.2px;
 }
 .findWrap .comment strong {
@@ -387,7 +393,7 @@ p.important:before,
   color: #404040; font-size: 0.9em; font-weight: 500;
 }
 .logBox .note,
-.user_info_form .note { font-size: 0.7em; margin-top: 3px;}
+.user_info_form .note { font-size: 0.7rem; margin-top: 3px;}
 .note._red {color: #ff3a3a;}
 .note._green {color: #01df70;}
 
@@ -1265,6 +1271,7 @@ body.mobile #srchBtn_h {
 body.mobile .joinTwoWrap .joinBox {padding: 50px 30px;}
 body.mobile .user_info_form dt,
 body.mobile .user_info_form dd {display: block; width: 100%;}
+body.mobile .user_info_form dt {margin-bottom: 5px;}
 body.mobile .user_info_form dt span {display: inline-block;}
 body.mobile .user_info_form dd span.note {position: static; float: right;}
 body.mobile .logBox .closeBtn, body.mobile .joinBox .closeBtn {top: 20px; right: 20px;}
