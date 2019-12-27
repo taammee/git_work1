@@ -1242,8 +1242,9 @@ body.sub .srchLine .srchBox .src_list {top: 57px; text-align: left;}
   body.sub .sub_srchLine {
     /* display: none; */
     width: 100%; position: absolute; left: 0; top: 98px; background-color: #f2f2f2; padding: 25px 0 17px;
-    z-index: 1;
+    z-index: -1;
   }
+  body.sub .sub_srchLine.show {z-index: 1;}
   #srchBtn_h {display: block;}
 }
 body.mobile #srchBtn_h {

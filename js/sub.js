@@ -54,7 +54,7 @@ $(document).ready(function(){
 
   // 헤더 search open 버튼
   $('#srchBtn_h').click(function(){
-    $('.sub_srchLine').toggle();
+    $('.sub_srchLine').toggleClass('show');
   });
 
   // 키워드 슬라이드
