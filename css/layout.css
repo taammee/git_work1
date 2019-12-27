@@ -2,10 +2,17 @@
 
 /* ------------------------------------------- common */
 body.noScroll{
-  position: fixed;
-  overflow: hidden;
+  overflow-y: hidden;
   width: 100%;
   height: 100%
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+body.noScroll::-webkit-scrollbar {
+  display: none;
+}
+/* Hide scrollbar for IE and Edge */
+body.noScroll {
+  -ms-overflow-style: none;
 }
 .w1420 {
   max-width: 1460px; width: 100%;

@@ -1658,7 +1658,7 @@ body.mobile .dt_right {
 }
 body.mobile .dt_right p.note {
   width: 340px;
-  top: 143px; right: calc(50% - 195px);
+  top: 128px; right: calc(50% - 195px);
 }
 body.mobile .dt_mark {display: block;}
 body.mobile .dt_mark .mark {
