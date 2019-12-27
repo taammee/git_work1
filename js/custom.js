@@ -95,13 +95,9 @@ $(document).ready(function(){
 		return false;
 	});
 	$('#srchText').on('focusin', function(){
-		$('.srchWrap').addClass('focus');
 		$('.srchBox').removeClass('_on');
 		$('.srchBox button').attr('title', '검색조건 열기');
 		$('.srchBox .src_list').hide();
-	});
-	$('#srchText').on('focusout', function(){
-		$('.srchWrap').removeClass('focus');
 	});
 
 

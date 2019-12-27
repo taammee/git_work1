@@ -1207,6 +1207,7 @@ body.sub .srchLink .first a {background-color: #01df70; color: #fff;}
 }
 body.mobile .srchLink {display: none;}
 
+body.mobile .btnBox ._btn {padding: 10px 15px;}
 
 /* ------------------------------------------- header */
 body.sub .logoArea {margin-top: 1px;}
@@ -1240,7 +1241,7 @@ body.sub .srchLine .srchBox .src_list {top: 57px; text-align: left;}
   body.sub .headerWrap {position: relative; padding: 20px; height: 100px;}
   body.sub .sub_srchLine {
     display: none;
-    width: 100%; position: absolute; left: 0; top: 100px; background-color: #f2f2f2; padding: 25px 0 17px;
+    width: 100%; position: absolute; left: 0; top: 98px; background-color: #f2f2f2; padding: 25px 0 17px;
     z-index: 1;
   }
   #srchBtn_h {display: block;}
@@ -1252,8 +1253,12 @@ body.mobile #srchBtn_h {
 }
 
 @media all and (max-width: 1020px) {
+  .user_info_form dd select, .user_info_form dd input[type="text"] {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
   .user_info_form dd.text3 select, .user_info_form dd.text3 input[type="text"] {
-      width: calc(33% - 12px);
+    width: calc(33% - 12px);
   }
 }
 body.mobile .joinTwoWrap .joinBox {padding: 50px 30px;}
@@ -1277,17 +1282,21 @@ body.mobile {font-size: 0.8em;}
     padding: 5px 20px;
   }
 }
+body.sub.mobile .srchLine .srchWrap {
+  height: 52px; font-size: 0.8em;
+}
 body.sub.mobile .srchLine .srcName:after {top: 13px;}
 body.sub.mobile .srchLine .srcName {
   height: 34px;
+  padding: 2px 15px;
 }
 body.sub.mobile .srchLine .srchBox .src_list a {
-  padding: 5px 20px;
+  padding: 5px 15px;
 }
-body.sub.mobile .srchLine .srchWrap {
-  height: 52px;
+
+body.sub.mobile #srchText {
+  width: calc(100% - 170px); height: 33px; font-size: 1em;
 }
-body.sub.mobile #srchText {height: 33px;}
 body.sub.mobile .srchLine #srchBtn {width: 52px; height: 52px;}
 
 

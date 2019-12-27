@@ -1588,6 +1588,7 @@ body.mobile .detailArea .chk_detail .srchWrap { top: 10px; }
 body.mobile .detailArea .chk_detail .srchBox {
   width: calc(50% - 8px); display: inline-block;
 }
+body.mobile .detailArea .chk_detail dd .chk_list li {margin: 5px 10px;}
 /* @media all and (max-width: 400px) {
   body.mobile .detailArea .chk_detail .srchBox {
     display: block; float: none; width: 100%; margin-right: 0; margin-bottom: 5px;
@@ -1596,6 +1597,9 @@ body.mobile .detailArea .chk_detail .srchBox {
 body.mobile .rsltKey-arrow {display: none;}
 body.mobile .rsltKey .swiper-container {width: 100%;}
 body.mobile .rsltKey ul li {margin: 0 5px;}
+body.mobile .btn_detail input[type="button"] {
+  padding: 10px; min-width: 100px;
+}
 
 
 /* --검색페이지 리스트-- */
