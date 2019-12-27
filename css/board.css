@@ -170,7 +170,7 @@ section.boardPage {background-color: #f3f3f3;}
 }
 
 /* ---------------------------------------------------- 반응형 */
-@media (max-width: 980px) {
+@media all and (max-width: 980px) {
     body.sub header + section {margin-top: 0;}
     .boardWrap,
     .viewWrap {width: 90%;padding: 40px 10px;}
@@ -180,3 +180,7 @@ body.mobile .viewWrap {padding: 40px 10px;}
 body.mobile .tableWrap ._date {width: 20%;}
 body.mobile .tableWrap ._hit {display: none;}
 body.mobile .tableWrap table ._title {width: 100%;}
+body.mobile .viewWrap .fileArea dt {float: none; width: 100%; text-align: left; margin-bottom: 10px;}
+body.mobile .viewWrap .fileArea dd {float: none; width: 100%; text-align: left;}
+body.mobile .viewWrap .fileArea dd li {padding: 5px 0 5px 35px;}
+body.mobile .viewWrap .fileArea dd a {padding: 5px 40px 4px 0;}
