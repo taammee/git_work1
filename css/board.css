@@ -33,7 +33,7 @@ section.boardPage {background-color: #f3f3f3;}
 .tableWrap table ._auto {width: auto;}
 .tableWrap table ._num {width: 10%;}
 .tableWrap table ._title {width: auto;}
-.tableWrap table ._date {width: 10%;}
+.tableWrap table ._date {width: 15%;}
 .tableWrap table ._hit {width: 10%;}
 
 .tableWrap table thead th {
@@ -179,3 +179,4 @@ body.mobile .boardWrap,
 body.mobile .viewWrap {padding: 40px 10px;}
 body.mobile .tableWrap ._date {width: 20%;}
 body.mobile .tableWrap ._hit {display: none;}
+body.mobile .tableWrap table ._title {width: 100%;}
