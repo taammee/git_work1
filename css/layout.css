@@ -811,7 +811,7 @@ body.main .srchLine #srchText {margin-top: 23px;}
 .angelInfo .people.on button:before {background-position: -126px bottom;}
 .angelInfo .director.on button:before {background-position: right bottom;}
 .angelInfo li.on button:after {
-  content: ''; display: block; width: 100%; height: 3px; background-color: #01df70;
+  content: ''; display: none; width: 100%; height: 3px; background-color: #01df70;
   margin-top: 9px;
 }
 
@@ -829,6 +829,7 @@ body.main .srchLine #srchText {margin-top: 23px;}
 .aViewBtn .slick-arrow.next {float: right; background-position: right center;}
 
 .titleBtn button {background-color: transparent; color: #555; margin-left: 35px;}
+.titleBtn button.on {font-weight: 500;}
 .titleBtn button.on:after {
   content: ''; display: block; width: 100%; height: 5px; background-color: #0ce076;
   margin-top: 15px;
@@ -858,6 +859,7 @@ body.main .srchLine #srchText {margin-top: 23px;}
     content: ''; display: block; width: 100%; height: 1px; background-color: #ccc;
     margin-top: 9px;
   }
+  .angelInfo li.on button:after {display: block; margin-top: 8px;}
   .angelView .angelInfo li p {margin-top: 30px;}
 
   .imgArea {float: none; width: 100%;}
