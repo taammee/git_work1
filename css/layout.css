@@ -1122,8 +1122,8 @@ body.main .srchLine #srchText {margin-top: 23px;}
     top: -740px;
     width: 79px; height: 79px; background-size: auto 88px;
   }
-  .angelThumb .slick-prev {left: -10px; }
-  .angelThumb .slick-next {right: -10px;}
+  .angelThumb .slick-prev {left: 0; }
+  .angelThumb .slick-next {right: 0;}
 }
 
 
