@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-type">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta name="format-detection" content="telephone=no,email=no,address=no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+<title>SUB - 관리자 게시판</title>
+
+
+<link rel="stylesheet" href="css/common.css" media="all">
+<link rel="stylesheet" href="css/manager.css" media="all">
+
+<script src="js/jquery.js"></script>
+<script src="js/manager.js"></script>
+
+</head>
+<body class="sub">
+<script>
+		function respondCSS() {
+			var windowWidth = $(window).width();
+
+			if (windowWidth < 641) {
+				$(document.body).addClass('mobile');
+				$(document.body).removeClass('desktop');
+			}
+			else {
+				$(document.body).addClass('desktop');
+				$(document.body).removeClass('mobile');
+			}
+		}
+		$(window).bind("orientationchange load resize", respondCSS);
+		respondCSS();
+	</script>
+	
+	<header>
+		<div class="w1380">
+			<h1>Silverangel</h1>
+			<nav>
+				<ul id="nav">
+					<li>
+						<a href="SUB-6-manager.html">회원관리</a>
+						<ul class="_2depth">
+							<li><a href="SUB-6-manager.html">개인회원 관리</a></li>
+							<li><a href="SUB-6-manager_1_2.html">요양원회원 관리</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="SUB-6-manager_2.html">메인관리</a>
+					</li>
+					<li>
+						<a href="SUB-6-manager_3.html">제휴/문의</a>
+					</li>
+					<li class="_on">
+						<a href="SUB-6-manager_4.html">게시판</a>
+					</li>
+				</ul>
+			</nav>
+
+			<div class="loginArea">
+				<p><strong>관리자</strong>님 안녕하세요.</p>
+				<a href="#none" class="logoutBtn">로그아웃</a>
+			</div>
+		</div>
+	</header>
+
+	<section class="w1380">
+		<h2>게시판</h2>
+		<div class="manageBox">
+			<div class="list_srchWrap">
+				<div class="condition">
+					<label for="start_year">등록일</label>
+					<select class="select_year" id="start_year">
+						<option value="2018">2018</option>
+						<option value="2017">2017</option>
+						<option value="2016">2016</option>
+					</select>
+					년
+					<select title="등록일 시작 월 선택">
+						<option value="9">9</option>
+						<option value="8">8</option>
+						<option value="7">7</option>
+					</select>
+					월 
+					~
+					<select class="select_year" title="등록일 마지막 년 선택">
+						<option value="2018">2018</option>
+						<option value="2017">2017</option>
+						<option value="2016">2016</option>
+					</select>
+					년
+					<select title="등록일 마지막 월 선택">
+						<option value="9">9</option>
+						<option value="8">8</option>
+						<option value="7">7</option>
+					</select>
+					월
+				</div>
+				<div class="srchArea">
+					<input type="text" title="검색어 입력">
+					<input type="button" value="검색">
+				</div>
+			</div>
+
+			<table>
+				<caption>게시판의 글 번호, 제목, 등록일을 안내합니다.</caption>
+				<colgroup>
+					<col style="width: 150px;">
+					<col style="width: auto;">
+					<col style="width: 150px;">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">번호</th>
+						<th scope="col">제목</th>
+						<th scope="col">등록일</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>121</td>
+						<td class="_title"><a href="#none">2019년 노인장기요양보험 월 한도액 및 급여비용.</a></td>
+						<td>2019-12-01</td>
+					</tr>
+					<tr>
+						<td>120</td>
+						<td class="_title"><a href="#none">장기요양급여 제공기준 및 급여비용 산정방법 관련 Q&A 안내</a></td>
+						<td>2019-12-01</td>
+					</tr>
+					<tr>
+						<td>119</td>
+						<td class="_title"><a href="#none">판촉 홍보물 차량용 자석 스티커 및 뒷유리 스티커 제작완료</a></td>
+						<td>2019-12-01</td>
+					</tr>
+					<tr>
+						<td>118</td>
+						<td class="_title"><a href="#none">홈페이지가 새롭게 개편되었습니다</a></td>
+						<td>2019-12-01</td>
+					</tr>
+					<tr>
+						<td>117</td>
+						<td class="_title"><a href="#none">2019년 노인장기요양보험 월 한도액 및 급여비용.</a></td>
+						<td>2019-12-01</td>
+					</tr>
+					<tr>
+						<td>116</td>
+						<td class="_title"><a href="#none">장기요양급여 제공기준 및 급여비용 산정방법 관련 Q&A 안내</a></td>
+						<td>2019-12-01</td>
+					</tr>
+					<tr>
+						<td>115</td>
+						<td class="_title"><a href="#none">판촉 홍보물 차량용 자석 스티커 및 뒷유리 스티커 제작완료</a></td>
+						<td>2019-12-01</td>
+					</tr>
+					<tr>
+						<td>114</td>
+						<td class="_title"><a href="#none">홈페이지가 새롭게 개편되었습니다</a></td>
+						<td>2019-12-01</td>
+					</tr>
+					<tr>
+						<td>113</td>
+						<td class="_title"><a href="#none">2019년 노인장기요양보험 월 한도액 및 급여비용.</a></td>
+						<td>2019-12-01</td>
+					</tr>
+					<tr>
+						<td>112</td>
+						<td class="_title"><a href="#none">장기요양급여 제공기준 및 급여비용 산정방법 관련 Q&A 안내</a></td>
+						<td>2019-12-01</td>
+					</tr>
+					<tr>
+						<td>111</td>
+						<td class="_title"><a href="#none">판촉 홍보물 차량용 자석 스티커 및 뒷유리 스티커 제작완료</a></td>
+						<td>2019-12-01</td>
+					</tr>
+					<tr>
+						<td>110</td>
+						<td class="_title"><a href="#none">홈페이지가 새롭게 개편되었습니다</a></td>
+						<td>2019-12-01</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<div class="paging">
+				<a class="pageBtn _first" href="#none">처음 페이지로 이동</a>
+				<a class="pageBtn _prev" href="#none">이전 페이지로 이동</a>
+				<ul>
+					<li class="on"><a href="#none">1</a></li>
+					<li><a href="#none">2</a></li>
+					<li><a href="#none">3</a></li>
+					<li><a href="#none">4</a></li>
+					<li><a href="#none">5</a></li>
+					<li><a href="#none">6</a></li>
+					<li><a href="#none">7</a></li>
+					<li><a href="#none">8</a></li>
+					<li><a href="#none">9</a></li>
+					<li><a href="#none">10</a></li>
+				</ul>
+				<a class="pageBtn _next" href="#none">다음 페이지로 이동</a>
+				<a class="pageBtn _last" href="#none">마지막 페이지로 이동</a>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="w1380">
+		<h2>게시판</h2>
+		<div class="manageBox">
+			<h3>등록</h3>
+			<div class="_inquiry">
+				<dl>
+					<dt><label for="postTitle">제목</label></dt>
+					<dd><input type="text" id="postTitle"></dd>
+				</dl>
+				<dl>
+					<dt><label for="postContents">내용</label></dt>
+					<dd><textarea id="postContents"></textarea></dd>
+				</dl>
+				<dl class="_fileArea">
+					<dt>첨부파일</dt>
+					<dd>
+						<ul>
+							<li>요양원소식_01234.pdf<a href="#none" class="addKeyword _del">파일 삭제</a></li>
+						</ul>
+						<input type="text" title="첨부파일">
+						<a href="#none" class="_btn _small _black">파일 첨부</a>
+					</dd>
+				</dl>
+			</div>
+
+			<div class="btnBox">
+				<a href="#none" class="_btn _write">저장</a>
+				<a href="#none" class="_btn">초기화</a>
+			</div>
+		</div>
+	</section>
+</body>
+</html>

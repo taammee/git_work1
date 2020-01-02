@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-type">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta name="format-detection" content="telephone=no,email=no,address=no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+<title>SUB - 관리자 제휴/문의</title>
+
+
+<link rel="stylesheet" href="css/common.css" media="all">
+<link rel="stylesheet" href="css/manager.css" media="all">
+
+<script src="js/jquery.js"></script>
+<script src="js/manager.js"></script>
+
+</head>
+<body class="sub">
+<script>
+		function respondCSS() {
+			var windowWidth = $(window).width();
+
+			if (windowWidth < 641) {
+				$(document.body).addClass('mobile');
+				$(document.body).removeClass('desktop');
+			}
+			else {
+				$(document.body).addClass('desktop');
+				$(document.body).removeClass('mobile');
+			}
+		}
+		$(window).bind("orientationchange load resize", respondCSS);
+		respondCSS();
+	</script>
+	
+	<header>
+		<div class="w1380">
+			<h1>Silverangel</h1>
+			<nav>
+				<ul id="nav">
+					<li>
+						<a href="SUB-6-manager.html">회원관리</a>
+						<ul class="_2depth">
+							<li><a href="SUB-6-manager.html">개인회원 관리</a></li>
+							<li><a href="SUB-6-manager_1_2.html">요양원회원 관리</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="SUB-6-manager_2.html">메인관리</a>
+					</li>
+					<li class="_on">
+						<a href="SUB-6-manager_3.html">제휴/문의</a>
+					</li>
+					<li>
+						<a href="SUB-6-manager_4.html">게시판</a>
+					</li>
+				</ul>
+			</nav>
+
+			<div class="loginArea">
+				<p><strong>관리자</strong>님 안녕하세요.</p>
+				<a href="#none" class="logoutBtn">로그아웃</a>
+			</div>
+		</div>
+	</header>
+
+	<section class="w1380">
+		<h2>제휴/문의</h2>
+		<div class="manageBox">
+			<div class="list_srchWrap">
+				<div class="condition">
+					<label for="start_year">등록일</label>
+					<select class="select_year" id="start_year">
+						<option value="2018">2018</option>
+						<option value="2017">2017</option>
+						<option value="2016">2016</option>
+					</select>
+					년
+					<select title="등록일 시작 월 선택">
+						<option value="9">9</option>
+						<option value="8">8</option>
+						<option value="7">7</option>
+					</select>
+					월 
+					~
+					<select class="select_year" title="등록일 마지막 년 선택">
+						<option value="2018">2018</option>
+						<option value="2017">2017</option>
+						<option value="2016">2016</option>
+					</select>
+					년
+					<select title="등록일 마지막 월 선택">
+						<option value="9">9</option>
+						<option value="8">8</option>
+						<option value="7">7</option>
+					</select>
+					월
+				</div>
+				<div class="srchArea">
+					<select class="srch_local" title="지역 선택">
+						<option value="지역">지역</option>
+						<option value="서울">서울</option>
+						<option value="경기">경기</option>
+					</select>
+					<input type="text" title="검색어 입력">
+					<input type="button" value="검색">
+				</div>
+			</div>
+
+			<table>
+				<caption>제휴/문의를 관리하기 위해 요양원의 번호, 요양원명, 담당자, 연락처, 지역, 입점문의 상태를 표로 안내합니다.</caption>
+				<colgroup>
+					<col style="width: 150px;">
+					<col style="width: auto;">
+					<col style="width: 150px;">
+					<col style="width: 150px;">
+					<col style="width: 300px;">
+					<col style="width: 150px;">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">번호</th>
+						<th scope="col">요양원</th>
+						<th scope="col">담당자</th>
+						<th scope="col">연락처</th>
+						<th scope="col">지역</th>
+						<th scope="col">상태</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>121</td>
+						<td><a href="#none">실버프리</a></td>
+						<td>홍길동</td>
+						<td>02-1234-5678</td>
+						<td>서울 은평구</td>
+						<td><p class="join">입점문의</p></td>
+					</tr>
+					<tr>
+						<td>120</td>
+						<td><a href="#none">해피니스 요양원</a></td>
+						<td>홍길동</td>
+						<td>02-1234-5678</td>
+						<td>일산 고양시</td>
+						<td><p class="join _black">입점완료</p></td>
+					</tr>
+					<tr>
+						<td>119</td>
+						<td><a href="#none">로나요양원</a></td>
+						<td>홍길동</td>
+						<td>02-1234-5678</td>
+						<td>충청남도</td>
+						<td><p class="join _black">입점완료</p></td>
+					</tr>
+					<tr>
+						<td>118</td>
+						<td><a href="#none">에바다요양원</a></td>
+						<td>홍길동</td>
+						<td>02-1234-5678</td>
+						<td>제주시</td>
+						<td><p class="join _black">입점완료</p></td>
+					</tr>
+					<tr>
+						<td>117</td>
+						<td><a href="#none">소담요양원</a></td>
+						<td>홍길동</td>
+						<td>02-1234-5678</td>
+						<td>대구시 서북구</td>
+						<td><p class="join _black">입점완료</p></td>
+					</tr>
+					<tr>
+						<td>116</td>
+						<td><a href="#none">나비요양원</a></td>
+						<td>홍길동</td>
+						<td>02-1234-5678</td>
+						<td>서울 은평구</td>
+						<td><p class="join _black">입점완료</p></td>
+					</tr>
+					<tr>
+						<td>115</td>
+						<td><a href="#none">아름다운요양원</a></td>
+						<td>홍길동</td>
+						<td>02-1234-5678</td>
+						<td>일산 고양시</td>
+						<td><p class="join _black">입점완료</p></td>
+					</tr>
+					<tr>
+						<td>114</td>
+						<td><a href="#none">행복요양원</a></td>
+						<td>홍길동</td>
+						<td>02-1234-5678</td>
+						<td>충청남도</td>
+						<td><p class="join _black">입점완료</p></td>
+					</tr>
+					<tr>
+						<td>113</td>
+						<td><a href="#none">휴마루 시니어타운</td>
+						<td>홍길동</td>
+						<td>02-1234-5678</td>
+						<td>제주시</td>
+						<td><p class="join _black">입점완료</p></td>
+					</tr>
+					<tr>
+						<td>112</td>
+						<td><a href="#none">무지개동산</td>
+						<td>홍길동</td>
+						<td>02-1234-5678</td>
+						<td>대구시 서북구</td>
+						<td><p class="join _black">입점완료</p></td>
+					</tr>
+					<tr>
+						<td>111</td>
+						<td><a href="#none">동탄요양원</a></td>
+						<td>홍길동</td>
+						<td>02-1234-5678</td>
+						<td>경상북도 구미시</td>
+						<td><p class="join _black">입점완료</p></td>
+					</tr>
+					<tr>
+						<td>110</td>
+						<td><a href="#none">미카엘요양원</a></td>
+						<td>홍길동</td>
+						<td>02-1234-5678</td>
+						<td>인천 부평구</td>
+						<td><p class="join _black">입점완료</p></td>
+					</tr>
+				</tbody>
+			</table>
+
+			<div class="paging">
+				<a class="pageBtn _first" href="#none">처음 페이지로 이동</a>
+				<a class="pageBtn _prev" href="#none">이전 페이지로 이동</a>
+				<ul>
+					<li class="on"><a href="#none">1</a></li>
+					<li><a href="#none">2</a></li>
+					<li><a href="#none">3</a></li>
+					<li><a href="#none">4</a></li>
+					<li><a href="#none">5</a></li>
+					<li><a href="#none">6</a></li>
+					<li><a href="#none">7</a></li>
+					<li><a href="#none">8</a></li>
+					<li><a href="#none">9</a></li>
+					<li><a href="#none">10</a></li>
+				</ul>
+				<a class="pageBtn _next" href="#none">다음 페이지로 이동</a>
+				<a class="pageBtn _last" href="#none">마지막 페이지로 이동</a>
+			</div>
+		</div>
+	</section>
+
+
+
+	<section class="w1380">
+		<h2>제휴/문의</h2>
+		<div class="manageBox">
+			<h3>문의하기 상세정보</h3>
+			<div class="_inquiry">
+				<dl>
+					<dt><label for="centerName">시설명</label></dt>
+					<dd><input type="text" id="centerName"  value="실버프리"></dd>
+				</dl>
+				<dl>
+					<dt><label for="centerAddr">주소</label></dt>
+					<dd><input type="text" id="centerAddr"  value="서울 은평구"></dd>
+				</dl>
+				<dl>
+					<dt><label for="centerP">시설장</label></dt>
+					<dd><input type="text" id="centerP"  value="시설장"></dd>
+				</dl>
+				<dl>
+					<dt><label for="centerNum">전화번호</label></dt>
+					<dd><input type="text" id="centerNum"  value="02-1234-5678"></dd>
+				</dl>
+				<dl>
+					<dt><label for="centerP_num">핸드폰번호</label></dt>
+					<dd><input type="text" id="centerP_num"  value="02-1234-5678"></dd>
+				</dl>
+				<dl>
+					<dt><label for="centerMail">이메일 주소</label></dt>
+					<dd><input type="text" id="centerMail"  value="silverangel@anver.com"></dd>
+				</dl>
+				<dl>
+					<dt><label for="inq_contents">문의내용</label></dt>
+					<dd><textarea id="inq_contents" >문의 내용 입니다.</textarea></dd>
+				</dl>
+				<dl>
+					<dt>시설명</dt>
+					<dd class="radioArea">
+						<p>
+							<input type="radio" name="state" id="_inq" checked>
+							<label for="_inq"><span></span>입점문의</label>
+						</p>
+						<p>
+							<input type="radio" name="state" id="_comp">
+							<label for="_comp"><span></span>입점완료</label>
+						</p>
+					</dd>
+				</dl>
+			</div>
+			<div class="btnBox">
+				<a href="#none" class="_btn _write">저장</a>
+				<a href="#none" class="_btn">취소</a>
+			</div>
+		</div>
+	</section>
+</body>
+</html>

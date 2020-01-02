@@ -1,0 +1,826 @@
+@charset "UTF-8";
+/**
+ * *manager page css
+*/
+/* ---------------------------------------------------- common */
+body {
+  color: #3c3c3c;
+  font-size: 18px;
+  background-color: #f1f1f1;
+  overflow-x: auto;
+}
+
+.w1380 {
+  width: 1380px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+/* button */
+.btnBox {
+  text-align: center;
+  margin: 30px auto;
+}
+
+.btnBox.t_left {
+  text-align: left;
+}
+
+.btnBox.t_right {
+  text-align: right;
+}
+
+._btn {
+  display: inline-block;
+  color: #fff !important;
+  text-align: center;
+  font-size: 16px;
+  background-color: #a0a0a0;
+  border-radius: 40px;
+  padding: 7px 37px;
+  margin: 0 5px;
+  border: 0;
+}
+
+._btn._write {
+  background-color: #01df70;
+}
+
+._btn._black {
+  background-color: #434343;
+}
+
+._btn._small {
+  font-size: 14px;
+  padding: 2px 9px;
+  vertical-align: middle;
+}
+
+/* ---------------------------------------------------- header */
+header {
+  background-color: #01df70;
+  text-align: center;
+  padding: 9px 0 0;
+}
+
+header:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 40px;
+  background-color: #fff;
+  border-bottom: 1px solid #e6e6e6;
+  margin-top: 1px;
+}
+
+header .w1380 {
+  display: inline-block;
+  position: relative;
+}
+
+header h1 {
+  float: left;
+  text-indent: -5000px;
+  width: 165px;
+  height: 33px;
+  background: url("../img/mng/logo.png") left top no-repeat;
+}
+
+header nav {
+  float: left;
+  text-align: center;
+  width: 910px;
+}
+
+header nav #nav > li {
+  display: inline-block;
+}
+
+header nav #nav > li > a {
+  color: #fff;
+  font-weight: 500;
+  margin: 0 20px;
+}
+
+header nav #nav ._2depth {
+  display: none;
+  position: absolute;
+  margin-top: 19px;
+}
+
+header nav #nav ._2depth > li {
+  display: inline-block;
+  margin: 0 12px;
+  font-size: 16px;
+}
+
+header nav #nav ._2depth > li._on > a {
+  color: #01df70;
+  font-weight: 500;
+}
+
+header nav #nav ._2depth > li._on > a:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #01df70;
+  margin-top: 7px;
+}
+
+header nav #nav > li._on > a {
+  color: #3c3c3c;
+}
+
+header nav #nav > li._on > ._2depth {
+  display: block;
+}
+
+header .loginArea {
+  float: right;
+}
+
+header .loginArea > p {
+  display: inline-block;
+  font-weight: 200;
+  vertical-align: middle;
+}
+
+header .loginArea > p strong {
+  font-weight: 500;
+}
+
+header .loginArea a.logoutBtn {
+  display: inline-block;
+  color: #01df70;
+  vertical-align: middle;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 2px 15px;
+  border-radius: 26px;
+  background-color: #fff;
+  margin-left: 10px;
+}
+
+/* ---------------------------------------------------- manageBox */
+section {
+  margin: 0 auto 100px !important;
+}
+
+section.w1380 h2 {
+  font-size: 25px;
+  font-weight: 700;
+  margin: 20px 0 20px 30px;
+}
+
+.manageBox {
+  background-color: #fff;
+  border: 1px solid #dadada;
+  padding: 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  min-height: 1100px;
+}
+
+.manageBox h3 {
+  font-weight: 500;
+  margin: 50px 0 30px;
+}
+
+.manageBox h3:first-child {
+  margin-top: 0;
+}
+
+.manageBox h3 strong {
+  color: #01df70;
+  font-size: 18px;
+  font-weight: 400;
+  margin-left: 15px;
+}
+
+.manageBox a.addKeyword {
+  display: inline-block;
+  text-indent: -5000px;
+  width: 26px;
+  height: 26px;
+  background: url("../img/mng/addKeyword_btn.png") left top no-repeat;
+  vertical-align: middle;
+  margin-left: 7px;
+}
+
+.manageBox a.addKeyword._del {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  margin: 0 0 0 10px;
+}
+
+.manageBox ._inquiry input[type="text"],
+.manageBox ._inquiry textarea,
+.manageBox ._inquiry select,
+.manageBox ._main_banner input[type="text"],
+.manageBox ._main_banner textarea,
+.manageBox ._main_banner select {
+  color: #7d7d7d;
+  font-size: 14px;
+  font-weight: 300;
+  width: 100%;
+  height: 28px;
+  border: 1px solid #d8d8d8;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  vertical-align: middle;
+}
+
+.manageBox ._inquiry input[type="text"],
+.manageBox ._main_banner input[type="text"] {
+  line-height: 26px;
+  padding: 0px 5px;
+}
+
+.manageBox ._inquiry textarea,
+.manageBox ._main_banner textarea {
+  min-height: 200px;
+  padding: 5px;
+}
+
+.manageBox .list_srchWrap {
+  overflow: hidden;
+  background-color: #f2f2f2;
+  padding: 15px 100px;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.manageBox .list_srchWrap select, .manageBox .list_srchWrap input[type="text"] {
+  text-indent: 5px;
+  font-size: 15px;
+  font-weight: 300;
+  min-width: 50px;
+  height: 27px;
+  line-height: 27px;
+  border: 1px solid #d8d8d8;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.manageBox .list_srchWrap select {
+  margin: 0 5px;
+}
+
+.manageBox .list_srchWrap select.select_year {
+  min-width: 80px;
+}
+
+.manageBox .list_srchWrap .condition {
+  float: left;
+}
+
+.manageBox .list_srchWrap .srchArea {
+  float: right;
+}
+
+.manageBox .list_srchWrap .srchArea input[type="text"] {
+  width: 408px;
+}
+
+.manageBox .list_srchWrap .srchArea input[type="button"] {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 200;
+  background-color: #3c3c3c;
+  padding: 3px 34px;
+  border-radius: 34px;
+  border: 0;
+  margin-left: 10px;
+}
+
+.manageBox .list_srchWrap .srchArea select {
+  width: 120px;
+}
+
+.manageBox table {
+  font-size: 16px;
+  border-top: 2px solid #777;
+  margin-bottom: 25px;
+}
+
+.manageBox table thead {
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.manageBox table thead th {
+  font-weight: 300;
+}
+
+.manageBox table tbody tr {
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.manageBox table thead th, .manageBox table tbody td {
+  padding: 7px 10px;
+  text-align: center;
+}
+
+.manageBox table p.join {
+  display: block;
+  color: #fff;
+  max-width: 77px;
+  background-color: #01df70;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 auto;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 5px 13px;
+  border-radius: 26px;
+}
+
+.manageBox table p.join._black {
+  background-color: #434343;
+}
+
+.manageBox table td._viewMain {
+  color: #01df70;
+  position: relative;
+}
+
+.manageBox table td._viewMain:after {
+  content: '메인노출';
+  font-size: 14px;
+  position: absolute;
+  right: 50px;
+  top: 12px;
+}
+
+.manageBox table ._title {
+  text-align: left;
+}
+
+.manageBox table ._title > a {
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.manageBox ._inquiry {
+  border-top: 2px solid #777;
+}
+
+.manageBox ._inquiry input[type="text"],
+.manageBox ._inquiry select,
+.manageBox ._inquiry textarea {
+  margin-bottom: 3px;
+}
+
+.manageBox ._inquiry dl {
+  width: 100%;
+  border-bottom: 1px solid #e6e6e6;
+  display: table;
+  font-size: 16px;
+}
+
+.manageBox ._inquiry dl dt, .manageBox ._inquiry dl dd {
+  display: table-cell;
+}
+
+.manageBox ._inquiry dl dt {
+  width: 180px;
+  background-color: #f9f9f9;
+  text-align: center;
+  padding: 9px;
+  vertical-align: middle;
+}
+
+.manageBox ._inquiry dl dd {
+  position: relative;
+  color: #7d7d7d;
+  font-weight: 300;
+  width: calc(100% - 180px);
+  padding: 5px 10px 2px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  vertical-align: middle;
+}
+
+.manageBox ._inquiry dl dd input[type="radio"],
+.manageBox ._inquiry dl dd input[type="checkbox"] {
+  display: none;
+}
+
+.manageBox ._inquiry dl dd input[type="checkbox"] + label,
+.manageBox ._inquiry dl dd input[type="radio"] + label {
+  color: #707070;
+  font-size: 16px;
+}
+
+.manageBox ._inquiry dl dd.radioArea p {
+  display: inline-block;
+  margin-right: 50px;
+}
+
+.manageBox ._inquiry dl dd input[type="checkbox"] + label span,
+.manageBox ._inquiry dl dd input[type="radio"] + label span {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid #252525;
+  margin: 0 3px 3px 0;
+  vertical-align: middle;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.manageBox ._inquiry dl dd input[type="checkbox"]:checked + label span,
+.manageBox ._inquiry dl dd input[type="radio"]:checked + label span {
+  border: 3px solid #01df70;
+}
+
+.manageBox ._inquiry dl dd.keyword select {
+  width: 300px;
+  margin-right: 5px;
+}
+
+.manageBox ._inquiry dl._2part dd {
+  width: calc(100% - 380px);
+}
+
+.manageBox ._inquiry dl .dateIcon {
+  display: block;
+  width: 17px;
+  height: 17px;
+  text-indent: -5000px;
+  background: url("../img/mng/cal_icon.png") left top no-repeat;
+  position: absolute;
+  right: 16px;
+  top: 13px;
+}
+
+.manageBox ._inquiry dl._rows dd {
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.manageBox ._inquiry dl._rows dd input[type="text"] {
+  width: 431px;
+}
+
+.manageBox ._inquiry dl._rows dd:last-child {
+  border-bottom: 0;
+}
+
+.manageBox ._inquiry dl._rows dd._2part input[type="text"] {
+  width: 555px;
+}
+
+.manageBox ._inquiry dl._rows dd._2part input[type="text"].last-addr {
+  width: 431px;
+}
+
+.manageBox ._inquiry dl._rows dd._2part span {
+  color: #3c3c3c;
+  margin: 0 10px 0 20px;
+}
+
+.manageBox ._inquiry dl.people dd input[type="text"] {
+  width: 88px;
+}
+
+.manageBox ._inquiry dl.people dd p {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.manageBox ._inquiry dl._facility dd > p {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.manageBox ._inquiry dl._facility dd input[type="checkbox"] + label {
+  display: inline-block;
+  font-size: 14px;
+  width: 75px;
+}
+
+.manageBox ._inquiry dl._facility dd select {
+  width: 100px;
+  margin-right: 5px;
+}
+
+.manageBox ._inquiry dl._facility dd input[type="text"] {
+  width: 195px;
+}
+
+.manageBox ._inquiry dl._staff dd > p {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.manageBox ._inquiry dl._staff dd input[type="checkbox"] + label {
+  display: inline-block;
+  font-size: 14px;
+  width: 100px;
+}
+
+.manageBox ._inquiry dl._staff dd input[type="text"] {
+  width: 85px;
+}
+
+.manageBox ._inquiry dl._input dd > p {
+  width: 55px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.manageBox ._inquiry dl._input dd input[type="text"]:last-of-type {
+  margin-right: 0 !important;
+}
+
+.manageBox ._inquiry dl._input dd._input1 input[type="text"] {
+  width: 1010px;
+}
+
+.manageBox ._inquiry dl._input dd._input2 input[type="text"] {
+  width: 484px;
+  margin-right: 5px;
+}
+
+.manageBox ._inquiry dl._input dd._input3 input[type="text"] {
+  width: 318px;
+  margin-right: 5px;
+}
+
+.manageBox ._inquiry dl._input dd._input5 select,
+.manageBox ._inquiry dl._input dd._input5 input[type="text"] {
+  width: 188px;
+  margin-right: 5px;
+}
+
+.manageBox ._inquiry dl._addAddr dd input[type="text"] {
+  width: 972px;
+}
+
+.manageBox ._inquiry dl._statement dd > div {
+  float: left;
+  width: 31%;
+  margin: 10px 15px;
+}
+
+.manageBox ._inquiry dl._statement dd > div:last-of-type {
+  margin-right: 0;
+}
+
+.manageBox ._inquiry dl._statement dd h4 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.manageBox ._inquiry dl._statement dd li {
+  margin-bottom: 5px;
+}
+
+.manageBox ._inquiry dl._statement dd li > p {
+  width: 105px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.manageBox ._inquiry dl._statement dd li input[type="text"] {
+  width: 195px;
+}
+
+.manageBox ._inquiry dl._fileArea ul {
+  margin: 10px 0;
+}
+
+.manageBox ._inquiry dl._fileArea ul li {
+  color: #959595;
+  margin-bottom: 5px;
+}
+
+.manageBox ._inquiry dl._fileArea input[type="text"] {
+  width: 996px;
+}
+
+.manageBox ._inquiry dl._keyAdd dd input[type="text"] {
+  width: 154px;
+  text-align: center;
+  color: #3c3c3c;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.manageBox ._inquiry dl._keyAdd dd span {
+  margin-right: 20px;
+}
+
+.manageBox ._inquiry dl._keyAdd dd ._del {
+  margin-left: 5px;
+}
+
+.manageBox ._inquiry._imgAdd dd input[type="text"] {
+  width: 645px;
+}
+
+.manageBox ._inquiry._imgAdd dd .addKeyword {
+  margin-left: 0;
+}
+
+.manageBox ._inquiry._detail dd {
+  font-size: 14px;
+}
+
+.manageBox ._inquiry._detail dd.radioArea label {
+  font-size: 14px;
+}
+
+.manageBox .titleArea {
+  position: relative;
+}
+
+.manageBox .titleArea ._btn {
+  position: absolute;
+  right: 0;
+  top: 10px;
+}
+
+.manageBox ._main_banner {
+  border-top: 2px solid #777;
+  margin-bottom: 50px;
+}
+
+.manageBox ._main_banner li {
+  overflow: hidden;
+  position: relative;
+  border-bottom: 1px solid #e6e6e6;
+  padding: 20px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.manageBox ._main_banner li ._del {
+  position: absolute;
+  top: 20px;
+  right: 0;
+}
+
+.manageBox ._main_banner li .imgWrap {
+  float: left;
+  overflow: hidden;
+  width: 655px;
+  min-height: 174px;
+  background-color: #cdcdcd;
+}
+
+.manageBox ._main_banner li .imgWrap img {
+  width: 100%;
+  height: auto;
+}
+
+.manageBox ._main_banner li dl {
+  float: right;
+  width: 590px;
+  margin-top: 20px;
+}
+
+.manageBox ._main_banner li dl dt {
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+
+.manageBox ._main_banner li dl dd {
+  margin-bottom: 15px;
+}
+
+.manageBox ._main_banner li dl dd.imgAdd input[type="text"] {
+  width: 508px;
+}
+
+.manageBox .pop_rec_table {
+  position: relative;
+  margin: 50px 0;
+}
+
+.manageBox .pop_rec_table .paging ._btn {
+  position: absolute;
+  right: 0;
+}
+
+.manageBox .pop_rec_table ._check span {
+  margin: 0 20px;
+}
+
+.manageBox .pop_rec_table ._check select {
+  font-size: 16px;
+  width: 90px;
+  height: 28px;
+}
+
+.manageBox ._pop_center {
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
+.manageBox ._pop_center li {
+  float: left;
+  width: 20%;
+  border-bottom: 1px solid #e6e6e6;
+  padding-bottom: 10px;
+  margin-top: 20px;
+}
+
+.manageBox ._pop_center li img {
+  width: 245px;
+  height: 160px;
+  margin-bottom: 10px;
+}
+
+.manageBox ._pop_center li h4 {
+  font-weight: 700;
+}
+
+.manageBox ._pop_center li p {
+  font-size: 16px;
+}
+
+.manageBox ._recommend dd {
+  font-size: 16px;
+}
+
+.manageBox ._recommend dd ul {
+  margin-bottom: 5px;
+}
+
+.manageBox ._recommend dd ul li {
+  display: inline-block;
+  width: calc(33% - 80px);
+  margin-left: 80px;
+}
+
+.manageBox ._recommend dd ul li h4 {
+  display: inline-block;
+  color: #3c3c3c;
+  font-weight: 500;
+}
+
+.manageBox ._recommend dd ul li p {
+  display: inline-block;
+  color: #747474;
+}
+
+/* ---------------------------------------------------- list */
+.paging {
+  text-align: center;
+}
+
+a.pageBtn {
+  display: inline-block;
+  text-indent: -5000px;
+  width: 17px;
+  height: 17px;
+  background: url("../img/mng/board_paging.png") left center no-repeat;
+  vertical-align: middle;
+}
+
+a.pageBtn._prev {
+  background-position: -23px center;
+}
+
+a.pageBtn._next {
+  background-position: -47px center;
+}
+
+a.pageBtn._last {
+  background-position: right center;
+}
+
+.paging ul {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 10px 2px;
+}
+
+.paging ul li {
+  display: inline-block;
+}
+
+.paging ul li a {
+  display: block;
+  width: 25px;
+  height: 25px;
+  color: #767676;
+  font-size: 0.850em;
+  font-weight: 300;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.paging ul li.on a {
+  color: #fff;
+  background-color: #01df70;
+}

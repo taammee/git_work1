@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-type">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta name="format-detection" content="telephone=no,email=no,address=no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+<title>SUB - 관리자 메인 관리</title>
+
+
+<link rel="stylesheet" href="css/common.css" media="all">
+<link rel="stylesheet" href="css/manager.css" media="all">
+
+<script src="js/jquery.js"></script>
+<script src="js/manager.js"></script>
+
+</head>
+<body class="sub">
+<script>
+		function respondCSS() {
+			var windowWidth = $(window).width();
+
+			if (windowWidth < 641) {
+				$(document.body).addClass('mobile');
+				$(document.body).removeClass('desktop');
+			}
+			else {
+				$(document.body).addClass('desktop');
+				$(document.body).removeClass('mobile');
+			}
+		}
+		$(window).bind("orientationchange load resize", respondCSS);
+		respondCSS();
+	</script>
+	
+	<header>
+		<div class="w1380">
+			<h1>Silverangel</h1>
+			<nav>
+				<ul id="nav">
+					<li>
+						<a href="SUB-6-manager.html">회원관리</a>
+						<ul class="_2depth">
+							<li><a href="SUB-6-manager.html">개인회원 관리</a></li>
+							<li><a href="SUB-6-manager_1_2.html">요양원회원 관리</a></li>
+						</ul>
+					</li>
+					<li class="_on">
+						<a href="SUB-6-manager_2.html">메인관리</a>
+					</li>
+					<li>
+						<a href="SUB-6-manager_3.html">제휴/문의</a>
+					</li>
+					<li>
+						<a href="SUB-6-manager_4.html">게시판</a>
+					</li>
+				</ul>
+			</nav>
+
+			<div class="loginArea">
+				<p><strong>관리자</strong>님 안녕하세요.</p>
+				<a href="#none" class="logoutBtn">로그아웃</a>
+			</div>
+		</div>
+	</header>
+
+	<section class="w1380">
+		<h2>메인 관리</h2>
+		<div class="manageBox">
+			<div class="titleArea">
+				<h3>메인 배너 <strong>* 총 5개의 메인 배너를 등록하실 수 있습니다.</strong></h3>
+				<a href="#none" class="_btn _write">배너 추가</a>
+			</div>
+			<div class="_main_banner">
+				<ul>
+					<li>
+						<div class="imgWrap">
+							<img src="img/main/visual_01.jpg" alt="메인 배너1">
+						</div>
+						<dl>
+							<dt>이미지파일</dt>
+							<dd class="imgAdd">
+								<input type="text" title="이미지파일">
+								<a href="#none" class="_btn _small _black">파일첨부</a>
+							</dd>
+							<dt>링크주소입력</dt>
+							<dd>
+								<input type="text" title="링크주소입력">
+							</dd>
+						</dl>
+						<a href="#none" class="addKeyword _del">배너 삭제</a>
+					</li>
+					<li>
+						<div class="imgWrap">
+							<!-- <img src="" alt="메인 배너1"> -->
+						</div>
+						<dl>
+							<dt>이미지파일</dt>
+							<dd class="imgAdd">
+								<input type="text" title="이미지파일">
+								<a href="#none" class="_btn _small _black">파일첨부</a>
+							</dd>
+							<dt>링크주소입력</dt>
+							<dd>
+								<input type="text" title="링크주소입력">
+							</dd>
+						</dl>
+						<a href="#none" class="addKeyword _del">배너 삭제</a>
+					</li>
+				</ul>
+			</div>
+
+			<h3>키워드</h3>
+			<div class="_inquiry">
+				<dl class="_rows _keyAdd"> 
+					<dt>기존 키워드</dt>
+					<dd class="readonly">
+						<span>
+							<input type="text" title="키워드1" value="신규" readonly>
+							<a href="#none" class="addKeyword _del">키워드 삭제하기</a>
+						</span>
+						<span>
+							<input type="text" title="키워드2" value="식단" readonly>
+							<a href="#none" class="addKeyword _del">키워드 삭제하기</a>
+						</span>
+						<span>
+							<input type="text" title="키워드3" value="종교" readonly>
+							<a href="#none" class="addKeyword _del">키워드 삭제하기</a>
+						</span>
+						<span>
+							<input type="text" title="키워드4" value="특별관리" readonly>
+							<a href="#none" class="addKeyword _del">키워드 삭제하기</a>
+						</span>
+						<span>
+							<input type="text" title="키워드5" value="시설" readonly>
+							<a href="#none" class="addKeyword _del">키워드 삭제하기</a>
+						</span>
+					</dd>
+					<dd>
+						<span>
+							<input type="text" title="키워드6" value="프로그램" readonly>
+							<a href="#none" class="addKeyword _del">키워드 삭제하기</a>
+						</span>
+						<span>
+							<input type="text" title="키워드7" value="인원수" readonly>
+							<a href="#none" class="addKeyword _del">키워드 삭제하기</a>
+						</span>
+						<span>
+							<input type="text" title="키워드8" value="가격" readonly>
+							<a href="#none" class="addKeyword _del">키워드 삭제하기</a>
+						</span>
+						<span>
+							<input type="text" title="키워드9" value="등급" readonly>
+							<a href="#none" class="addKeyword _del">키워드 삭제하기</a>
+						</span>
+					</dd>
+				</dl>
+				<dl class="_input">
+					<dt>신규등록 키워드</dt>
+					<dd class="_input3">
+						<input type="text" title="신규등록 키워드 입력창 1">
+						<input type="text" title="신규등록 키워드 입력창 2">
+						<input type="text" title="신규등록 키워드 입력창 3">
+						<a href="#none" class="_btn _small _black">키워드 생성</a>
+					</dd>
+				</dl>
+			</div>
+
+			<!-- 인기/추천 노출될 요양원 선택 표 -->
+			<div class="pop_rec_table">
+				<div class="list_srchWrap">
+					<div class="condition">
+						<label for="start_year">등록일</label>
+						<select class="select_year" id="start_year">
+							<option value="2018">2018</option>
+							<option value="2017">2017</option>
+							<option value="2016">2016</option>
+						</select>
+						년
+						<select title="등록일 시작 월 선택">
+							<option value="9">9</option>
+							<option value="8">8</option>
+							<option value="7">7</option>
+						</select>
+						월 
+						~
+						<select class="select_year" title="등록일 마지막 년 선택">
+							<option value="2018">2018</option>
+							<option value="2017">2017</option>
+							<option value="2016">2016</option>
+						</select>
+						년
+						<select title="등록일 마지막 월 선택">
+							<option value="9">9</option>
+							<option value="8">8</option>
+							<option value="7">7</option>
+						</select>
+						월
+					</div>
+					<div class="srchArea">
+						<select class="srch_local" title="지역 선택">
+							<option value="지역">지역</option>
+							<option value="서울">서울</option>
+							<option value="경기">경기</option>
+						</select>
+						<input type="text" title="검색어 입력">
+						<input type="button" value="검색">
+					</div>
+				</div>
+
+				<table>
+					<caption>메인에 노출될 요양원의 번호, 요양원 이름, 담당자, 연락처, 지역, 인기/추천 그룹으로 선택하여 표로 안내합니다.</caption>
+					<colgroup>
+						<col style="width: 150px;">
+						<col style="width: auto;">
+						<col style="width: 150px;">
+						<col style="width: 200px;">
+						<col style="width: 200px;">
+						<col style="width: auto;">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">번호</th>
+							<th scope="col">요양원</th>
+							<th scope="col">담당자</th>
+							<th scope="col">연락처</th>
+							<th scope="col">지역</th>
+							<th scope="col">선택</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>121</td>
+							<td><a href="#none">실버프리</a></td>
+							<td>홍길동</td>
+							<td>02-1234-5678</td>
+							<td>서울 은평구</td>
+							<td>
+								<div class="_check">
+									<span>
+										<input type="checkbox" id="pop_1">
+										<label for="pop_1">인기</label>
+									</span>
+									<span>
+										<input type="checkbox" id="reco_1">
+										<label for="reco_1">추천</label>
+									</span>
+									<select title="그룹선택">
+										<option value="그룹1">그룹1</option>
+										<option value="그룹2">그룹2</option>
+										<option value="그룹3">그룹3</option>
+										<option value="그룹4">그룹4</option>
+										<option value="그룹5">그룹5</option>
+									</select>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<div class="paging">
+					<a class="pageBtn _first" href="#none">처음 페이지로 이동</a>
+					<a class="pageBtn _prev" href="#none">이전 페이지로 이동</a>
+					<ul>
+						<li class="on"><a href="#none">1</a></li>
+						<li><a href="#none">2</a></li>
+						<li><a href="#none">3</a></li>
+						<li><a href="#none">4</a></li>
+						<li><a href="#none">5</a></li>
+						<li><a href="#none">6</a></li>
+						<li><a href="#none">7</a></li>
+						<li><a href="#none">8</a></li>
+						<li><a href="#none">9</a></li>
+						<li><a href="#none">10</a></li>
+					</ul>
+					<a class="pageBtn _next" href="#none">다음 페이지로 이동</a>
+					<a class="pageBtn _last" href="#none">마지막 페이지로 이동</a>
+
+					<a href="#none" class="_btn _write">반영하기</a>
+				</div>
+			</div>
+
+
+			<!-- 인기요양원 이미지 리스트 -->
+			<h3>인기요양원 <strong>* 총 10개까지 메인에 반영됩니다.</strong></h3>
+			<ul class="_pop_center">
+				<li>
+					<img src="img/main/angel_1_1.jpg" alt="엔젤 요양원 썸네일">
+					<div class="centerInfo">
+						<h4>엔젤 요양원</h4>
+						<p>충남 당진시</p>
+					</div>
+				</li>
+				<li>
+					<img src="img/main/angel_2_1.jpg" alt="실버프리 썸네일">
+					<div class="centerInfo">
+						<h4>실버프리</h4>
+						<p>전남 담양군</p>
+					</div>
+				</li>
+				<li>
+					<img src="img/main/angel_3_1.jpg" alt="미소요양원 썸네일">
+					<div class="centerInfo">
+						<h4>미소요양원</h4>
+						<p>경기 시흥시</p>
+					</div>
+				</li>
+				<li>
+					<img src="img/main/angel_4_1.jpg" alt="행복요양원 썸네일">
+					<div class="centerInfo">
+						<h4>행복요양원</h4>
+						<p>경기 파주시</p>
+					</div>
+				</li>
+				<li>
+					<img src="img/main/angel_5_1.jpg" alt="해피니스요양원 썸네일">
+					<div class="centerInfo">
+						<h4>해피니스요양원</h4>
+						<p>충남 논산시</p>
+					</div>
+				</li>
+				<li>
+					<img src="img/main/angel_1_1.jpg" alt="엔젤 요양원 썸네일">
+					<div class="centerInfo">
+						<h4>엔젤 요양원</h4>
+						<p>충남 당진시</p>
+					</div>
+				</li>
+				<li>
+					<img src="img/main/angel_2_1.jpg" alt="실버프리 썸네일">
+					<div class="centerInfo">
+						<h4>실버프리</h4>
+						<p>전남 담양군</p>
+					</div>
+				</li>
+				<li>
+					<img src="img/main/angel_3_1.jpg" alt="미소요양원 썸네일">
+					<div class="centerInfo">
+						<h4>미소요양원</h4>
+						<p>경기 시흥시</p>
+					</div>
+				</li>
+				<li>
+					<img src="img/main/angel_4_1.jpg" alt="행복요양원 썸네일">
+					<div class="centerInfo">
+						<h4>행복요양원</h4>
+						<p>경기 파주시</p>
+					</div>
+				</li>
+				<li>
+					<img src="img/main/angel_5_1.jpg" alt="해피니스요양원 썸네일">
+					<div class="centerInfo">
+						<h4>해피니스요양원</h4>
+						<p>충남 논산시</p>
+					</div>
+				</li>
+			</ul>
+			<!-- 추천요양원 리스트 -->
+			<h3>추천요양원 <strong>* 총 12개까지 메인에 반영됩니다.</strong></h3>
+			<div class="_inquiry _recommend">
+				<dl class="_rows">
+					<dt>그룹 1</dt>
+					<dd>
+						<ul>
+							<li>
+								<h4>실버프리</h4>
+								<p>전남 담양군</p>
+							</li>
+							<li>
+								<h4>해피니스 요양원</h4>
+								<p>충남 논산시</p>
+							</li>
+							<li>
+								<h4>로나요양원</h4>
+								<p>충남 논산시</p>
+							</li>
+							<li>
+								<h4>에바다요양원</h4>
+								<p>전남 담양군</p>
+							</li>
+							<li>
+								<h4>소담 요양원</h4>
+								<p>전남 담양군</p>
+							</li>
+							<li>
+								<h4>미카엘요양원</h4>
+								<p>전남 담양군</p>
+							</li>
+						</ul>
+					</dd>
+					<dd>
+						<ul>
+							<li>
+								<h4>나비 요양원</h4>
+								<p>충남 논산시</p>
+							</li>
+							<li>
+								<h4>아름다운 요양원</h4>
+								<p>충남 논산시</p>
+							</li>
+							<li>
+								<h4>행복요양원</h4>
+								<p>전남 담양군</p>
+							</li>
+							<li>
+								<h4>휴마루 시니어타운</h4>
+								<p>전남 담양군</p>
+							</li>
+							<li>
+								<h4>무지개동산</h4>
+								<p>충남 논산시</p>
+							</li>
+							<li>
+								<h4>동탄요양원</h4>
+								<p>충남 논산시</p>
+							</li>
+						</ul>
+					</dd>
+				</dl>
+				<dl class="_rows">
+					<dt>그룹 2</dt>
+					<dd>
+						<ul>
+							<li>
+								<h4>실버프리</h4>
+								<p>전남 담양군</p>
+							</li>
+							<li>
+								<h4>해피니스 요양원</h4>
+								<p>충남 논산시</p>
+							</li>
+							<li>
+								<h4>로나요양원</h4>
+								<p>충남 논산시</p>
+							</li>
+							<li>
+								<h4>에바다요양원</h4>
+								<p>전남 담양군</p>
+							</li>
+							<li>
+								<h4>소담 요양원</h4>
+								<p>전남 담양군</p>
+							</li>
+							<li>
+								<h4>미카엘요양원</h4>
+								<p>전남 담양군</p>
+							</li>
+						</ul>
+					</dd>
+					<dd>
+						<ul>
+							<li>
+								<h4>나비 요양원</h4>
+								<p>충남 논산시</p>
+							</li>
+							<li>
+								<h4>아름다운 요양원</h4>
+								<p>충남 논산시</p>
+							</li>
+							<li>
+								<h4>행복요양원</h4>
+								<p>전남 담양군</p>
+							</li>
+							<li>
+								<h4>휴마루 시니어타운</h4>
+								<p>전남 담양군</p>
+							</li>
+							<li>
+								<h4>무지개동산</h4>
+								<p>충남 논산시</p>
+							</li>
+							<li>
+								<h4>동탄요양원</h4>
+								<p>충남 논산시</p>
+							</li>
+						</ul>
+					</dd>
+				</dl>
+			</div>
+
+			
+			<div class="btnBox">
+				<a href="#none" class="_btn _write">등록</a>
+				<a href="#none" class="_btn">수정</a>
+			</div>
+		</div>
+	</section>
+
+
+</body>
+</html>

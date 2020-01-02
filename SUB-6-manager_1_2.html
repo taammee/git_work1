@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-type">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta name="format-detection" content="telephone=no,email=no,address=no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+<title>SUB - 관리자 요양원회원 관리</title>
+
+
+<link rel="stylesheet" href="css/common.css" media="all">
+<link rel="stylesheet" href="css/manager.css" media="all">
+
+<script src="js/jquery.js"></script>
+<script src="js/manager.js"></script>
+
+</head>
+<body class="sub">
+<script>
+		function respondCSS() {
+			var windowWidth = $(window).width();
+
+			if (windowWidth < 641) {
+				$(document.body).addClass('mobile');
+				$(document.body).removeClass('desktop');
+			}
+			else {
+				$(document.body).addClass('desktop');
+				$(document.body).removeClass('mobile');
+			}
+		}
+		$(window).bind("orientationchange load resize", respondCSS);
+		respondCSS();
+	</script>
+	
+	<header>
+		<div class="w1380">
+			<h1>Silverangel</h1>
+			<nav>
+				<ul id="nav">
+					<li class="_on">
+						<a href="SUB-6-manager.html">회원관리</a>
+						<ul class="_2depth">
+							<li><a href="SUB-6-manager.html">개인회원 관리</a></li>
+							<li class="_on"><a href="SUB-6-manager_1_2.html">요양원회원 관리</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="SUB-6-manager_2.html">메인관리</a>
+					</li>
+					<li>
+						<a href="SUB-6-manager_3.html">제휴/문의</a>
+					</li>
+					<li>
+						<a href="SUB-6-manager_4.html">게시판</a>
+					</li>
+				</ul>
+			</nav>
+
+			<div class="loginArea">
+				<p><strong>관리자</strong>님 안녕하세요.</p>
+				<a href="#none" class="logoutBtn">로그아웃</a>
+			</div>
+		</div>
+	</header>
+
+	<section class="w1380">
+		<h2>요양원회원 관리</h2>
+		<div class="manageBox">
+			<div class="list_srchWrap">
+				<div class="condition">
+					<label for="start_year">등록일</label>
+					<select class="select_year" id="start_year">
+						<option value="2018">2018</option>
+						<option value="2017">2017</option>
+						<option value="2016">2016</option>
+					</select>
+					년
+					<select title="등록일 시작 월 선택">
+						<option value="9">9</option>
+						<option value="8">8</option>
+						<option value="7">7</option>
+					</select>
+					월 
+					~
+					<select class="select_year" title="등록일 마지막 년 선택">
+						<option value="2018">2018</option>
+						<option value="2017">2017</option>
+						<option value="2016">2016</option>
+					</select>
+					년
+					<select title="등록일 마지막 월 선택">
+						<option value="9">9</option>
+						<option value="8">8</option>
+						<option value="7">7</option>
+					</select>
+					월
+				</div>
+				<div class="srchArea">
+					<select class="srch_local" title="지역 선택">
+						<option value="지역">지역</option>
+						<option value="서울">서울</option>
+						<option value="경기">경기</option>
+					</select>
+					<input type="text" title="검색어 입력">
+					<input type="button" value="검색">
+				</div>
+			</div>
+
+			<table>
+				<caption>요양원회원을 관리하기 위해 요양원의 번호, 이름, 담당자, 연락처, 지역, 평점순위, 상태를 표로 안내합니다.</caption>
+				<colgroup>
+					<col style="width: 150px;">
+					<col style="width: 200px;">
+					<col style="width: 150px;">
+					<col style="width: auto;">
+					<col style="width: 200px;">
+					<col style="width: auto;">
+					<col style="width: 100px;">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">번호</th>
+						<th scope="col">요양원</th>
+						<th scope="col">담당자</th>
+						<th scope="col">연락처</th>
+						<th scope="col">지역</th>
+						<th scope="col">평점순위</th>
+						<th scope="col">상태</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>121</td>
+						<td><a href="#none">실버프리</a></td>
+						<td>홍길동</td>
+						<td>02-1234-5678</td>
+						<td>서울 은평구</td>
+						<td>0</td>
+						<td><p class="join">승인요청</p></td>
+					</tr>
+					<tr>
+						<td>120</td>
+						<td><a href="#none">해피니스 요양원</a></td>
+						<td>홍길동</td>
+						<td>02-1234-5678</td>
+						<td>일산 고양시</td>
+						<td>32</td>
+						<td><p class="join _black">승인완료</p></td>
+					</tr>
+					<tr>
+						<td>119</td>
+						<td><a href="#none">로나요양원</a></td>
+						<td>홍길동</td>
+						<td>02-1234-5678</td>
+						<td>충청남도</td>
+						<td class="_viewMain">1</td>
+						<td><p class="join _black">승인완료</p></td>
+					</tr>
+					<tr>
+						<td>118</td>
+						<td><a href="#none">에바다요양원</a></td>
+						<td>홍길동</td>
+						<td>02-1234-5678</td>
+						<td>제주시</td>
+						<td>43</td>
+						<td><p class="join _black">승인완료</p></td>
+					</tr>
+					<tr>
+						<td>117</td>
+						<td><a href="#none">소담요양원</a></td>
+						<td>홍길동</td>
+						<td>02-1234-5678</td>
+						<td>대구시 서북구</td>
+						<td>22</td>
+						<td><p class="join _black">승인완료</p></td>
+					</tr>
+					<tr>
+						<td>116</td>
+						<td><a href="#none">나비요양원</a></td>
+						<td>홍길동</td>
+						<td>02-1234-5678</td>
+						<td>서울 은평구</td>
+						<td class="_viewMain">2</td>
+						<td><p class="join _black">승인완료</p></td>
+					</tr>
+					<tr>
+						<td>115</td>
+						<td><a href="#none">아름다운요양원</a></td>
+						<td>홍길동</td>
+						<td>02-1234-5678</td>
+						<td>일산 고양시</td>
+						<td class="_viewMain">3</td>
+						<td><p class="join _black">승인완료</p></td>
+					</tr>
+					<tr>
+						<td>114</td>
+						<td><a href="#none">행복요양원</a></td>
+						<td>홍길동</td>
+						<td>02-1234-5678</td>
+						<td>충청남도</td>
+						<td>92</td>
+						<td><p class="join _black">승인완료</p></td>
+					</tr>
+					<tr>
+						<td>113</td>
+						<td><a href="#none">휴마루 시니어타운</td>
+						<td>홍길동</td>
+						<td>02-1234-5678</td>
+						<td>제주시</td>
+						<td class="_viewMain">4</td>
+						<td><p class="join _black">승인완료</p></td>
+					</tr>
+					<tr>
+						<td>112</td>
+						<td><p href="#none">무지개동산</td>
+						<td>홍길동</td>
+						<td>02-1234-5678</td>
+						<td>대구시 서북구</td>
+						<td>55</td>
+						<td><p class="join _black">승인완료</p></td>
+					</tr>
+					<tr>
+						<td>111</td>
+						<td><a href="#none">동탄요양원</a></td>
+						<td>홍길동</td>
+						<td>02-1234-5678</td>
+						<td>경상북도 구미시</td>
+						<td>13</td>
+						<td><p class="join _black">승인완료</p></td>
+					</tr>
+					<tr>
+						<td>110</td>
+						<td><a href="#none">미카엘요양원</a></td>
+						<td>홍길동</td>
+						<td>02-1234-5678</td>
+						<td>인천 부평구</td>
+						<td>15</td>
+						<td><p class="join _black">승인완료</p></td>
+					</tr>
+				</tbody>
+			</table>
+
+			<div class="paging">
+				<a class="pageBtn _first" href="#none">처음 페이지로 이동</a>
+				<a class="pageBtn _prev" href="#none">이전 페이지로 이동</a>
+				<ul>
+					<li class="on"><a href="#none">1</a></li>
+					<li><a href="#none">2</a></li>
+					<li><a href="#none">3</a></li>
+					<li><a href="#none">4</a></li>
+					<li><a href="#none">5</a></li>
+					<li><a href="#none">6</a></li>
+					<li><a href="#none">7</a></li>
+					<li><a href="#none">8</a></li>
+					<li><a href="#none">9</a></li>
+					<li><a href="#none">10</a></li>
+				</ul>
+				<a class="pageBtn _next" href="#none">다음 페이지로 이동</a>
+				<a class="pageBtn _last" href="#none">마지막 페이지로 이동</a>
+			</div>
+		</div>
+	</section>
+
+
+
+
+	<section class="w1380">
+		<h2>요양원회원 관리</h2>
+		<div class="manageBox">
+			<h3>기본정보</h3>
+			<div class="_inquiry">
+				<dl class="_2part"> 
+					<dt><label for="centerName">요양원명</label></dt>
+					<dd><input type="text" id="centerName"></dd>
+					<dt><label for="openDate">개원일</label></dt>
+					<dd><input type="text" id="openDate"><a href="#none" class="dateIcon">달력열기</a></dd>
+				</dl>
+				<dl class="_2part"> 
+					<dt><label for="director">원장</label></dt>
+					<dd><input type="text" id="director"></dd>
+					<dt><label for="licenseNum">사업자등록번호</label></dt>
+					<dd><input type="text" id="licenseNum"></dd>
+				</dl>
+				<dl class="_rows"> 
+					<dt><label for="addr">주소</label></dt>
+					<dd>
+						<input type="text" title="기본 주소">
+						<a href="#none" class="_btn _small _black">주소찾기</a>
+					</dd>
+					<dd class="_2part">
+						<input type="text" title="기본 주소 2">
+						<span>상세주소</span>
+						<input type="text" title="상세주소" class="last-addr">
+					</dd>
+				</dl>
+				<dl class="_2part"> 
+					<dt><label for="centerNum">대표번호</label></dt>
+					<dd><input type="text" id="centerNum"></dd>
+					<dt><label for="centerMail">이메일</label></dt>
+					<dd><input type="text" id="centerMail"></dd>
+				</dl>
+				<dl class="_rows"> 
+					<dt>주요키워드</dt>
+					<dd class="keyword">
+						<select title="첫번째 키워드">
+							<option value="첫번째 키워드">첫번째 키워드</option>
+						</select>
+						<select title="두번째 키워드">
+							<option value="두번째 키워드">두번째 키워드</option>
+						</select>
+						<select title="세번째 키워드">
+							<option value="세번째 키워드">세번째 키워드</option>
+						</select>
+					</dd>
+					<dd>
+						<input type="text" title="키워드 작성" placeholder="키워드를 등록하세요">
+						<a href="#none" class="addKeyword">키워드 등록하기</a>
+					</dd>
+				</dl>
+				<dl class="_2part"> 
+					<dt>엔젤시스템</dt>
+					<dd class="radioArea">
+						<p>
+							<input type="radio" name="a_system" id="use" checked>
+							<label for="use"><span></span>사용</label>
+						</p>
+						<p>
+							<input type="radio" name="a_system" id="notUsed">
+							<label for="notUsed"><span></span>미사용</label>
+						</p>
+					</dd>
+					<dt>평가등급</dt>
+					<dd class="radioArea">
+						<p>
+							<input type="radio" name="grade" id="best" checked>
+							<label for="best"><span></span>최우수</label>
+						</p>
+						<p>
+							<input type="radio" name="grade" id="good">
+							<label for="good"><span></span>우수</label>
+						</p>
+						<p>
+							<input type="radio" name="grade" id="nograde">
+							<label for="nograde"><span></span>등급없음</label>
+						</p>
+					</dd>
+				</dl>
+	
+			</div>
+
+
+			<h3>이미지 정보</h3>
+			<div class="_inquiry _imgAdd">
+				<dl>
+					<dt>대표사진</dt>
+					<dd>
+						<input type="text" title="대표사진">
+						<p class="_btn _small _black">파일첨부</p>
+						<a href="#none" class="addKeyword">파일 찾기</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt>시설사진</dt>
+					<dd>
+						<input type="text" title="대표사진">
+						<p class="_btn _small _black">파일첨부</p>
+						<a href="#none" class="addKeyword">파일 찾기</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt>활동사진</dt>
+					<dd>
+						<input type="text" title="대표사진">
+						<p class="_btn _small _black">파일첨부</p>
+						<a href="#none" class="addKeyword">파일 찾기</a>
+					</dd>
+				</dl>
+			</div>
+
+
+			<h3>상세정보</h3>
+			<div class="_inquiry _detail">
+				<dl>
+					<dt>소개</dt>
+					<dd>
+						<textarea></textarea>
+					</dd>
+				</dl>
+				<dl class="people">
+					<dt>인원현황</dt>
+					<dd>
+						<p>
+							정원
+							<input type="text" title="정원">
+							명
+						</p>
+						<p>
+							총원
+							<input type="text" title="총원">
+							명
+						</p>
+						<p>
+							여성
+							<input type="text" title="여성">
+							명
+						</p>
+						<p>
+							남성
+							<input type="text" title="남성">
+							명
+						</p>
+						<p>
+							대기/여성
+							<input type="text" title="대기/여성">
+							명
+						</p>
+						<p>
+							대기/남성
+							<input type="text" title="대기/남성">
+							명
+						</p>
+					</dd>
+				</dl>
+				<dl>
+					<dt>프로그램</dt>
+					<dd class="radioArea">
+						<p>
+							<input type="checkbox" id="_pro_1" checked>
+							<label for="_pro_1"><span></span>재활/물리치료</label>
+						</p>
+						<p>
+							<input type="checkbox" id="_pro_2">
+							<label for="_pro_2"><span></span>체조교실</label>
+						</p>
+						<p>
+							<input type="checkbox" id="_pro_3" checked>
+							<label for="_pro_3"><span></span>노래교실</label>
+						</p>
+					</dd>
+				</dl>
+				<dl class="_rows _facility">
+					<dt>시설안내</dt>
+					<dd>
+						<p>
+							<input type="checkbox" id="room1" checked>
+							<label for="room1"><span></span>1인실</label>
+							<select title="1인실">
+								<option value="5">5</option>
+								<option value="4">4</option>
+								<option value="3">3</option>
+								<option value="2">2</option>
+								<option value="1">1</option>
+							</select>
+							<input type="text" title="이미지 첨부">
+							<a href="#none" class="_btn _small _black">파일찾기</a>
+						</p>
+						<p>
+							<input type="checkbox" id="room2" checked>
+							<label for="room2"><span></span>2인실</label>
+							<select title="2인실">
+								<option value="5">5</option>
+								<option value="4">4</option>
+								<option value="3">3</option>
+								<option value="2">2</option>
+								<option value="1">1</option>
+							</select>
+							<input type="text" title="이미지 첨부">
+							<a href="#none" class="_btn _small _black">파일찾기</a>
+						</p>
+					</dd>
+					<dd>
+						<p>
+							<input type="checkbox" id="room3" checked>
+							<label for="room3"><span></span>3인실</label>
+							<select title="3인실">
+								<option value="5">5</option>
+								<option value="4">4</option>
+								<option value="3">3</option>
+								<option value="2">2</option>
+								<option value="1">1</option>
+							</select>
+							<input type="text" title="이미지 첨부">
+							<a href="#none" class="_btn _small _black">파일찾기</a>
+						</p>
+						<p>
+							<input type="checkbox" id="room4" checked>
+							<label for="room4"><span></span>4인실</label>
+							<select title="4인실">
+								<option value="5">5</option>
+								<option value="4">4</option>
+								<option value="3">3</option>
+								<option value="2">2</option>
+								<option value="1">1</option>
+							</select>
+							<input type="text" title="이미지 첨부">
+							<a href="#none" class="_btn _small _black">파일찾기</a>
+						</p>
+					</dd>
+					<dd>
+						<p>
+							<input type="checkbox" id="spe_bed">
+							<label for="spe_bed"><span></span>특수침대</label>
+							<select title="특수침대">
+								<option value="10">10</option>
+								<option value="4">4</option>
+								<option value="3">3</option>
+								<option value="2">2</option>
+								<option value="1">1</option>
+							</select>
+							<input type="text" title="이미지 첨부">
+							<a href="#none" class="_btn _small _black">파일찾기</a>
+						</p>
+						<p>
+							<input type="checkbox" id="treat" checked>
+							<label for="treat"><span></span>의료/간호</label>
+							<select title="의료/간호">
+								<option value="3">3</option>
+								<option value="2">2</option>
+								<option value="1">1</option>
+							</select>
+							<input type="text" title="이미지 첨부">
+							<a href="#none" class="_btn _small _black">파일찾기</a>
+						</p>
+					</dd>
+					<dd>
+						<p>
+							<input type="checkbox" id="training">
+							<label for="training"><span></span>훈련실</label>
+							<select title="훈련실">
+								<option value="5">5</option>
+								<option value="4">4</option>
+								<option value="3">3</option>
+								<option value="2">2</option>
+								<option value="1">1</option>
+							</select>
+							<input type="text" title="이미지 첨부">
+							<a href="#none" class="_btn _small _black">파일찾기</a>
+						</p>
+						<p>
+							<input type="checkbox" id="wash">
+							<label for="wash"><span></span>세면실</label>
+							<select title="세면실">
+								<option value="2">2</option>
+								<option value="1">1</option>
+							</select>
+							<input type="text" title="이미지 첨부">
+							<a href="#none" class="_btn _small _black">파일찾기</a>
+						</p>
+					</dd>
+				</dl>
+				<dl class="_rows _staff">
+					<dt>직원현황</dt>
+					<dd>
+						<p>
+							<input type="checkbox" id="_staff1" checked>
+							<label for="_staff1"><span></span>시설장</label>
+							<input type="text" title="시설장">
+							명
+						</p>
+						<p>
+							<input type="checkbox" id="_staff2">
+							<label for="_staff2"><span></span>사무국장</label>
+							<input type="text" title="사무국장">
+							명
+						</p>
+						<p>
+							<input type="checkbox" id="_staff3">
+							<label for="_staff3"><span></span>사회복지사</label>
+							<input type="text" title="사회복지사">
+							명
+						</p>
+						<p>
+							<input type="checkbox" id="_staff4" checked>
+							<label for="_staff4"><span></span>의사_촉탁</label>
+							<input type="text" title="의사_촉탁">
+							명
+						</p>
+						<p>
+							<input type="checkbox" id="_staff5" checked>
+							<label for="_staff5"><span></span>간호사</label>
+							<input type="text" title="간호사">
+							명
+						</p>
+					</dd>
+					<dd>
+						<p>
+							<input type="checkbox" id="_staff6" checked>
+							<label for="_staff6"><span></span>간호조무사</label>
+							<input type="text" title="간호조무사">
+							명
+						</p>
+						<p>
+							<input type="checkbox" id="_staff7">
+							<label for="_staff7"><span></span>물리치료사</label>
+							<input type="text" title="물리치료사">
+							명
+						</p>
+						<p>
+							<input type="checkbox" id="_staff8">
+							<label for="_staff8"><span></span>요양보호사1급</label>
+							<input type="text" title="요양보호사1급">
+							명
+						</p>
+						<p>
+							<input type="checkbox" id="_staff9">
+							<label for="_staff9"><span></span>사무원</label>
+							<input type="text" title="사무원">
+							명
+						</p>
+						<p>
+							<input type="checkbox" id="_staff10">
+							<label for="_staff10"><span></span>영양사</label>
+							<input type="text" title="영양사">
+							명
+						</p>
+					</dd>
+					<dd>
+						<p>
+							<input type="checkbox" id="_staff11" checked>
+							<label for="_staff11"><span></span>조리원</label>
+							<input type="text" title="조리원">
+							명
+						</p>
+						<p>
+							<input type="checkbox" id="_staff12">
+							<label for="_staff12"><span></span>위생원</label>
+							<input type="text" title="위생원">
+							명
+						</p>
+						<p>
+							<input type="checkbox" id="_staff13">
+							<label for="_staff13"><span></span>관리인</label>
+							<input type="text" title="관리인">
+							명
+						</p>
+						<p>
+							<input type="checkbox" id="_staff14" checked>
+							<label for="_staff14"><span></span>보조원</label>
+							<input type="text" title="보조원">
+							명
+						</p>
+					</dd>
+				</dl>
+				<dl class="_input"> 
+					<dt>장비정보</dt>
+					<dd class="_input3">
+						<input type="text" title="장비정보 입력창 1">
+						<input type="text" title="장비정보 입력창 2">
+						<input type="text" title="장비정보 입력창 3">
+						<a href="#none" class="addKeyword">장비정보 추가하기</a>
+					</dd>
+				</dl>
+				<dl class="_rows _input"> 
+					<dt>입소안내</dt>
+					<dd class="_input3">
+						<p>입소대상</p>
+						<input type="text" title="입소대상 입력창 1">
+						<input type="text" title="입소대상 입력창 2">
+						<input type="text" title="입소대상 입력창 3">
+						<a href="#none" class="addKeyword">입소대상 추가하기</a>
+					</dd>
+					<dd class="_input5">
+						<p>구비서류</p>
+						<input type="text" title="구비서류 입력창 1">
+						<input type="text" title="구비서류 입력창 2">
+						<input type="text" title="구비서류 입력창 3">
+						<input type="text" title="구비서류 입력창 4">
+						<input type="text" title="구비서류 입력창 5">
+						<a href="#none" class="addKeyword">구비서류 추가하기</a>
+					</dd>
+					<dd class="_input3">
+						<p>입소비용</p>
+						<input type="text" title="입소비용 입력창 1">
+						<input type="text" title="입소비용 입력창 2">
+						<input type="text" title="입소비용 입력창 3">
+						<a href="#none" class="addKeyword">입소비용 추가하기</a>
+					</dd>
+					<dd class="_input1">
+						<p>준비물</p>
+						<input type="text" title="준비물 입력창 1">
+					</dd>
+					<dd class="_input2">
+						<p>면회시간</p>
+						<input type="text" title="면회시간 입력창 1">
+						<input type="text" title="면회시간 입력창 2">
+						<a href="#none" class="addKeyword">면회시간 추가하기</a>
+					</dd>
+					<dd class="_input5">
+						<p>식사시간</p>
+						<select title="아침식사">
+							<option value="아침식사">아침식사</option>
+							<option value="06">06</option>
+							<option value="07">07</option>
+							<option value="08">08</option>
+						</select>
+						<select title="점심식사">
+							<option value="점심식사">점심식사</option>
+							<option value="06">06</option>
+							<option value="07">07</option>
+							<option value="08">08</option>
+						</select>
+						<select title="저녁식사">
+							<option value="저녁식사">저녁식사</option>
+							<option value="06">06</option>
+							<option value="07">07</option>
+							<option value="08">08</option>
+						</select>
+						<select title="간식">
+							<option value="간식">간식</option>
+							<option value="06">06</option>
+							<option value="07">07</option>
+							<option value="08">08</option>
+						</select>
+						<input type="text" title="식사시간 입력창">
+						<a href="#none" class="addKeyword">식사시간 추가하기</a>
+					</dd>
+				</dl>
+				<dl class="_addAddr">
+					<dt>오시는 길</dt>
+					<dd>
+						<input type="text" title="오시는 길">
+						<a href="#none" class="_btn _small _black">주소 불러오기</a>
+					</dd>
+				</dl>
+				<dl class="_rows _statement">
+					<dt>비급여수가표</dt>
+					<dd>
+						<div>
+							<h4>1등급</h4>
+							<ul>
+								<li>
+									<p>1일당 수가</p><input type="text" title="1등급 1일당 수가 입력창"> 원
+								</li>
+								<li>
+									<p>1일 본인부담</p><input type="text" title="1등급 1일 본인부담 입력창"> 원
+								</li>
+								<li>
+									<p>비급여 합</p><input type="text" title="1등급 비급여 합 입력창"> 원
+								</li>
+								<li>
+									<p>30일 수가</p><input type="text" title="1등급 30일 수가 입력창"> 원
+								</li>
+								<li>
+									<p>30일 본인부담</p><input type="text" title="1등급 30일 본인부담 입력창"> 원
+								</li>
+							</ul>
+						</div>
+						<div>
+							<h4>2등급</h4>
+							<ul>
+								<li>
+									<p>1일당 수가</p><input type="text" title="2등급 1일당 수가 입력창"> 원
+								</li>
+								<li>
+									<p>1일 본인부담</p><input type="text" title="2등급 1일 본인부담 입력창"> 원
+								</li>
+								<li>
+									<p>비급여 합</p><input type="text" title="2등급 비급여 합 입력창"> 원
+								</li>
+								<li>
+									<p>30일 수가</p><input type="text" title="2등급 30일 수가 입력창"> 원
+								</li>
+								<li>
+									<p>30일 본인부담</p><input type="text" title="2등급 30일 본인부담 입력창"> 원
+								</li>
+							</ul>
+						</div>
+						<div>
+							<h4>3등급</h4>
+							<ul>
+								<li>
+									<p>1일당 수가</p><input type="text" title="3등급 1일당 수가 입력창"> 원
+								</li>
+								<li>
+									<p>1일 본인부담</p><input type="text" title="3등급 1일 본인부담 입력창"> 원
+								</li>
+								<li>
+									<p>비급여 합</p><input type="text" title="3등급 비급여 합 입력창"> 원
+								</li>
+								<li>
+									<p>30일 수가</p><input type="text" title="3등급 30일 수가 입력창"> 원
+								</li>
+								<li>
+									<p>30일 본인부담</p><input type="text" title="3등급 30일 본인부담 입력창"> 원
+								</li>
+							</ul>
+						</div>
+					</dd>
+					<dd>
+						<div>
+							<h4>4등급</h4>
+							<ul>
+								<li>
+									<p>1일당 수가</p><input type="text" title="4등급 1일당 수가 입력창"> 원
+								</li>
+								<li>
+									<p>1일 본인부담</p><input type="text" title="4등급 1일 본인부담 입력창"> 원
+								</li>
+								<li>
+									<p>비급여 합</p><input type="text" title="4등급 비급여 합 입력창"> 원
+								</li>
+								<li>
+									<p>30일 수가</p><input type="text" title="4등급 30일 수가 입력창"> 원
+								</li>
+								<li>
+									<p>30일 본인부담</p><input type="text" title="4등급 30일 본인부담 입력창"> 원
+								</li>
+							</ul>
+						</div>
+						<div>
+							<h4>5등급</h4>
+							<ul>
+								<li>
+									<p>1일당 수가</p><input type="text" title="5등급 1일당 수가 입력창"> 원
+								</li>
+								<li>
+									<p>1일 본인부담</p><input type="text" title="5등급 1일 본인부담 입력창"> 원
+								</li>
+								<li>
+									<p>비급여 합</p><input type="text" title="5등급 비급여 합 입력창"> 원
+								</li>
+								<li>
+									<p>30일 수가</p><input type="text" title="5등급 30일 수가 입력창"> 원
+								</li>
+								<li>
+									<p>30일 본인부담</p><input type="text" title="5등급 30일 본인부담 입력창"> 원
+								</li>
+							</ul>
+						</div>
+					</dd>
+				</dl>
+				<dl class="_rows _statement">
+					<dt>비급여</dt>
+					<dd>
+						<div>
+							<h4>식재료비</h4>
+							<ul>
+								<li>
+									<p>하루</p><input type="text" title="식재료비 하루 입력창"> 원
+								</li>
+								<li>
+									<p>한달(31일)</p><input type="text" title="식재료비 한달(31일) 입력창"> 원
+								</li>
+							</ul>
+						</div>
+						<div>
+							<h4>간식비</h4>
+							<ul>
+								<li>
+									<p>하루</p><input type="text" title="간식비 하루 입력창"> 원
+								</li>
+								<li>
+									<p>한달(31일)</p><input type="text" title="간식비 한달(31일) 입력창"> 원
+								</li>
+							</ul>
+						</div>
+						<div>
+							<h4>상급 침실 사용료</h4>
+							<ul>
+								<li>
+									<p>하루</p><input type="text" title="상급 침실 사용료 하루 입력창"> 원
+								</li>
+								<li>
+									<p>한달(31일)</p><input type="text" title="상급 침실 사용료 한달(31일) 입력창"> 원
+								</li>
+							</ul>
+						</div>
+					</dd>
+				</dl>
+			</div>
+
+			<div class="btnBox">
+				<a href="#none" class="_btn _write">승인완료</a>
+				<a href="#none" class="_btn">수정</a>
+				<a href="#none" class="_btn">삭제</a>
+			</div>
+
+		</div>
+	</section>
+</body>
+</html>
