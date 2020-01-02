@@ -408,10 +408,11 @@ footer .w1420 {
   padding-left: 315px;
   box-sizing: border-box;
 }
-.f_link {margin-bottom: 30px;}
+.f_link {display: inline-block; margin-bottom: 30px;}
 .f_link a {color: #a6a5a5; font-size: 1.1em; font-weight: 500;}
 .f_link li {display: inline-block; margin-right: 40px;}
-.f_info {color: #646363; font-size: 0.9em; letter-spacing: -1px;}
+.f_info {clear: both; color: #646363; font-size: 0.9em; letter-spacing: -1px;}
+footer .managerLink {display: inline-block; color: #a6a5a5; font-size: 1.1em; font-weight: 500; float: right;}
 
 /* ------------------------------------------- main_body */
 
