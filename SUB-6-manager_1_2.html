@@ -36,7 +36,7 @@
 	
 	<header>
 		<div class="w1380">
-			<h1>Silverangel</h1>
+			<h1><a href="index.html">Silverangel</a></h1>
 			<nav>
 				<ul id="nav">
 					<li class="_on">
@@ -681,11 +681,29 @@
 						<p>준비물</p>
 						<input type="text" title="준비물 입력창 1">
 					</dd>
-					<dd class="_input2">
+					<dd class="_input3 _meet">
 						<p>면회시간</p>
-						<input type="text" title="면회시간 입력창 1">
-						<input type="text" title="면회시간 입력창 2">
-						<a href="#none" class="addKeyword">면회시간 추가하기</a>
+						<label for="meet_am">오전</label>
+						<select title="면회시간 오전" id="meet_am">
+							<option value="09">09</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+						</select>
+						<label for="meet_pm">오후</label>
+						<select title="면회시간 오후" id="meet_pm">
+							<option value="01">01</option>
+							<option value="02">02</option>
+							<option value="03">03</option>
+							<option value="04">04</option>
+							<option value="05">05</option>
+							<option value="06">06</option>
+							<option value="07">07</option>
+							<option value="08">08</option>
+							<option value="09">09</option>
+						</select>
+						<input type="text" title="면회 주의사항 입력창" placeholder="면회 주의사항 입력창">
+						<a href="#none" class="addKeyword">면회 주의사항 추가하기</a>
 					</dd>
 					<dd class="_input5">
 						<p>식사시간</p>
@@ -731,7 +749,7 @@
 							<h4>1등급</h4>
 							<ul>
 								<li>
-									<p>1일당 수가</p><input type="text" title="1등급 1일당 수가 입력창"> 원
+									<p>1일당 수가</p><input type="text" title="1등급 1일당 수가 입력창" value="69,150"> 원
 								</li>
 								<li>
 									<p>1일 본인부담</p><input type="text" title="1등급 1일 본인부담 입력창"> 원

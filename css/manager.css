@@ -80,6 +80,10 @@ header .w1380 {
 
 header h1 {
   float: left;
+}
+
+header h1 a {
+  display: block;
   text-indent: -5000px;
   width: 165px;
   height: 33px;
@@ -179,23 +183,26 @@ section.w1380 h2 {
   padding: 40px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  min-height: 1100px;
 }
 
-.manageBox h3 {
+.manageBox h3, .manageBox h4 {
   font-weight: 500;
   margin: 50px 0 30px;
 }
 
-.manageBox h3:first-child {
+.manageBox h3:first-child, .manageBox h4:first-child {
   margin-top: 0;
 }
 
-.manageBox h3 strong {
+.manageBox h3 strong, .manageBox h4 strong {
   color: #01df70;
   font-size: 18px;
   font-weight: 400;
   margin-left: 15px;
+}
+
+.manageBox h4 {
+  margin: 10px 0;
 }
 
 .manageBox a.addKeyword {
@@ -235,6 +242,30 @@ section.w1380 h2 {
 .manageBox ._main_banner input[type="text"] {
   line-height: 26px;
   padding: 0px 5px;
+}
+
+.manageBox ._inquiry input[type="text"]::-webkit-input-placeholder,
+.manageBox ._main_banner input[type="text"]::-webkit-input-placeholder {
+  color: #a0a0a0;
+  font-weight: 200;
+}
+
+.manageBox ._inquiry input[type="text"]:-ms-input-placeholder,
+.manageBox ._main_banner input[type="text"]:-ms-input-placeholder {
+  color: #a0a0a0;
+  font-weight: 200;
+}
+
+.manageBox ._inquiry input[type="text"]::-ms-input-placeholder,
+.manageBox ._main_banner input[type="text"]::-ms-input-placeholder {
+  color: #a0a0a0;
+  font-weight: 200;
+}
+
+.manageBox ._inquiry input[type="text"]::placeholder,
+.manageBox ._main_banner input[type="text"]::placeholder {
+  color: #a0a0a0;
+  font-weight: 200;
 }
 
 .manageBox ._inquiry textarea,
@@ -549,7 +580,8 @@ section.w1380 h2 {
   margin-right: 5px;
 }
 
-.manageBox ._inquiry dl._input dd._input3 input[type="text"] {
+.manageBox ._inquiry dl._input dd._input3 input[type="text"],
+.manageBox ._inquiry dl._input dd._input3 select {
   width: 318px;
   margin-right: 5px;
 }
@@ -558,6 +590,11 @@ section.w1380 h2 {
 .manageBox ._inquiry dl._input dd._input5 input[type="text"] {
   width: 188px;
   margin-right: 5px;
+}
+
+.manageBox ._inquiry dl._input dd._meet select,
+.manageBox ._inquiry dl._input dd._meet input[type="text"] {
+  width: 300px;
 }
 
 .manageBox ._inquiry dl._addAddr dd input[type="text"] {
@@ -591,6 +628,7 @@ section.w1380 h2 {
 
 .manageBox ._inquiry dl._statement dd li input[type="text"] {
   width: 195px;
+  text-align: right;
 }
 
 .manageBox ._inquiry dl._fileArea ul {
@@ -701,9 +739,13 @@ section.w1380 h2 {
   width: 508px;
 }
 
+.manageBox h3.pop_rec {
+  margin-top: 80px;
+}
+
 .manageBox .pop_rec_table {
   position: relative;
-  margin: 50px 0;
+  margin: 10px 0 20px;
 }
 
 .manageBox .pop_rec_table .paging ._btn {
