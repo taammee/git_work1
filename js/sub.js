@@ -274,6 +274,34 @@ $(document).ready(function(){
 			},
 		]
   });
+  $('.system_list').not('.slick-initialized').slick({
+    infinite: false,
+    slidesToShow: 5,
+		slidesToScroll: 1,
+    dots: false,
+    focusOnSelect: false,
+    arrows: false,
+    centerMode: false,
+    responsive: [
+			{
+				breakpoint: 1200,
+				settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          arrows: true,
+				}
+			},
+			{
+				breakpoint: 500,
+				settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          arrows: true,
+
+				}
+			},
+		]
+  });
 
   // 상세페이지 :: 프로그램
   $('.picBtn').click(function(){
