@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-type">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta name="format-detection" content="telephone=no,email=no,address=no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+<title>SUB - 요양보험제도 안내</title>
+
+
+<link rel="stylesheet" href="css/common.css" media="all">
+<link rel="stylesheet" href="css/vendor/swiper.min.css">
+<link rel="stylesheet" href="css/layout.css" media="all">
+<link rel="stylesheet" href="css/sub.css" media="all">
+
+<script src="js/jquery.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/custom.js"></script>
+<script src="js/sub.js"></script>
+
+</head>
+<body class="sub">
+<script>
+		function respondCSS() {
+			var windowWidth = $(window).width();
+
+			if (windowWidth < 641) {
+				$(document.body).addClass('mobile');
+				$(document.body).removeClass('desktop');
+			}
+			else {
+				$(document.body).addClass('desktop');
+				$(document.body).removeClass('mobile');
+			}
+		}
+		$(window).bind("orientationchange load resize", respondCSS);
+		respondCSS();
+	</script>
+	
+	<header>
+		<div class="w1420 headerWrap">
+			<div class="logoArea">
+				<h1><a href="index.html"><img src="img/logo.png" alt="Silverangel"></a></h1>
+			</div>
+			<div class="sub_srchLine">
+				<div class="srchLine">
+				<!-- 검색조건 -->
+					<div class="srchWrap">
+						<div class="srchBox">
+							<label class="hidden" for="srchOption">검색조건</label> 
+							<button type="button" title="검색조건 닫기" class="srcName"><span>검색조건</span></button> 
+							<ul id="srchOption" class="src_list" role="tablist"> 
+								<li role="tab"><a href="#none">전체검색</a></li> 
+								<li role="tab"><a href="#none">요양원명</a></li> 
+								<li role="tab"><a href="#none">지역검색</a></li> 
+								<li role="tab"><a href="#none">주·야간보호센터</a></li> 
+							</ul> 
+						</div>
+						<input id="srchText" type="text">
+						<button type="button" id="srchBtn">검색</button>
+					</div>
+				</div>
+			</div>
+			<div class="loginArea">
+				<ul>
+					<li class="log-in"><button type="button"><strong>Silverangel</strong>님</button>
+						<div class="mypageBox">
+							<img src="img/sub/rvw_profile.png" alt="" class="mp_user">
+							<div class="infoArea">
+								<p class="name"><span>이엔젤</span>님</p>
+								<a href="SUB-3-mypage.html">마이페이지</a>
+							</div>
+							<div class="postCount">
+								<ul>
+									<li class="fav">
+										<p>나의 관심 요양원 <span>12</span></p>
+									</li>
+									<li class="post">
+										<p>내가 작성한 후기 <span>1</span></p>
+									</li>
+								</ul>
+							</div>
+							<h5>최근 본 요양원</h5>
+							<ul class="rct_center">
+								<li><img src="img/sub/rct_center.jpg" alt=""></li>
+								<li><img src="img/sub/rct_center2.jpg" alt=""></li>
+								<li><img src="img/sub/rct_center3.jpg" alt=""></li>
+							</ul>
+						</div>
+					</li>
+					<li><a href="#none">로그아웃</a></li>
+				</ul>
+			</div>
+			<button id="srchBtn_h" type="button"><span>검색열기</span></button>
+		</div>
+		<button id="mMenu" type="button"><span>메뉴열기</span></button>
+		<div class="mLogin">
+			<div class="profileArea">
+				<img src="img/main/profile.png" alt="프로필 이미지">
+				<strong class="name">Silverangel</strong>
+				<p class="msg">실버엔젤 님 반갑습니다!</p>
+			</div>
+			<ul class="postNumArea">
+				<li>
+					<dl>
+						<dt>나의 관심 요양원 </dt>
+						<dd>12</dd>
+					</dl>	
+				</li>
+				<li>
+					<dl>
+						<dt>내가 작성한 후기 </dt>
+						<dd>0</dd>
+					</dl>	
+				</li>
+			</ul>
+			<ul class="loginLink"></ul>
+			<ul class="mypageNav">
+				<li>
+					<a href="SUB-3-mypage.html">마이페이지</a>
+				</li>
+				<li>
+					<a href="SUB-3-user_edit.html">회원정보 수정</a>
+				</li>
+				<li>
+					<a href="SUB-3-password_edit.html">비밀번호 변경</a>
+				</li>
+			</ul>
+			<button class="btn_logout">로그아웃</button>
+		</div>
+	</header>
+
+	<section class="systemPage">
+
+
+
+		<div class="srchLinkWrap w1420">
+			<ul class="srchLink">
+				<li class="first">
+					<a href="#none">
+						<h4>굽은나무</h4>
+						<p>부모님의 요양원 생활을<br>
+							직접 확인해 보세요!</p>
+					</a>
+				</li>
+				<li>
+					<a href="#none">
+						<h4>엔젤챗봇</h4>
+						<p>부모님의 요양원 생활을<br>
+							직접 확인해 보세요!</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+
+		
+		<div class="systemWrap">
+			<div class="w1420">
+				<h2>요양보험제도 안내</h2>
+				<div class="comment">
+					어렵고 이해하기 힘든 요양제도와 용어들<br>
+					<strong><span>요양시설</span></strong>에 대한 <strong>궁금증</strong>을 쉽게 알려드립니다.
+				</div>
+			</div>
+		</div>
+
+		<div class="systemContent">
+			<div class="system_listWrap">
+				<div class="w1420">
+					<ul class="system_list">
+						<li class="li01 on" data-tab="tab1">
+							<a href="#none">요양시설의 종류와 차이</a>
+						</li>
+						<li class="li02" data-tab="tab2">
+							<a href="#none">노인장기요양보험제도란?</a>
+						</li>
+						<li class="li03" data-tab="tab3">
+							<a href="#none">장기요양급여의 종류</a>
+						</li>
+						<li class="li04" data-tab="tab4">
+							<a href="#none">노인장기요양 신청 절차</a>
+						</li>
+						<li class="li05" data-tab="tab5">
+							<a href="#none">등급 판정 기준</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="w1420">
+				<!-- 제도 안내 텍스트 -->
+				<ul class="system_text">
+					<li id="tab1" class="on">
+						<article>
+							<h3>
+								<span><em>요양시설</em>의</span>
+								<strong>종류</strong>와 <strong>차이</strong>
+							</h3>
+							<div class="textArea">
+								<div class="iconArea center">
+										<h4>요양원(시설)</h4>
+										<div class="text">
+											노환 및 노인성질환으로 돌봄을 필요한 노인들을 수용하여 생활수발과 복지서비스를 제공하는 통합적 생활시설을 지칭합니다.<br>
+											의료인이 상주하지 않으므로 의료가 필요한 경우는 병원에서 진료하셔야 합니다. 요양시설의 종류는 '장기요양급여의 종류' 메뉴에서 확인하실 수 있습니다. 요양시설을 이용하시려면 노인장기요양보험에 가입하여 요양등급을 받으셔야 합니다.
+										</div>
+								</div>
+								<div class="iconArea hospital">
+									<h4>요양병원</h4>
+									<div class="text">
+										요양병원은 의료기관입니다. 의사가 상주하고 간호사 및 전문 인력이 상주하여 의료법이 규정한 시설, 장비를 갖춘 곳, 즉 '병원'입니다.<br>
+										요양병원의 입원 대상은 노인성질환이나 만성질환 및 외과적 수술 후 회복이 필요한 분들로, 의학적 치료 및 요양을 필요로하는 환자입니다.
+									</div>
+								</div>
+								<div class="tableWrap">
+									<table>
+										<caption>요양원과 요양병원의 목적, 시설기준, 적용보험, 자격대상, 의사, 서비스인력을 안내합니다.</caption>
+										<colgroup>
+											<col class="auto">
+											<col class="auto">
+											<col class="auto">
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col">구분</th>
+												<th scope="col">요양원</th>
+												<th scope="col">요양병원</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>목적</td>
+												<td>돌봄</td>
+												<td>치료</td>
+											</tr>
+											<tr>
+												<td>시설기준</td>
+												<td>노인복지법</td>
+												<td>의료법</td>
+											</tr>
+											<tr>
+												<td>적용보험</td>
+												<td>장기요양보험</td>
+												<td>국민건강보험</td>
+											</tr>
+											<tr>
+												<td>자격대상</td>
+												<td>요양등급을 받은자</td>
+												<td>의학적 치료 및 요양이 필요한 자</td>
+											</tr>
+											<tr>
+												<td>의사</td>
+												<td>촉탁의 제도</td>
+												<td>의사, 한의사</td>
+											</tr>
+											<tr>
+												<td>서비스인력</td>
+												<td>요양보호사</td>
+												<td>간병사</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</article>
+					</li>
+					<li id="tab2">
+						<article>
+							<h3>
+								<span><em>노인장기요양</em></span>
+								<em>보험제도</em>란?
+							</h3>
+							<div class="textArea">
+								<div class="text marB30">노인장기요양보험은 고령이나 치매, 중풍 등의 노인성 질환 등으로 일상생활과 신체활동에 불편함을 느꼈을 때 몸과 마음의 편안함과 그 가족의 부담을 덜어주기 위해 만들어진 사회보험제도입니다. 목욕, 식사, 세탁, 간호, 그 외의 생활 수발 등의 요양 서비스가 필요하게 될 경우	어르신의 가정에서 도움을 받거나 또는 별도의 요양시설을 이용하여 편한 노후를 위한 서비스를 부담없이 제공 받을 수 있습니다.</div>
+								<div class="text">노인장기요양보험을 신청하여 이용하시려면 특정한 자격 조건을 갖추어야 합니다. <br>
+								요양 안내 페이지를 읽어보시면 자세한 신청 절차와 자격 조건을 알 수 있습니다.
+								</div>
+							</div>
+						</article>
+						<article>
+							<h3>
+								<span><em>장기요양</em></span>							<em>급여</em>란?
+							</h3>
+							<div class="textArea">
+								<p>장기요양급여란 요양원 같이 숙식을 제공하는 요양기관과 방문요양, 방문목욕, 방문간호, 주야간보호, 단기보호와 같은<br>
+									센터 방문 또는 단기 시설 이용에 필요한 비용을 말합니다.
+								</p>
+							</div>
+						</article>
+					</li>
+					<li id="tab3">
+						<article>
+							<h3>
+								<span><em>장기</em></span>							<em>요양급여</em>의
+								<span><strong>종류</strong></span>
+							</h3>
+							<div class="textArea">
+								<p>장기요양급여는 크게 <strong>시설급여, 재가급여, 가족요양비</strong>로 나뉩니다.
+								</p>
+							</div>
+						</article>
+						<article>
+							<h3>
+								<span><em>시설급여</em></span>
+							</h3>
+							<div class="textArea">
+								<h4>노인요양시설</h4>
+								<p class="marB50">흔히 말하는 요양원입니다. 치매, 중풍과 같은 노인성 질환의 발생으로 도움이 필요한 어르신들이 공동생활을 하며 식사, 세탁, 요양의 편의를 제공하는 합숙 기관입니다. 10인 이상의 어르신들이 공동생활 하게 됩니다.
+								</p>
+
+								<h4>노인요양공동생활가정</h4>
+								<p class="marB50">노인요양시설(요양원)과 비슷하지만 가정과 같은 환경에서 요양하실 수 있는 소규모 기관입니다.<br>
+									기관 간판에 “공동생활가정” 이라고 명시되어 있기도 합니다. 5인~9인의 어르신들이 가족같은 분위기로 공동생활 하게 됩니다.
+								</p>
+
+								<h4>시설 급여기관의 1일당 비용(2019년 기준)</h4>
+								<div class="tableWrap _border marB50">
+									<table>
+										<caption>노인요양시설,노인요양공동생활가정의 1일당 비용을 등급에 따라 안내합니다.</caption>
+										<colgroup>
+											<col class="auto">
+											<col class="auto">
+											<col class="auto">
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col">분류</th>
+												<th scope="col">등급</th>
+												<th scope="col">1일당 급여비용 (원)</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr class="padT20">
+												<th scope="row" rowspan="3">노인요양시설</th>
+												<td>1등급</td>
+												<td>69,150</td>
+											</tr>
+											<tr>
+												<td>2등급</td>
+												<td>64,170</td>
+											</tr>
+											<tr class="border-b">
+												<td>3~5등급</td>
+												<td>59,170</td>
+											</tr>
+											<tr class="padT20">
+												<th scope="row" rowspan="3">노인요양공동생활가정</th>
+												<td>1등급</td>
+												<td>60,590</td>
+											</tr>
+											<tr>
+												<td>2등급</td>
+												<td>56,220</td>
+											</tr>
+											<tr class="border-b">
+												<td>3~5등급</td>
+												<td>51,820</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+
+								
+								<h4>치매전담 시설 급여기관의 1일당 비용(2019년 기준)</h4>
+								<div class="tableWrap _border">
+									<table>
+										<caption>노인요양시설 내 치매전담실,치매전담형 노인요양공동생활가정의 1일당 비용을 등급에 따라 안내합니다.</caption>
+										<colgroup>
+											<col class="auto">
+											<col class="auto">
+											<col class="w15per">
+											<col class="w15per">
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col" rowspan="2">분류</th>
+												<th scope="col" rowspan="2">등급</th>
+												<th scope="col" colspan="2">1일당 급여비용 (원)</th>
+											</tr>
+											<tr>
+												<th scope="col">가형</th>
+												<th scope="col">나형</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr class="padT20">
+												<th scope="row" rowspan="2">노인요양시설 내 치매전담실</th>
+												<td>2등급</td>
+												<td>79,140</td>
+												<td>71,220</td>
+											</tr>
+											<tr class="border-b">
+												<td>3~5등급</td>
+												<td>79,140</td>
+												<td>65,670</td>
+											</tr>
+											<tr class="padT20">
+												<th scope="row" rowspan="2">치매전담형 노인요양공동생활가정</th>
+												<td>2등급</td>
+												<td colspan="2">69,690</td>
+											</tr>
+											<tr class="border-b">
+												<td>3~5등급</td>
+												<td colspan="2">64,260</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</article>
+						<article>
+							<h3>
+								<span><em>재가급여</em></span>
+							</h3>
+							<div class="textArea">
+								<p class="marB30">재가급여란 숙식이 가능한 시설에 입소하여 생활하는 것이 아닌 시설을 학교 다니듯 단 시간에 이용하는데에 필요한 비용을 말합니다.
+									어르신의 집으로 요양사가 직접 방문하는 요양서비스 비용도 이에 포함됩니다.
+								</p>
+								<p class="marB30">
+									재가급여의 종류로는 방문요양, 방문목욕, 방문간호, 주야간보호, 단기보호가 있습니다.
+								</p>
+								<ol class="brak marB50">
+									<li>방문요양 요양보호사가 어르신 댁을 직접 방문하여 일상생활에 필요한 전반적 수발을 도와드립니다.<br>
+										식사, 청소, 목욕, 화장실이용, 장보기 등이 이에 해당 됩니다.
+									</li>
+									<li>방문간호 의사, 한의사, 간호(조무)사, 치과의사 등이 어르신 댁을 직접 방문하여 진료, 간호보조, 치위생관리 등을 도와드립니다. <br>
+										사전에 의료기관에서 발급받은 방문간호지시서를 방문간호 이용시 기관에 제출하시면 됩니다.
+									</li>
+									<li>주/야간 보호 어르신을 낮 또는 밤 중 일정 시간 동안 요양보호시설에서 보호해 드립니다.
+									</li>
+									<li>단기보호 일정기간 가족의 보호를 받을 수 없는 어르신을 요양보호시설에서 보호해 드립니다.
+									</li>
+									<li>복지용구 어르신의 생활에 필요한 용구 (휠체어, 전동침대 등)을 구입 하거나 대여하실 수 있습니다.
+									</li>
+								</ol>
+
+								<h4>재가급여(복지용구 제외)의 월 한도액 (2019년 기준)</h4>
+								<div class="tableWrap marB20">
+									<table>
+										<caption>재가급여(복지용구 제외)의 월 한도액을 등급에 따라 안내합니다.</caption>
+										<colgroup>
+											<col class="auto">
+											<col class="auto">
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col">등급</th>
+												<th scope="col">월 한도액(원)</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th scope="row">1등급</th>
+												<td>1,456,400</td>
+											</tr>
+											<tr>
+												<th scope="row">2등급</th>
+												<td>1,294,600</td>
+											</tr>
+											<tr>
+												<th scope="row">3등급</th>
+												<td>1,240,700</td>
+											</tr>
+											<tr>
+												<th scope="row">4등급</th>
+												<td>1,142,400</td>
+											</tr>
+											<tr>
+												<th scope="row">5등급</th>
+												<td>980,800</td>
+											</tr>
+											<tr>
+												<th scope="row">인지지원등급</th>
+												<td>551,800</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<a href="#none" class="round_btn" target="_blank" title="새창 열기">
+									상세 재가급여표 보기
+								</a>
+							</div>
+						</article>
+
+						<article>
+							<h3>
+								<span><em>가족요양비</em></span>
+							</h3>
+							<div class="textArea">
+								<p>방문요양기관 또는 장기요양기관을 이용하기가 현저하게 어려운 어르신들을 가족이 직접 돌봐야 하는 경우 현금으로 지급되는 급여입니다.<br>
+									(도서, 벽지 지역 위치 등과 같이 대통령으로 정한 사유로 인정 받아야 합니다.)
+								</p>
+							</div>
+						</article>
+					</li>
+					<li id="tab4">
+						<article>
+							<h3>
+								<span><strong>노인</strong></span>
+								<span><strong>장기요양</strong></span>
+								<span><em>신청</em></span>							<em>자격 조건</em>
+							</h3>
+							<div class="textArea">
+								<ol class="num">
+									<li>65세 이상의 어르신이어야 합니다.</li>
+									<li>65세 미만일 경우 노인성 질병(치매, 파킨슨, 뇌혈관성 질환)가 있어야 합니다.</li>
+									<li>타인의 도움 없이는 일생생활이 어려운 상태입니다.</li>
+									<li>건강보험가입자 또는 피부양자, 의료급여수급권자는 소득에 관계 없이 장기요양급여 이용이 가능합니다.</li>
+								</ol>
+							</div>
+						</article>
+
+						<article>
+							<h3>
+								<span><strong>노인</strong></span>
+								<span><strong>장기요양</strong></span>
+								<em>신청절차</em>
+							</h3>
+							<div class="textArea">
+								<ul class="sys_process">
+									<li>
+										<span>01</span>
+										<p>신청</p>
+									</li>
+									<li>
+										<span>02</span>
+										<p>방문 인정조사</p>
+									</li>
+									<li>
+										<span>03</span>
+										<p>등급판정</p>
+									</li>
+									<li>
+										<span>04</span>
+										<p>결과통지</p>
+									</li>
+									<li>
+										<span>05</span>
+										<p>서비스 이용</p>
+									</li>
+								</ul>
+
+								<h5>(1) 신청</h5>
+								<ul class="dash marB20">
+									<li>- 신청 장소 : 살고 있는 지역의 국민건강보험공단 지사에서 신청합니다.</li>
+									<li>- 신청 방법 : 국민건강보험공단 방문, 우편, 팩스, 인터넷 접수가 가능합니다. 인터넷으로 신청하는 경우 대리인은 신청인의 가족에 한하며,
+										보험 적용 받으실 어르신과 주민등록상 같은 세대인 가족이어야 합니다.</li>
+									<li>
+										- 신청 서류 :
+										<p><a href="#none" class="round_btn" target="_blank" title="새창 열기">
+											장기요양인정 신청서
+											</a>
+										</p>
+									</li>
+								</ul>
+
+								<h5>(2) (방문) 인정조사</h5>
+								<div class="marB20">
+									<p>공단 직원이 신청인의 집으로 직접 찾아뵙고 어르신의 몸과 마음 상태를 살펴보고 그에 따른 서비스의 정도를 조사합니다.<br>
+										조사항목은 12개 영역 90개 항목으로 자세한 조사항목은 공단 홈페이지에서 확인하실 수 있습니다.</p>
+									<p><a href="#none" class="round_btn" target="_blank" title="새창 열기">
+										장기요양인정조사표
+										</a>
+									</p>
+								</div>
+
+								<h5>(3) 등급판정</h5>
+								<div class="marB20">
+									<p>인정조사의 결과와 의사 소견서 등을 바탕으로 등급판정위원회에서 등급기준에 따른 등급을 판정합니다.<br>
+										신청일로부터 30일내 등급판정이 가능합니다.</p>
+								</div>
+								<h5>(4) 결과통지</h5>
+								<div class="marB20">
+									<p>등급판정 결과에 따라 등급을 받은 어르신과 인정 받지 못한 어르신 모두에게 통보해드립니다.<br>
+										장기요양인정을 받은 어르신에게는 장기요양인정서와 표준장기요양이용계획서 등을 보내드리고 등급판정을 이용 받지 못한 어르신에게도 별도의 안내가
+										가게 됩니다. 판정 등급은 등급 판정 심의 완료 후 바로 알려드리며 우편, 방문, 공단 방문 등의 방법으로 통보 됩니다.</p>
+								</div>
+								<h5>(5) 서비스이용</h5>
+								<div class="marB20">
+									<p>등급판정을 받으신 어르신께서는 장기요양인정서가 도착한 날부터 바로 서비스 이용이 가능합니다.<br>
+										선택에 따라 요양원, 주야간보호, 방문요양 서비스를 받을 수 있습니다.<br>
+										실버하이에서 다양한 요양시설과 기관을 찾아 보실 수 있습니다.증명서 (의사 소견서 또는 진단서)가 필요합니다.
+									</p>
+								</div>
+								<div class="marB20">
+									더 자세한 내용은 국민건강보험공단 노인장기요양보험 공단 홈페이지를 확인해보세요.
+								</div>
+								<p><a href="#none" class="round_btn _black" target="_blank" title="새창 열기">
+									국민건강보험공단 홈페이지
+									</a>
+								</p>
+								
+							</div>
+						</article>
+					</li>
+					<li id="tab5">
+						<article>
+							<h3>
+								<strong>등급</strong>
+								<span><em>판정 기준</em></span>
+							</h3>
+							<div class="textArea">
+								<p class="marB20"><em>등급 판정 인정 조사</em>에 의한 <strong>판정 기준</strong>은 다음과 같습니다.</p>
+
+								<h4>1등급</h4>
+								<p class="marB20">심신의 기능 상태 장애로 일상생활이 현저하게 불가능하여 반드시 다른 사람의 도움이 필요한 상태 장기요양인정 점수 95점 이상</p>
+								<h4>2등급</h4>
+								<p class="marB20">심신의 기능 상태 장애로 일상생활의 대부분을 다른 사람의 도움을 받아야 하는 상태 장기요양인정 점수 75점 ~ 94점</p>
+								<h4>3등급</h4>
+								<p class="marB20">심신의 기능 상태 장애로 일상생활이 부분적으로 다른 사람의 도움을 받아야 하는 상태 장기요양인정점수 60점 ~ 74점</p>
+								<h4>4등급</h4>
+								<p class="marB20">심신의 기능 상태 장애로 일상생활의 일정부분을 다른 사람의 도움을 받아야 하는 상태 장기요양인정점수 51점 ~ 59점</p>
+								<h4>5등급</h4>
+								<p class="marB20">노인성 질병에 해당하는 치매 환자 장기요양인정 점수 45점 ~ 50점
+								</p>
+							</div>
+						</article>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+	</section>
+	<footer>
+		<div class="w1420">
+			<ul class="f_link">
+				<li><a href="#none">실버엔젤</a></li>
+				<li><a href="#none">이용안내</a></li>
+				<li><a href="SUB-4-quest.html">제휴／문의</a></li>
+				<li><a href="SUB-5-board2.html">장기요양보험소식</a></li>
+			</ul>
+			<div class="f_info">
+				<address>
+						인천광역시 부평구 부평대로 293, 712호 (청천동, 부평테크시티) 전화 : 032-277-9797 팩스 : 032-524-7955 통신판매면허번호 : 제2011-인천부평-00326호
+				</address>
+				<p class="copy">COPYRIGHTⓒ 2019 실버엔젤(Silver Angel) ALL RiGHTS RESERVED.</p>
+			</div>
+		</div>
+		<button id="mTop">Top</button>
+	</footer>
+</body>
+</html>

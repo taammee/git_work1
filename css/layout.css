@@ -38,6 +38,13 @@ button#mTop {
 	text-indent: -5000px;
 	z-index: 997;
 }
+a.round_btn {
+  display: inline-block; color: #01df70; font-weight: 500;
+  padding: 0 10px; box-sizing: border-box;
+  border: 3px solid #01df70; border-radius: 40px;
+  margin: 5px 0;
+}
+a.round_btn._black {color: #fff; background-color: #434343; border-color: #434343;}
 
 /* ------------------------------------------- header */
 header {

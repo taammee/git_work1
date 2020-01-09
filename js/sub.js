@@ -222,10 +222,10 @@ $(document).ready(function(){
 
 
   // 상세페이지 :: 소개 내용
-  $('.detail_list li').click(function() {
+  $('.detail_list li, .system_list li').click(function() {
     var activeTab = $(this).attr('data-tab');
-    $('.detail_list li').removeClass('on');
-    $('.detail_text li').removeClass('on');
+    $('.detail_list li, .system_list li').removeClass('on');
+    $('.detail_text li, .system_text li').removeClass('on');
     $(this).addClass('on');
     $('#' + activeTab).addClass('on');
   })

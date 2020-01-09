@@ -1,4 +1,26 @@
 /* ------------------------------------------- common */
+table col.auto {width: auto;}
+table col.w10per {width: 10%;}
+table col.w15per {width: 15%;}
+table col.w20per {width: 20%;}
+table col.w30per {width: 30%;}
+table col.w40per {width: 40%;}
+table col.w50per {width: 50%;}
+table col.w60per {width: 60%;}
+table col.w70per {width: 70%;}
+table col.w80per {width: 80%;}
+table col.w90per {width: 90%;}
+table col.w100per {width: 100%;}
+
+ol.num li {list-style: decimal; margin-left: 20px;}
+ol.brak {padding-left: 27px;}
+ol.brak li:before {margin-left: -28px; padding-right: 5px;}
+ol.brak li:nth-child(1):before {content: '(1)';}
+ol.brak li:nth-child(2):before {content: '(2)';}
+ol.brak li:nth-child(3):before {content: '(3)';}
+ol.brak li:nth-child(4):before {content: '(4)';}
+ol.brak li:nth-child(5):before {content: '(5)';}
+
 /* ------------------------------------------- 검색페이지 */
 #rsltWrap .rsltArea .note {
   color: #393939; font-weight: 500;
@@ -1408,26 +1430,33 @@
 
 /* ------------------------------------------- 제휴/문의 */
 body.sub header + section.questPage {padding: 0;}
-.questWrap {
+.questWrap,
+.systemWrap {
   text-align: center;
   background: url('../img/sub/quest_bg.jpg') center top no-repeat;
   padding-top: 180px;
 }
-.questWrap h2 {
+.questWrap h2,
+.systemWrap h2 {
   color: #434343; font-size: 2.1em; font-weight: 500;
   margin-bottom: 100px;
 }
-.questWrap .comment {
+.questWrap .comment,
+.systemWrap .comment {
   font-size: 1.4em; font-weight: 300;
 }
-.questWrap .comment strong {font-weight: 500;}
-.questWrap .comment strong span { color: #01df70; }
-.questWrap .content:before {
+.questWrap .comment strong,
+.systemWrap .comment strong {font-weight: 500;}
+.questWrap .comment strong span,
+.systemWrap .comment strong span { color: #01df70; }
+.questWrap .content:before,
+.systemWrap .content:before {
   content: ''; display: block;
   width: 50px; height: 2px; background-color: #c1c1c1;
   margin: 75px auto 45px;
 }
-.questWrap .content {
+.questWrap .content,
+.systemWrap .content {
   color: #000; font-weight: 200;
   margin-bottom: 175px;
 }
@@ -1536,6 +1565,88 @@ body.sub header + section.questPage {padding: 0;}
 .questForm ._form dd textarea {min-height: 195px;}
 .questForm h4 {
   color: #404040; font-size: 0.9em; font-weight: 500;
+}
+
+/* ------------------------------------------- 요양보험제도 안내 페이지 */
+body.sub header + section.systemPage {padding: 0; margin: 7px 0 0 0;}
+.systemWrap {
+  height: 646px; box-sizing: border-box;
+  background: url('../img/sub/system_bg.jpg') center top no-repeat;
+}
+.system_listWrap {
+  background-color: rgba(0,0,0,0.7);
+  padding: 32px 0;
+}
+.system_list {display: table; width: 100%;}
+.system_list li {display: table-cell; padding: 0 10px;}
+.system_list a {display: inline-block; position: relative; color: #fff; font-size: 1.2em; }
+.system_list li.on a:after {
+  content: ''; width: 100%; height: 5px; background-color: #01df70;
+  position: absolute; bottom: -32px; left: 0;
+}
+.system_list li.on a { color: #01df70; font-weight: 500;}
+.system_text {margin: 90px 0;}
+.system_text > li {display: none; width: 100%; }
+.system_text > li.on { display: block; }
+
+.system_text > li article {overflow: hidden; margin-bottom: 70px;}
+.system_text > li article h3 {float: left; width: 225px; color: #444; font-size: 1.5em; letter-spacing: -1px; line-height: 1.2;}
+.system_text > li article h3 span {display: block;}
+.system_text > li article em {color: #01df70; font-weight: 700;}
+.system_text > li article h3 strong {font-weight: 700;}
+.system_text > li article .textArea {float: right; width: calc(100% - 225px); color: #444; line-height: 1.7; font-weight: 300;}
+.system_text > li article .textArea h4 {color: #444; font-size: 1.2em; font-weight: 700; margin-bottom: 15px;}
+.system_text > li article .textArea h5 {font-size: 1em;}
+.system_text > li article .textArea strong {font-weight: 700;}
+.system_text > li article .textArea .iconArea {
+  background: url('../img/sub/system_icon_center.png') left top no-repeat;
+  padding-left: 145px; margin-bottom: 60px;
+}
+.system_text > li article .textArea .iconArea.hospital {
+  background: url('../img/sub/system_icon_hospital.png') left top no-repeat;
+}
+.system_text > li article .textArea .marB20 {margin-bottom: 20px;}
+.system_text > li article .textArea .marB30 {margin-bottom: 30px;}
+.system_text > li article .textArea .marB50 {margin-bottom: 50px;}
+.system_text .tableWrap table {
+  font-size: 0.9em; text-align: center;
+  border-top: 2px solid #c1c1c1;
+  border-bottom: 1px solid #c1c1c1;
+}
+.system_text .tableWrap table thead {
+  border-bottom: 1px solid #c1c1c1;
+}
+.system_text .tableWrap table thead th {padding: 3px; font-weight: 500; border-top: 1px solid #c1c1c1;}
+.system_text .tableWrap table tbody td {padding: 3px;}
+.system_text .tableWrap table tbody th {font-weight: 300;}
+
+.system_text .tableWrap._border table {margin-left: 1px;}
+.system_text .tableWrap._border table thead th,
+.system_text .tableWrap._border table tbody th,
+.system_text .tableWrap._border table tbody td {border-right: 1px solid #c1c1c1;}
+.system_text .tableWrap._border table tbody tr th,
+.system_text .tableWrap._border table tbody tr.border-b td {border-bottom: 1px solid #c1c1c1;}
+.system_text .tableWrap._border table tbody tr.padT20 td {padding-top: 20px;}
+.system_text .tableWrap._border table tbody tr.border-b td {padding-bottom: 20px;}
+
+.system_text .sys_process {overflow: hidden; position: relative; margin-bottom: 30px;}
+.system_text .sys_process:before {
+  content: ''; position: absolute; bottom: 3px; left: 0;
+  width: 100%; height: 1px; background-color: #444;
+}
+.system_text .sys_process:after {position: absolute; bottom: 0; right: 0;}
+.system_text .sys_process li {
+  float: left; width: 20%; padding-bottom: 25px;
+}
+.system_text .sys_process li > span {
+  display: block; color: #01df70; font-size: 2em; font-weight: 700; line-height: 0.9;
+}
+.system_text .sys_process li > p {
+  color: #444; font-size: 1.2em; font-weight: 700;
+}
+.system_text .sys_process:after,
+.system_text .sys_process li:after {
+  content: ''; position: absolute; bottom: 0; width: 8px; height: 8px; background-color: #444; border-radius: 50%;
 }
 
 /* ------------------------------------------- 반응형 */
@@ -1896,3 +2007,16 @@ body.mobile .sati_chk > li {float: none; width: 100%; margin: 20px 0;}
 body.mobile .questWrap .process li {
   width: 49%;
 }
+
+/* 요양보험제도 안내 */
+body.mobile.sub header + section.systemPage {margin-top: 7px;}
+body.mobile .systemWrap {background-position: 37% top;}
+body.mobile .system_text > li article h3,
+body.mobile .system_text > li article .textArea {float: none; width: 100%;}
+body.mobile .system_text > li article h3 {margin-bottom: 40px;}
+body.mobile .system_text > li article h3 span {display: inline-block;}
+body.mobile {}
+body.mobile {}
+body.mobile {}
+body.mobile {}
+body.mobile {}
