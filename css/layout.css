@@ -761,7 +761,7 @@ body.main .srchLine #srchText {margin-top: 23px;}
 }
 .mark li:before {
   content: ''; display: block;
-  width: 47px; height: 47px; background: url('../img/main/mark_icon.png') left top no-repeat; margin-right: 7px;
+  width: 58px; height: 59px; background: url('../img/main/mark_icon.png') left top no-repeat; margin-right: 7px;
 }
 .mark li.mark_best:before {background-position: right top;}
 .ico_rate {
@@ -939,7 +939,7 @@ body.main .srchLine #srchText {margin-top: 23px;}
   position: absolute; top: 0;
 }
 .angelThumb .thumbArea .mark {
-  position: absolute; top: 20px; right: 15px;
+  position: absolute; top: 15px; right: 5px;
   z-index: 1;
 }
 .angelThumb .thumbInfo {

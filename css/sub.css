@@ -346,6 +346,11 @@ ol.brak li:nth-child(5):before {content: '(5)';}
 }
 .dt_mark .mark {margin-right: 10px;}
 .dt_mark .mark li {vertical-align: middle; margin-right: 2px;}
+.dt_mark .mark li:before {
+  content: ''; display: block;
+  width: 51px; height: 51px; background: url('../img/sub/mark_icon.png') left top no-repeat; margin-right: 0;
+}
+.dt_mark .mark li.mark_best:before {background-position: right top;}
 
 .dt_keyword h4 {display: none;}
 
@@ -1787,11 +1792,11 @@ body.mobile .dt_mark .mark li {
 body.mobile .dt_mark .mark li.mark_lcms strong {color: #33c3ff;}
 body.mobile .dt_mark .mark li.mark_best strong {color: #ffb42b;}
 body.mobile .dt_mark .mark li:before {
-  display: inline-block; vertical-align: top; margin-top: 8px;
+  display: inline-block; vertical-align: top; margin-right: 8px;
 }
 body.mobile .dt_mark .mark li > p {
   display: inline-block;
-  width: calc(100% - 54px);
+  width: calc(100% - 64px);
 }
 body.mobile .dt_mark .mark li > p em {
   font-weight: 500; display: block;
